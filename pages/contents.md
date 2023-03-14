@@ -3,6 +3,7 @@
 	- [[Crypto a Week]]
 	- [[AI a Week]]
 - AI
-	- [[ChatGPT]]
 	- [[AI Drawing]]
+	- [[ChatGPT]]
+	- [[LLaMA]]
 -
