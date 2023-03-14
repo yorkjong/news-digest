@@ -1,1 +1,0 @@
-- {{query (and [[Crypto]] (between :-7d :today))}}

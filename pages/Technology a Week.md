@@ -1,2 +1,0 @@
-- {{query (and [[tech]] (between :-7d :today))}}
--
