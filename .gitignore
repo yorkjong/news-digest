@@ -1,0 +1,7 @@
+# Logseq back-up files
+logseq/bak/*
+
+# macOS system files
+.DS_Store
+logseq/.recycle/*
+

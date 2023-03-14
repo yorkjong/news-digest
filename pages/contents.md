@@ -1,0 +1,8 @@
+- Weekly
+	- [[Technology a Week]]
+	- [[Crypto a Week]]
+	- [[AI a Week]]
+- AI
+	- [[ChatGPT]]
+	- [[AI Drawing]]
+-
