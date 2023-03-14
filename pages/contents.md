@@ -2,6 +2,9 @@
 	- [[Technology a Week]]
 	- [[Crypto a Week]]
 	- [[AI a Week]]
+- Youtube Channel
+	- [[投资TALK君]]
+	- [[小丹尼]]
 - AI
 	- [[AI Drawing]]
 	- [[ChatGPT]]
