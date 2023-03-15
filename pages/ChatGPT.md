@@ -1,3 +1,8 @@
+---
+title: ChatGPT
+tags: AI, DL, GPT
+---
+
 - ### Principle
 	- [【生成式AI】能夠使用工具的AI：New Bing, WebGPT, Toolformer - YouTube](https://www.youtube.com/watch?v=ZID220t_MpI) #WebGPT #NewBing #Toolformer #AI #[[Hung-yi Lee]]
 	- [【生成式AI】ChatGPT 原理剖析 (1/3) — 對 ChatGPT 的常見誤解 - YouTube](https://www.youtube.com/watch?v=yiY4nPOzJEg) #ChatGPT #AI #[[Hung-yi Lee]]

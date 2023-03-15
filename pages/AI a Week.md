@@ -1,3 +1,7 @@
+---
+tags: AI
+---
+
 - ### ChatGPT
 - {{query (and [[ChatGPT]] (between :-7d :today))}}
 - ### AI Drawing
