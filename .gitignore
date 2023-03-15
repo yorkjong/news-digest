@@ -1,11 +1,16 @@
-# Logseq back-up files
-logseq/bak/*
-
-# Obsidian system files
-.trash/*
-
 # macOS system files
 .DS_Store
-logseq/.recycle/*
+.trash/
 
+# Thumbnails (macOS)
+._*
+
+# Dropbox system files
+.recycle/
+
+# Logseq back-up files
+bak/
+
+# Obsidian files
+.obsidian/plugins/
 
