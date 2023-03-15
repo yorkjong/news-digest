@@ -5,10 +5,10 @@ tags: AI, AID, Diffusion
 ---
 
 - Web UI on Colab
-	- [免安裝 Stable Diffusion 繪圖教學：教你用 Google Colab 做出擬真 AI 美女圖 - 蘋果仁 - 果仁 iPhone/iOS/好物推薦科技媒體](https://applealmond.com/posts/178039) #AI #AID #SD
+	- [免安裝 Stable Diffusion 繪圖教學：教你用 Google Colab 做出擬真 AI 美女圖](https://applealmond.com/posts/178039) #AI #AID #SD
 	- [[AI繪圖] Stable Diffusion WebUI Colab TW 支援多種SD模型 支援ControlNet](https://home.gamer.com.tw/artwork.php?sn=5664550) #AI #AID #SD
 	- [如何在Google colab上安装和使用Stable Diffusion WebUI](https://www.youtube.com/watch?v=nwyxpTOmcJ4)  #AI #AID #SD
-	- [[教學懶人包] Midjourney做不到的完美！三分鐘搞定Stable Diffusion！只需瀏覽器就能免費打造你的AI女神！(免顯卡版)  #StableDiffusion #ai繪圖](https://www.youtube.com/watch?v=jR6vLdzECDw) #AI #AID #SD
+	- [[教學懶人包] Midjourney做不到的完美！三分鐘搞定Stable Diffusion！只需瀏覽器就能免費打造你的AI女神！(免顯卡版)](https://www.youtube.com/watch?v=jR6vLdzECDw) #AI #AID #SD
 	- [GitHub - AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) #AI #AID #SD
 	-
 - Web UI on Desktop
