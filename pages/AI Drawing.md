@@ -1,3 +1,8 @@
+---
+title: AI Drawing
+alias: AID
+tags: AI
+---
 - ### Stable Diffusion
 	- Web UI on Colab
 		- [免安裝 Stable Diffusion 繪圖教學：教你用 Google Colab 做出擬真 AI 美女圖 - 蘋果仁 - 果仁 iPhone/iOS/好物推薦科技媒體](https://applealmond.com/posts/178039) #AI #AID #SD
