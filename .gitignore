@@ -12,5 +12,6 @@
 bak/
 
 # Obsidian files
-.obsidian/plugins/
+#.obsidian/plugins/
+.obsidian/
 
