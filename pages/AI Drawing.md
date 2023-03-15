@@ -1,8 +1,9 @@
 ---
 title: AI Drawing
 alias: AID
-tags: AI
+tags: AI, Diffusion
 ---
+
 - ### [[Stable Diffusion]]
 - ---
 ### Midjourney

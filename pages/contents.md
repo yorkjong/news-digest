@@ -7,6 +7,8 @@
 	- [[小丹尼]]
 - AI
 	- [[AI Drawing]]
+	- [[Stable Diffusion]]
 	- [[ChatGPT]]
 	- [[LLaMA]]
+-
 -
