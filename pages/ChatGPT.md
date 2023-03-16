@@ -6,9 +6,9 @@ tags: AI, DL, GPT
 - ### Principle
 	- [【生成式AI】能夠使用工具的AI：New Bing, WebGPT, Toolformer - YouTube](https://www.youtube.com/watch?v=ZID220t_MpI) #WebGPT #NewBing #Toolformer #AI #[[Hung-yi Lee]]
 	- [【生成式AI】ChatGPT 原理剖析 (1/3) — 對 ChatGPT 的常見誤解 - YouTube](https://www.youtube.com/watch?v=yiY4nPOzJEg) #ChatGPT #AI #[[Hung-yi Lee]]
-	- [【生成式AI】ChatGPT 原理剖析 (2/3) — 預訓練 (Pre-train) - YouTube](https://www.youtube.com/watch?v=1ah7Qsri_c8)#ChatGPT #AI #[[Hung-yi Lee]]
-	- [【生成式AI】ChatGPT 原理剖析 (3/3) — ChatGPT 所帶來的研究問題 - YouTube](https://www.youtube.com/watch?v=UsaZhQ9bY2k)#ChatGPT #AI #[[Hung-yi Lee]]
-	- [ChatGPT (可能)是怎麼煉成的 - GPT 社會化的過程 - YouTube](https://www.youtube.com/watch?v=e0aKI2GGZNg)#ChatGPT #AI #[[Hung-yi Lee]]
+	- [【生成式AI】ChatGPT 原理剖析 (2/3) — 預訓練 (Pre-train) - YouTube](https://www.youtube.com/watch?v=1ah7Qsri_c8) #ChatGPT #AI #[[Hung-yi Lee]]
+	- [【生成式AI】ChatGPT 原理剖析 (3/3) — ChatGPT 所帶來的研究問題 - YouTube](https://www.youtube.com/watch?v=UsaZhQ9bY2k) #ChatGPT #AI #[[Hung-yi Lee]]
+	- [ChatGPT (可能)是怎麼煉成的 - GPT 社會化的過程 - YouTube](https://www.youtube.com/watch?v=e0aKI2GGZNg) #ChatGPT #AI #[[Hung-yi Lee]]
 	- [ChatGPT技术原理解析：从RL之PPO算法、RLHF到GPT-N、instructGPT](https://blog.csdn.net/v_JULY_v/article/details/128579457) #ChatGPT #AI
 	-
 - ### Application
