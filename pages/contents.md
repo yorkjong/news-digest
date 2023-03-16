@@ -5,6 +5,7 @@
 - Youtube Channel
 	- [[投资TALK君]]
 	- [[小丹尼]]
+	- [[Alan]]
 - AI
 	- [[AI Drawing]]
 	- [[Stable Diffusion]]
