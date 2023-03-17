@@ -6,6 +6,7 @@
 	- [[投资TALK君]]
 	- [[小丹尼]]
 	- [[Alan]]
+	- [[Anastasi]]
 - AI
 	- [[AI Drawing]]
 	- [[Stable Diffusion]]
