@@ -13,6 +13,7 @@
 	- [[Stable Diffusion]]
 	- [[ChatGPT]]
 	- [[LLaMA]]
+	- [[LLM]]
 - Tags
 	- [[☆☆☆]]
 	- [[☆☆]]
