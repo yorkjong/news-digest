@@ -3,7 +3,7 @@
   template-including-parent:: false
 	- ### Tesla & SpaceX; Vehicle
 	-
-	- ###  Industry
+	- ###  Tech Titans
 	-
 	- ### Finance
 	-
@@ -14,5 +14,9 @@
 	- ### Technology
 	-
 	- ### AI
+- Page metadata
+	- ---
+	  title:
+	  date:
 	-
 	-

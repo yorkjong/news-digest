@@ -1,6 +1,6 @@
 ---
 title: ChatGPT
-tags: AI, DL, GPT
+tags: AI, DL, GPT, LLM
 ---
 
 - ### Principle

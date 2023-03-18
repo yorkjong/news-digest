@@ -17,21 +17,21 @@ tags: AI, AID, Diffusion
 	-
 - LoRA
 	- [Stable Diffusion web UI x Kohya's GUI：訓練 LoRA 模型教學，快速上手最流行的 AI 繪圖訓練方式！](https://mnya.tw/cc/word/1940.html) #AI #AID #SD
-	- [Stable Diffusion webUI Model 模型 安裝, 要真人還是動漫就靠它了](https://www.coolaler.com/index/stable-diffusion-webui-model-%E6%A8%A1%E5%9E%8B%E5%AE%89%E8%A3%9D-%E8%A6%81%E7%9C%9F%E4%BA%BA%E9%82%84%E6%98%AF%E5%8B%95%E6%BC%AB%E5%B0%B1%E9%9D%A0%E5%AE%83%E4%BA%86/) #AI #AID #SD
+	- [Stable Diffusion webUI Model 模型 安裝, 要真人還是動漫就靠它了](https://www.coolaler.com/index/stable-diffusion-webui-model-模型安裝-要真人還是動漫就靠它了) #AI #AID #SD
 	- [Ai绘画半年了，到目前为止，AI绘画让多少画师失业了？未来又会有多少?](https://www.zhihu.com/question/583294094) #AI #AID #SD
-	- [[AI 繪圖教學] 融合台韓風格的超擬真美女 | LoRA  | VAE | Chilloutmix-Ni 模型 | #stablediffusion](https://www.youtube.com/watch?v=HaXb3R2VHP8) #AI #AID #SD
+	- [[AI 繪圖教學] 融合台韓風格的超擬真美女 | LoRA  | VAE | Chilloutmix-Ni 模型](https://www.youtube.com/watch?v=HaXb3R2VHP8) #AI #AID #SD
 	-
 - ControlNet :: OpenPose
-	- [[AI 繪圖教學] 讓超擬真美女做出特定動作(上) | ControlNet  | OpenPos | Chilloutmix-Ni | #stablediffusion](https://www.youtube.com/watch?v=C7IT8hP50P4) #AI #AID #SD
+	- [[AI 繪圖教學] 讓超擬真美女做出特定動作(上) | ControlNet  | OpenPos | Chilloutmix-Ni](https://www.youtube.com/watch?v=C7IT8hP50P4) #AI #AID #SD
 	- [產業生態將大變？Stable Diffusion 超強擴充外掛 ControlNet 亮相，只需上傳草圖、簡易骨架即可生成精美圖像](https://www.incgmedia.com/new-release/stable-diffusion-addon-controlnet) #AI #AID #SD
 	- [[閒聊] Multi-Controlnet AI精準手部控制](https://www.ptt.cc/bbs/C_Chat/M.1677484755.A.7B8.html) #AI #AID #SD
 	-
 - Prompt
 	- [AIGC 圖像生成咒語最強辭庫　Stable Diffusion/NovelAI 魔導書](https://www.pcmarket.com.hk/stable-diffusion-novelai-nai-prompt-cookbooks/) #AI #AID #SD
-	- [[AI 繪圖教學] ChatGPT 結合 AI 繪圖 | 這個世界太好了玩了 | 如何訓練 ChatGPT 寫 Prompt | 魔法咒語 | #stablediffusion | #novelai](https://www.youtube.com/watch?v=B0X54ilrOsQ) #AI #AID #SD #ChatGPT
+	- [[AI 繪圖教學] ChatGPT 結合 AI 繪圖 | 這個世界太好了玩了 | 如何訓練 ChatGPT 寫 Prompt | 魔法咒語](https://www.youtube.com/watch?v=B0X54ilrOsQ) #AI #AID #SD #ChatGPT
 	-
 - Misc
 	- [AI畫圖「Stable Diffusion」快速上手，Midjourney的神級勁敵、開箱即用](https://www.techbang.com/posts/99486-stable-diffusion-goes-live-for-free) #AI #AID #SD
-	- [](https://replicate.com/stability-ai/stable-diffusion)[https://replicate.com/stability-ai/stable-diffusion](https://replicate.com/stability-ai/stable-diffusion) #AI #AID #SD
+	- [stability-ai/stable-diffusion](https://replicate.com/stability-ai/stable-diffusion) #AI #AID #SD
 	- [Stable Diffusion Online](https://stablediffusionweb.com/#demo) #AI #AID #SD
-	- https://zhuanlan.zhihu.com/p/612517660 #AI #AID #SD #WebAssembly #WebGPU
+	- [面向 Web 的机器学习编译突破：纯浏览器运行 Stable Diffusion](https://zhuanlan.zhihu.com/p/612517660) #AI #AID #SD #WebAssembly #WebGPU
