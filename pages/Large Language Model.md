@@ -1,3 +1,9 @@
+---
+title: Large Language Model
+alias: LLM
+tags: AI, DL
+---
+
 - {{embed [[ChatGPT]]}}
 - {{embed [[LLaMA]]}}
 -
