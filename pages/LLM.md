@@ -1,0 +1,6 @@
+- {{embed [[ChatGPT]]}}
+- {{embed [[LLaMA]]}}
+-
+- ### Others
+	- [GitHub - BlinkDL/ChatRWKV: ChatRWKV is like ChatGPT but powered by RWKV (100% RNN) language model, and open source.](https://github.com/BlinkDL/ChatRWKV) #AI #ChatRWKV #RNN #LLM #GitHub
+-
