@@ -4,6 +4,7 @@
 	- [[AI a Week]]
 - Youtube Channel
 	- [[投资TALK君]]
+	- [[北美韭菜日记]]
 	- [[小丹尼]]
 	- [[Alan]]
 	- [[Anastasi]]
