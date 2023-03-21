@@ -7,7 +7,7 @@
 ### Getting Started on Colab
 1. Click [news_clip.ipynb](https://colab.research.google.com/github/YorkJong/news-digest/blob/main/notebooks/news_clip.ipynb) to open it in colab.
 2. Sign in your Google account if required.
-3. Click the ► button to run "Define Function" cell once.
+3. Click the ► button to run "Install" cell once.
 4. Fill parameters of a form.
 5. Manually click ► button (means "start run") to get news with selected categories.
 
