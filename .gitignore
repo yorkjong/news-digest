@@ -1,9 +1,16 @@
 # macOS system files
 .DS_Store
-.trash/
+.Trash/
+.Trashes/
+.Spotlight-V100/
+.fseventsd/
+__MACOSX/
 
 # Thumbnails (macOS)
 ._*
+
+# Thumbnails (Windows)
+Thumbs.db
 
 # Dropbox system files
 .recycle/
