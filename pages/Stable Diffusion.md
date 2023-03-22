@@ -31,7 +31,7 @@ tags: AI, AID, Diffusion
 	- [[AI 繪圖教學] ChatGPT 結合 AI 繪圖 | 這個世界太好了玩了 | 如何訓練 ChatGPT 寫 Prompt | 魔法咒語](https://www.youtube.com/watch?v=B0X54ilrOsQ) #AI #AID #SD #ChatGPT
 	-
 - Misc
-	- [AI畫圖「Stable Diffusion」快速上手，Midjourney的神級勁敵、開箱即用](https://www.techbang.com/posts/99486-stable-diffusion-goes-live-for-free) #AI #AID #SD
+	- [AI畫圖「Stable Diffusion」快速上手，Midjourney的神級勁敵、開箱即用](https://www.techbang.com/posts/99486-stable-diffusion-goes-live-for-free) #AI #AID #SD #Midjourney
 	- [stability-ai/stable-diffusion](https://replicate.com/stability-ai/stable-diffusion) #AI #AID #SD
 	- [Stable Diffusion Online](https://stablediffusionweb.com/#demo) #AI #AID #SD
 	- [面向 Web 的机器学习编译突破：纯浏览器运行 Stable Diffusion](https://zhuanlan.zhihu.com/p/612517660) #AI #AID #SD #WebAssembly #WebGPU
