@@ -7,12 +7,13 @@ __author__ = "York <york.jong@gmail.com>"
 __date__ = "2023/03/20 (initial version) ~ 2023/03/21 (last revision)"
 
 __all__ = [
+    'get_sublist',
     'get_latest_fn',
     'get_file',
     'get_categories',
     'get_lines_of_category',
     'get_lines_of_categories',
-    'get_sublist',
+    'send_to_line_notify',
 ]
 
 import requests
@@ -23,6 +24,72 @@ import re
 repo = "YorkJong/news-digest"
 path = "journals"
 
+
+#------------------------------------------------------------------------------
+# Utility
+#------------------------------------------------------------------------------
+
+def get_sublist(all, first, last):
+    '''Get a subset of a list of given range.
+
+    Args:
+        all (list): The lsit of all items
+        first (str): first item you want
+        last (str): last item you want
+
+    Returns:
+        ([str]) The subset between [first last]
+
+    Examples
+        >>> get_sublist(list('abcdefg'), 'b', 'd')
+        ['b', 'c', 'd']
+    '''
+    ret = []
+    trigger = False
+    for item in all:
+        if item == first:
+            trigger = True
+        if trigger:
+            ret += [item]
+        if item == last:
+            break
+    return ret
+
+
+def split_string(input_str, max_chars=1000):
+    """
+    Splits a string into substrings based on a maximum character limit per
+    substring and the occurrence of '\n' characters.
+
+    Args:
+        input_str (str): The string to be split.
+        max_chars (int): The maximum number of characters per substring.
+
+    Returns:
+        A list of substrings, where each substring has at most 'max_chars'
+        characters and ends with a '\n' character, if one is present.
+    """
+    result = []
+    start = 0
+    end = max_chars
+    while end < len(input_str):
+        # Find the last occurrence of '\n' before the current 'end' position
+        index = input_str.rfind('\n', start, end)
+        if index != -1:
+            # If '\n' is found, set 'end' to the position after '\n'
+            end = index + 1
+        # Add the substring between 'start' and 'end' to the result list
+        result.append(input_str[start:end].strip())
+        start = end
+        end += max_chars
+    # Add the last substring to the result list
+    result.append(input_str[start:].strip())
+    return result
+
+
+#------------------------------------------------------------------------------
+# Functions for news-digest
+#------------------------------------------------------------------------------
 
 def get_latest_fn(path):
     '''Get the filename with latest date.
@@ -148,33 +215,47 @@ def get_lines_of_categories(categories, content,
     return lines
 
 
-def get_sublist(all, first, last):
-    '''Get a subset of a list of given range.
+
+#------------------------------------------------------------------------------
+# Line Notify
+#------------------------------------------------------------------------------
+
+def _send_to_line_notify(msg, token):
+    '''Send a message to a chat room via Line Notify.
 
     Args:
-        all (list): The lsit of all items
-        first (str): first item you want
-        last (str): last item you want
-
-    Returns:
-        ([str]) The subset between [first last]
-
-    Examples
-        >>> get_sublist(list('abcdefg'), 'b', 'd')
-        ['b', 'c', 'd']
+        msg (str): message to send
+        token (str): line access token
     '''
-    ret = []
-    trigger = False
-    for item in all:
-        if item == first:
-            trigger = True
-        if trigger:
-            ret += [item]
-        if item == last:
-            break
-    return ret
+    url = "https://notify-api.line.me/api/notify"
+    headers = {
+        "Authorization": "Bearer " + token,
+        "Content-Type": "application/x-www-form-urlencoded"
+    }
+    payload = {'message': msg}
+
+    # send the message
+    r = requests.post(url, headers=headers, params=payload)
 
 
+def send_to_line_notify(msg, token, max_chars=1000):
+    '''Send a messae to a chat room via Line Notify.
+    This function will split a message to sub-message with the `max_chars`
+    limit.
+
+    Args:
+        msg (str): message to send
+        token (str): line access token
+        max_chars (int): The maximum number of characters per sub-message.
+    '''
+    msgs = split_string(msg, max_chars)
+    for m in msgs:
+        _send_to_notify(m, token)
+
+
+#------------------------------------------------------------------------------
+# Test
+#------------------------------------------------------------------------------
 
 def test():
     fn = get_latest_fn(path)
