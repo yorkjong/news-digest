@@ -238,7 +238,7 @@ def _send_to_line_notify(msg, token):
     r = requests.post(url, headers=headers, params=payload)
 
 
-def send_to_line_notify(msg, token, max_chars=1000):
+def send_to_line_notify(msg, token, max_chars=999):
     '''Send a messae to a chat room via Line Notify.
     This function will split a message to sub-message with the `max_chars`
     limit.
@@ -250,7 +250,7 @@ def send_to_line_notify(msg, token, max_chars=1000):
     '''
     msgs = split_string(msg, max_chars)
     for m in msgs:
-        _send_to_line_notify(m, token)
+        _send_to_line_notify(f'\n{m}', token)
 
 
 #------------------------------------------------------------------------------
