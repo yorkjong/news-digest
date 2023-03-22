@@ -79,11 +79,11 @@ def split_string(input_str, max_chars=1000):
             # If '\n' is found, set 'end' to the position after '\n'
             end = index + 1
         # Add the substring between 'start' and 'end' to the result list
-        result.append(input_str[start:end].strip())
+        result.append(input_str[start:end])
         start = end
         end += max_chars
     # Add the last substring to the result list
-    result.append(input_str[start:].strip())
+    result.append(input_str[start:])
     return result
 
 
