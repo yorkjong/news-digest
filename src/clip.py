@@ -250,7 +250,7 @@ def send_to_line_notify(msg, token, max_chars=1000):
     '''
     msgs = split_string(msg, max_chars)
     for m in msgs:
-        _send_to_notify(m, token)
+        _send_to_line_notify(m, token)
 
 
 #------------------------------------------------------------------------------
