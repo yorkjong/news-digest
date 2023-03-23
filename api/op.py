@@ -5,7 +5,8 @@ __author__ = "York <york.jong@gmail.com>"
 __date__ = "2023/03/23 (initial version) ~ 2023/03/24 (last revision)"
 
 __all__ = [
-    'diff_markdown',
+    'diff_links',
+    'union_links',
 ]
 
 
@@ -32,27 +33,51 @@ def parse_markdown(lines):
     return header_links
 
 
-def build_diff_header_links(old_header_links, new_header_links):
+def diff_header_links(header_links1, header_links2):
     """
-    Builds the diff of the header links between the two markdown files. This is
-    done by iterating over the headers and comparing the link lists of each.
+    Builds the difference (subtraction) of the header links between the two
+    markdown files. This is done by iterating over the headers and comparing
+    the link lists of each.
 
     Args:
-        old_header_links ({str:[str]}): header-links dictionary of old markdown.
-        new_header_links ({str:[str]}): header-links dictionary of new markdown.
+        header_links1 ({str:[str]}): header-links dictionary of new markdown.
+        header_links2 ({str:[str]}): header-links dictionary of old markdown.
 
     Returns:
-        ({str:[str]}): the diff of header links.
+        ({str:[str]}): the diff of the two header links.
     """
-    diff_header_links = {}
-    for header in old_header_links:
-        if header in new_header_links:
-            old_links = old_header_links[header]
-            new_links = new_header_links[header]
-            link_diff = [link for link in new_links if link not in old_links]
+    diff = {}
+    for header in header_links1:
+        if header in header_links2:
+            links1 = header_links1[header]
+            links2 = header_links2[header]
+            link_diff = [link for link in links1 if link not in links2]
             if link_diff:
-                diff_header_links[header] = link_diff
-    return diff_header_links
+                diff[header] = link_diff
+    return diff
+
+
+def union_header_links(header_links1, header_links2):
+    """
+    Builds the union of two header-links of markdown files.
+
+    Args:
+        header_links1 ({str:[str]}): header-links dictionary of new markdown.
+        header_links2 ({str:[str]}): header-links dictionary of old markdown.
+
+    Returns:
+        ({str:[str]}): the union of the two header links.
+    """
+    union = {}
+    for header in header_links1:
+        if header in header_links2:
+            links1 = header_links1[header]
+            links2 = header_links2[header]
+            link_union = links1[:]
+            link_union += [link for link in links2 if link not in links1]
+            if link_union:
+                union[header] = link_union
+    return union
 
 
 def build_markdown_text(header_links):
@@ -74,30 +99,48 @@ def build_markdown_text(header_links):
     return markdown
 
 
-def diff_markdown(old_lines, new_lines):
-    '''Get diff of two news-items markdown text.
+def diff_links(lines1, lines2):
+    '''Get difference (subtraction) of links for two news-items markdown text
+    lines.
 
     Args:
-        old_lines ([str]): a list of lines of the old markdown file.
-        new_lines ([str]): a list of lines of the new markdown file.
+        lines1 ([str]): a list of lines of 1st markdown file.
+        lines2 ([str]): a list of lines of 2nd markdown file.
 
     Returns:
-        ([str]): a list of lines listing link-items in old markdown not in
-        new one.
+        ([str]): a list of lines listing link-items in 1st markdown not in
+        2nd one.
     '''
-    old_header_links = parse_markdown(old_lines)
-    new_header_links = parse_markdown(new_lines)
-    diff = build_diff_header_links(old_header_links, new_header_links)
+    header_links1 = parse_markdown(lines1)
+    header_links2 = parse_markdown(lines2)
+    diff = diff_header_links(header_links1, header_links2)
     return build_markdown_text(diff)
 
 
-def main():
-    with open('test_data/old.md', 'r') as old:
-        old_lines = old.readlines()
-    with open('test_data/new.md', 'r') as new:
-        new_lines = new.readlines()
+def union_links(lines1, lines2):
+    '''Get union of links for two news-items markdown text lines.
 
-    md = diff_markdown(old_lines, new_lines)
+    Args:
+        lines1 ([str]): 1st list of lines of a links markdown file.
+        lines2 ([str]): 2nd list of lines of a links markdown file.
+
+    Returns:
+        ([str]): the union of the two lines.
+    '''
+    header_links1 = parse_markdown(lines1)
+    header_links2 = parse_markdown(lines2)
+    union = union_header_links(header_links1, header_links2)
+    return build_markdown_text(union)
+
+
+def main():
+    with open('test_data/new.md', 'r') as f1:
+        lines1 = f1.readlines()
+    with open('test_data/old.md', 'r') as f2:
+        lines2 = f2.readlines()
+
+    md = diff_links(lines1, lines2)
+    #md = union_links(lines1, lines2)
     print(md)
 
 
