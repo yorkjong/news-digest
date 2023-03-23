@@ -1,6 +1,5 @@
 """
-Builds the diff of the header links between the two markdown files. This is
-done by iterating over the headers and comparing the link lists of each.
+Operations (e.g., difference, union, merge) of links between news journal files.
 """
 __author__ = "York <york.jong@gmail.com>"
 __date__ = "2023/03/23 (initial version) ~ 2023/03/24 (last revision)"
