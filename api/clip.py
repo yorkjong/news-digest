@@ -142,8 +142,7 @@ def get_lines_of_category(kind_name, content, with_hashtags=False):
     if not with_hashtags:
         # Remove hashtags after each link
         lines = text.split('\n')
-        lines = [re.sub(r'\s*#\[\[\S+\]\]', '', line) for line in lines]
-        lines = [re.sub(r'\s*#[\w/]+', '', line) for line in lines]
+        lines = [re.sub(r'\s+#[\S]+', '', line) for line in lines]
         text = '\n'.join(lines)
 
     trigger = False
@@ -192,7 +191,7 @@ def test():
     print(f'{get_categories(content)}\n\n')
 
     content = get_file(fn)
-    lines = get_lines_of_category('Taiwan', content)
+    lines = get_lines_of_category('AI', content)
     print('\n'.join(lines))
 
 
