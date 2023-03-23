@@ -1,10 +1,8 @@
 """
 Utility functions for clipping news of news-digest site.
 """
-__software__ = "News Clip"
-__version__ = "1.0"
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/03/21 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/03/23 (last revision)"
 
 __all__ = [
     'get_sublist',
@@ -13,7 +11,6 @@ __all__ = [
     'get_categories',
     'get_lines_of_category',
     'get_lines_of_categories',
-    'send_to_line_notify',
 ]
 
 import requests
@@ -26,7 +23,7 @@ path = "journals"
 
 
 #------------------------------------------------------------------------------
-# Utility
+# Utility Functions
 #------------------------------------------------------------------------------
 
 def get_sublist(all, first, last):
@@ -55,36 +52,6 @@ def get_sublist(all, first, last):
             break
     return ret
 
-
-def split_string(input_str, max_chars=1000):
-    """
-    Splits a string into substrings based on a maximum character limit per
-    substring and the occurrence of '\n' characters.
-
-    Args:
-        input_str (str): The string to be split.
-        max_chars (int): The maximum number of characters per substring.
-
-    Returns:
-        A list of substrings, where each substring has at most 'max_chars'
-        characters and ends with a '\n' character, if one is present.
-    """
-    result = []
-    start = 0
-    end = max_chars
-    while end < len(input_str):
-        # Find the last occurrence of '\n' before the current 'end' position
-        index = input_str.rfind('\n', start, end)
-        if index != -1:
-            # If '\n' is found, set 'end' to the position after '\n'
-            end = index + 1
-        # Add the substring between 'start' and 'end' to the result list
-        result.append(input_str[start:end])
-        start = end
-        end += max_chars
-    # Add the last substring to the result list
-    result.append(input_str[start:])
-    return result
 
 
 #------------------------------------------------------------------------------
@@ -213,44 +180,6 @@ def get_lines_of_categories(categories, content,
             lines += [f'### {category}']
         lines += get_lines_of_category(category, content, with_hashtags)
     return lines
-
-
-
-#------------------------------------------------------------------------------
-# Line Notify
-#------------------------------------------------------------------------------
-
-def _send_to_line_notify(msg, token):
-    '''Send a message to a chat room via Line Notify.
-
-    Args:
-        msg (str): message to send
-        token (str): line access token
-    '''
-    url = "https://notify-api.line.me/api/notify"
-    headers = {
-        "Authorization": "Bearer " + token,
-        "Content-Type": "application/x-www-form-urlencoded"
-    }
-    payload = {'message': msg}
-
-    # send the message
-    r = requests.post(url, headers=headers, params=payload)
-
-
-def send_to_line_notify(msg, token, max_chars=999):
-    '''Send a messae to a chat room via Line Notify.
-    This function will split a message to sub-message with the `max_chars`
-    limit.
-
-    Args:
-        msg (str): message to send
-        token (str): line access token
-        max_chars (int): The maximum number of characters per sub-message.
-    '''
-    msgs = split_string(msg, max_chars)
-    for m in msgs:
-        _send_to_line_notify(f'\n{m}', token)
 
 
 #------------------------------------------------------------------------------
