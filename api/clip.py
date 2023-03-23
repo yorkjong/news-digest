@@ -2,15 +2,18 @@
 Utility functions for clipping news of news-digest site.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/03/23 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/03/24 (last revision)"
 
 __all__ = [
-    'get_sublist',
-    'get_latest_fn',
-    'get_file',
+    'get_all_journal_filenames',
+    'get_recent_journal_filenames',
+    'get_latest_journal_filename',
+    'get_latest_journal',
+    'get_journal',
     'get_categories',
     'get_lines_of_category',
     'get_lines_of_categories',
+    'get_sublist',
 ]
 
 import requests
@@ -19,7 +22,6 @@ import re
 
 # Assign GitHub repository and path of "journals" folder
 repo = "YorkJong/news-digest"
-path = "journals"
 
 
 #------------------------------------------------------------------------------
@@ -53,20 +55,17 @@ def get_sublist(all, first, last):
     return ret
 
 
-
 #------------------------------------------------------------------------------
 # Functions for news-digest
 #------------------------------------------------------------------------------
 
-def get_latest_fn(path):
-    '''Get the filename with latest date.
-
-    Args:
-        path (str): the path of journals folder to store YYYY_MM_DD.md files.
+def get_all_journal_filenames():
+    '''Get all filenames of journals.
 
     Returns:
-        (str): the filename with latest date.
+        ([str]): a list of filenames with YYYY_MM_DD.md format.
     '''
+    path = 'journals'
     api_url = f"https://api.github.com/repos/{repo}/contents/{path}"
 
     # Request to the GitHub API to get all the archives under the journal folder
@@ -74,19 +73,42 @@ def get_latest_fn(path):
     if response.status_code == 200:
         content = response.json()
         pattern = r'^\d{4}_\d{2}_\d{2}\.md$'
-        date_list = [f['name'] for f in content if re.match(pattern, f['name'])]
-
-        # Find the filename with the latest date
-        latest_date = max(date_list)
-        #latest_date = sorted(date_list)[-1]
-        return latest_date
+        return [f['name'] for f in content if re.match(pattern, f['name'])]
     else:
         print(f"Error {response.status_code}: {response.reason}")
-        return ""
+        return []
 
 
-def get_file(fn):
-    '''Get a file content of the news-digest site.
+def get_recent_journal_filenames(days=7):
+    '''Get filenames of recent journals.
+
+    Args:
+        days (int): max number of the recently days.
+
+    Returns:
+        ([str]): a list of filenames with YYYY_MM_DD.md format.
+    '''
+    return sorted(get_all_journal_filenames())[-days:]
+
+
+def get_latest_journal_filename():
+    '''Get the filename (YYYY_MM_DD.md) of the latest jurnal.
+
+    Returns:
+        (str): the filename with latest date.
+    '''
+    return max(get_all_journal_filenames())
+
+
+def get_latest_journal():
+    '''Get the content of latest journal.
+    '''
+    fn = get_latest_journal_filename()
+    return get_journal(fn)
+
+
+def get_journal(fn):
+    '''Get the content of a journal file.
 
     Args:
         fn (str): the filename to get.
@@ -94,6 +116,7 @@ def get_file(fn):
     Returns:
         (str): the total content of the file.
     '''
+    path = 'journals'
     file_url = f"https://raw.githubusercontent.com/{repo}/main/{path}/{fn}"
 
     response = requests.get(file_url)
@@ -105,7 +128,7 @@ def get_file(fn):
 
 
 def get_categories(content):
-    '''Get category names of the content of news-digest.
+    '''Get category names of the content of a news-digest journal.
 
     Args:
         content (str): the content of a YYYY_MM_DD.md news file.
@@ -122,11 +145,11 @@ def get_categories(content):
     return categorys
 
 
-def get_lines_of_category(kind_name, content, with_hashtags=False):
-    '''Get links of given kind.
+def get_lines_of_category(category, content, with_hashtags=False):
+    '''Get links of given category.
 
     Args:
-        kind_name (str): the header-text of a category.
+        category (str): the header-text of a category.
         content (str): the content of a YYYY_MM_DD.md news file.
         with_hashtags (bool): decide if keep the hashtags.
 
@@ -135,7 +158,7 @@ def get_lines_of_category(kind_name, content, with_hashtags=False):
     '''
     text = content
 
-    header = kind_name
+    header = category
     if not header.startswith("### "):
         header = f'### {header}'
 
@@ -185,16 +208,16 @@ def get_lines_of_categories(categories, content,
 # Test
 #------------------------------------------------------------------------------
 
-def test():
-    fn = get_latest_fn(path)
-    content = get_file(fn)
-    print(f'{get_categories(content)}\n\n')
+def main():
+    print(get_recent_journal_filenames())
+    print(get_latest_journal_filename())
+    content = get_latest_journal()
+    print(f'\n\n{get_categories(content)}\n')
 
-    content = get_file(fn)
     lines = get_lines_of_category('AI', content)
     print('\n'.join(lines))
 
 
 if __name__ == '__main__':
-    test()
+    main()
 
