@@ -26,6 +26,8 @@ jobs:
         uses: pengx17/logseq-publish@v0.1
       - name: add a nojekyll file # to make sure asset paths are correctly identified
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
+      - name: remove trace.zip
+        run: rm $GITHUB_WORKSPACE/www/trace.zip
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
         with:
