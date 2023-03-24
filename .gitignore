@@ -16,7 +16,7 @@ Thumbs.db
 .recycle/
 
 # python
-*.pyc
+__pycache__/
 
 # Logseq back-up files
 bak/
