@@ -3,6 +3,10 @@
 
 - **Website:** [york-news-digest.netlify.app](https://york-news-digest.netlify.app) (or [news-digest.vercel.app](https://news-digest.vercel.app))
 - **Bug reports:** [github.com/YorkJong/news-digest/issues](https://github.com/YorkJong/news-digest/issues)
+- **Tools:**
+  - [news_clip.ipynb](https://colab.research.google.com/github/YorkJong/news-digest/blob/main/notebooks/news_clip.ipynb) -- clip latest news.
+  - [news_query.ipynb](https://colab.research.google.com/github/YorkJong/news-digest/blob/main/notebooks/news_query.ipynb) -- query news across upto 30 days
+
 
 ### Getting Started on Colab
 
