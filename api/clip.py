@@ -1,5 +1,5 @@
 """
-Utility functions for clipping news of news-digest site.
+News clipping by categories.
 """
 __author__ = "York <york.jong@gmail.com>"
 __date__ = "2023/03/20 (initial version) ~ 2023/03/24 (last revision)"
@@ -20,44 +20,13 @@ import requests
 import re
 
 
-# Assign GitHub repository and path of "journals" folder
-repo = "YorkJong/news-digest"
-
-
 #------------------------------------------------------------------------------
-# Utility Functions
+# Journals
 #------------------------------------------------------------------------------
 
-def get_sublist(all, first, last):
-    '''Get a subset of a list of given range.
+repo = "YorkJong/news-digest"   # repository
+path = 'journals'               # path of "journals" folder
 
-    Args:
-        all (list): The lsit of all items
-        first (str): first item you want
-        last (str): last item you want
-
-    Returns:
-        ([str]) The subset between [first last]
-
-    Examples
-        >>> get_sublist(list('abcdefg'), 'b', 'd')
-        ['b', 'c', 'd']
-    '''
-    ret = []
-    trigger = False
-    for item in all:
-        if item == first:
-            trigger = True
-        if trigger:
-            ret += [item]
-        if item == last:
-            break
-    return ret
-
-
-#------------------------------------------------------------------------------
-# Functions for news-digest
-#------------------------------------------------------------------------------
 
 def get_all_journal_filenames():
     '''Get all filenames of journals.
@@ -65,7 +34,6 @@ def get_all_journal_filenames():
     Returns:
         ([str]): a list of filenames with YYYY_MM_DD.md format.
     '''
-    path = 'journals'
     api_url = f"https://api.github.com/repos/{repo}/contents/{path}"
 
     # Request to the GitHub API to get all the archives under the journal folder
@@ -83,7 +51,7 @@ def get_recent_journal_filenames(days=7):
     '''Get filenames of recent journals.
 
     Args:
-        days (int): max number of the recently days.
+        days (int): max number of the recent days.
 
     Returns:
         ([str]): a list of filenames with YYYY_MM_DD.md format.
@@ -116,7 +84,6 @@ def get_journal(fn):
     Returns:
         (str): the total content of the file.
     '''
-    path = 'journals'
     file_url = f"https://raw.githubusercontent.com/{repo}/main/{path}/{fn}"
 
     response = requests.get(file_url)
@@ -126,6 +93,10 @@ def get_journal(fn):
         print(f"Error {response.status_code}: {response.reason}")
     return ""
 
+
+#------------------------------------------------------------------------------
+# Categories
+#------------------------------------------------------------------------------
 
 def get_categories(content):
     '''Get category names of the content of a news-digest journal.
@@ -202,6 +173,37 @@ def get_lines_of_categories(categories, content,
             lines += [f'### {category}']
         lines += get_lines_of_category(category, content, with_hashtags)
     return lines
+
+
+#------------------------------------------------------------------------------
+# Utility Functions
+#------------------------------------------------------------------------------
+
+def get_sublist(all, first, last):
+    '''Get a subset of a list of given range.
+
+    Args:
+        all (list): The lsit of all items
+        first (str): first item you want
+        last (str): last item you want
+
+    Returns:
+        ([str]) The subset between [first last]
+
+    Examples
+        >>> get_sublist(list('abcdefg'), 'b', 'd')
+        ['b', 'c', 'd']
+    '''
+    ret = []
+    trigger = False
+    for item in all:
+        if item == first:
+            trigger = True
+        if trigger:
+            ret += [item]
+        if item == last:
+            break
+    return ret
 
 
 #------------------------------------------------------------------------------
