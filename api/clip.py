@@ -1,5 +1,5 @@
 """
-News clipping by categories.
+News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
 __date__ = "2023/03/20 (initial version) ~ 2023/03/24 (last revision)"
