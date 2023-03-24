@@ -69,14 +69,18 @@ def union_header_links(header_links1, header_links2):
         ({str:[str]}): the union of the two header:links dictionaries.
     """
     union = {}
-    for header in header_links1:
-        if header in header_links2:
+    #header_links = header_links1 | header_links2
+    header_links = {**header_links1, **header_links2}
+    for header in header_links:
+        if header in header_links1 and header in header_links2:
             links1 = header_links1[header]
             links2 = header_links2[header]
             link_union = links1[:]
             link_union += [link for link in links2 if link not in links1]
             if link_union:
                 union[header] = link_union
+        else:
+            union[header] = header_links[header]
     return union
 
 
