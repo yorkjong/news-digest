@@ -10,6 +10,7 @@ __all__ = [
     'get_latest_journal_filename',
     'get_latest_journal',
     'get_journal',
+    'merge_recent_journals',
     'get_categories',
     'get_lines_of_category',
     'get_lines_of_categories',
@@ -19,6 +20,7 @@ __all__ = [
 import requests
 import re
 
+import op
 
 #------------------------------------------------------------------------------
 # Journals
@@ -92,6 +94,24 @@ def get_journal(fn):
     else:
         print(f"Error {response.status_code}: {response.reason}")
     return ""
+
+#------------------------------------------------------------------------------
+
+def merge_recent_journals(days=7):
+    '''Merge recent journal files.
+
+    Args:
+        days (int): max number of the recent days.
+
+    Returns:
+        (str): the total content of the files.
+    '''
+    fns = get_recent_journal_filenames(days)
+    lines1 = []
+    for fn in fns:
+        lines2 = get_journal(fn)
+        lines1 = op.union_links(lines1, lines2)
+    return '\n'.join(lines1)
 
 
 #------------------------------------------------------------------------------
