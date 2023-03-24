@@ -19,7 +19,7 @@
 - [新光保全攜手元太科技 全台首創推動「AED收納箱電子紙」](https://m.cnyes.com/news/id/5123049) #TW #元太
 -
 ### Crypto
-- [USDC 危機後的穩定幣市場：「購買力」跌至短期低點](https://blockcast.it/2023/03/22/what-happened-to-the-stablecoin-market-after-usdc-breaks-dollar-peg/) #Crytpo #USDC
+- [USDC 危機後的穩定幣市場：「購買力」跌至短期低點](https://blockcast.it/2023/03/22/what-happened-to-the-stablecoin-market-after-usdc-breaks-dollar-peg/) #Crypto #USDC
 - [比特幣全網未確認交易數量為53625筆](https://news.cnyes.com/news/id/5123146) #Crypto #BTC
 - [方舟投資小賣Coinbase股票，Cathie Wood解釋比特幣上漲論點卻遭質疑](https://abmedia.io/20230322-cathie-woods-ark-etf-sells-13m-in-coinbase) #ARK #COIN #Crypto
 -
