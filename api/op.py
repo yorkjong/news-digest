@@ -12,14 +12,14 @@ __all__ = [
 
 def parse_markdown(lines):
     """
-    Parses the markdown file into a dictionary where the keys are header strings
-    and the values are lists of link strings.
+    Parses the lines of a markdown text into a dictionary where the keys are
+    header strings and the values are lists of link strings.
 
     Args:
-        lines (list): a list of lines of a markdown content.
+        lines (list): a list of lines of a markdown text.
 
     Returns:
-        ({str:[str]}): a header-links dictionary.
+        ({str:[str]}): the header:links dictionary from given markdown text.
     """
     header_links = {}
     header = None
@@ -35,16 +35,15 @@ def parse_markdown(lines):
 
 def diff_header_links(header_links1, header_links2):
     """
-    Builds the difference (subtraction) of the header links between the two
-    markdown files. This is done by iterating over the headers and comparing
-    the link lists of each.
+    Builds the difference (subtraction) of two header:links dictionary of
+    markdown text.
 
     Args:
-        header_links1 ({str:[str]}): header-links dictionary of new markdown.
-        header_links2 ({str:[str]}): header-links dictionary of old markdown.
+        header_links1 ({str:[str]}): 1st header:links dictionary of markdown text.
+        header_links2 ({str:[str]}): 2nd header:links dictionary of markdown text.
 
     Returns:
-        ({str:[str]}): the diff of the two header links.
+        ({str:[str]}): the difference of the two header-links dictionaries.
     """
     diff = {}
     for header in header_links1:
@@ -59,14 +58,14 @@ def diff_header_links(header_links1, header_links2):
 
 def union_header_links(header_links1, header_links2):
     """
-    Builds the union of two header-links of markdown files.
+    Builds the union of two header:links dictionary of markdown text.
 
     Args:
-        header_links1 ({str:[str]}): header-links dictionary of new markdown.
-        header_links2 ({str:[str]}): header-links dictionary of old markdown.
+        header_links1 ({str:[str]}): 1st header:links dictionary of markdown text.
+        header_links2 ({str:[str]}): 2nd header:links dictionary of markdown text.
 
     Returns:
-        ({str:[str]}): the union of the two header links.
+        ({str:[str]}): the union of the two header:links dictionaries.
     """
     union = {}
     for header in header_links1:
@@ -82,13 +81,13 @@ def union_header_links(header_links1, header_links2):
 
 def build_markdown_text(header_links):
     """
-    Builds the markdown file from the header links dictionary.
+    Builds the markdown file from a header:links dictionary.
 
     Args:
-        header_links ({str:[str]}): a header-links dictionary.
+        header_links ({str:[str]}): a header:links dictionary.
 
     Returns:
-        (str): the markdown text.
+        (str): the built markdown text.
     """
     markdown = ''
     for header, links in header_links.items():
@@ -100,16 +99,15 @@ def build_markdown_text(header_links):
 
 
 def diff_links(lines1, lines2):
-    '''Get difference (subtraction) of links for two news-items markdown text
-    lines.
+    '''Get difference (subtraction) of links for two markdown lines. Each markdown
+    contains a sequence of header-with-links.
 
     Args:
-        lines1 ([str]): a list of lines of 1st markdown file.
-        lines2 ([str]): a list of lines of 2nd markdown file.
+        lines1 ([str]): a sequence of lines of 1st markdown text.
+        lines2 ([str]): a sequence of lines of 2nd markdown text.
 
     Returns:
-        ([str]): a list of lines listing link-items in 1st markdown not in
-        2nd one.
+        ([str]): the difference of the two lines of header-with-links sequence.
     '''
     header_links1 = parse_markdown(lines1)
     header_links2 = parse_markdown(lines2)
@@ -118,14 +116,15 @@ def diff_links(lines1, lines2):
 
 
 def union_links(lines1, lines2):
-    '''Get union of links for two news-items markdown text lines.
+    '''Get union of links for two markdown lines. Each markdown contains a sequence
+    of header-with-links.
 
     Args:
-        lines1 ([str]): 1st list of lines of a links markdown file.
-        lines2 ([str]): 2nd list of lines of a links markdown file.
+        lines1 ([str]): 1st sequence of lines of a links markdown text.
+        lines2 ([str]): 2nd sequence of lines of a links markdown text.
 
     Returns:
-        ([str]): the union of the two lines.
+        ([str]): the union of the two lines of header-with-links sequence.
     '''
     header_links1 = parse_markdown(lines1)
     header_links2 = parse_markdown(lines2)
