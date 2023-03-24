@@ -17,7 +17,7 @@ def parse_markdown(lines):
     header strings and the values are lists of link strings.
 
     Args:
-        lines (list): a list of lines of a markdown text.
+        lines ([str]): a list of lines of a markdown text.
 
     Returns:
         ({str:[str]}): the header:links dictionary from given markdown text.
@@ -80,23 +80,23 @@ def union_header_links(header_links1, header_links2):
     return union
 
 
-def build_markdown_text(header_links):
+def build_markdown_lines(header_links):
     """
-    Builds the markdown file from a header:links dictionary.
+    Builds the markdown lines from a header:links dictionary.
 
     Args:
         header_links ({str:[str]}): a header:links dictionary.
 
     Returns:
-        (str): the built markdown text.
+        ([str]): the lines of the built markdown text.
     """
-    markdown = ''
+    lines = []
     for header, links in header_links.items():
-        markdown += f'{header}\n'
+        lines += [f'{header}']
         for link in links:
-            markdown += f'{link}\n'
-        markdown += '\n'
-    return markdown
+            lines += [f'{link}']
+        lines += ['']
+    return lines
 
 
 def diff_links(lines1, lines2):
@@ -113,7 +113,7 @@ def diff_links(lines1, lines2):
     header_links1 = parse_markdown(lines1)
     header_links2 = parse_markdown(lines2)
     diff = diff_header_links(header_links1, header_links2)
-    return build_markdown_text(diff)
+    return build_markdown_lines(diff)
 
 
 def union_links(lines1, lines2):
@@ -130,7 +130,7 @@ def union_links(lines1, lines2):
     header_links1 = parse_markdown(lines1)
     header_links2 = parse_markdown(lines2)
     union = union_header_links(header_links1, header_links2)
-    return build_markdown_text(union)
+    return build_markdown_lines(union)
 
 
 def main():
@@ -139,8 +139,9 @@ def main():
     with open('test_data/old.md', 'r') as f2:
         lines2 = f2.readlines()
 
-    md = diff_links(lines1, lines2)
-    #md = union_links(lines1, lines2)
+    lines = diff_links(lines1, lines2)
+    #lines = union_links(lines1, lines2)
+    md = '\n'.join(lines)
     print(md)
 
 
