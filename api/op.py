@@ -1,6 +1,6 @@
 """
-Operations (e.g., difference, union, merge) of links between markdown lines with
-a sequence of header:links structures.
+Operations (e.g., difference, union) of links between markdown lines with a
+sequence of header:links structures.
 """
 __author__ = "York <york.jong@gmail.com>"
 __date__ = "2023/03/23 (initial version) ~ 2023/03/24 (last revision)"
