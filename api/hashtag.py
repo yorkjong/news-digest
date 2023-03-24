@@ -7,7 +7,7 @@ __date__ = "2023/03/24 (initial version) ~ 2023/03/24 (last revision)"
 __all__ = [
     'get_hashtags',
     'get_lines_with_any_hashtag',
-    'get_lines_with_all_hashtag',
+    'get_lines_with_all_hashtags',
 ]
 
 
