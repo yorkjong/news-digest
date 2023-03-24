@@ -25,6 +25,8 @@ def parse_markdown(lines):
     header_links = {}
     header = None
     for line in lines:
+        if line.startswith('- ### '):
+            line = line[2:]
         if line.startswith('### '):
             header = line.strip()
             header_links[header] = []
