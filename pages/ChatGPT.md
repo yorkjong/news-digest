@@ -12,6 +12,7 @@ tags: AI, DL, GPT, LLM
 	- [ChatGPT技术原理解析：从RL之PPO算法、RLHF到GPT-N、instructGPT](https://blog.csdn.net/v_JULY_v/article/details/128579457) #ChatGPT #AI
 	-
 - ### Application
+	- [ChatGPT插件开发指南](https://juejin.cn/post/7214053344810074171) #ChatGPT #AI #Plugin #Python #☆
 	- [AIPRM for ChatGPT 集結超過 1,000 個 prompt 範本，瞬間變成 ChatGPT 專家的免費擴充功能](https://www.kocpc.com.tw/archives/483360) #ChatGPT #AI #☆
 	- [ChatGPT Sidebar 讓你在網頁側邊就能跟 ChatGPT 對談，任何網頁都支援](https://www.kocpc.com.tw/archives/483538) #ChatGPT #AI
 	- [ChatGPT 捷徑建立教學！點捷徑就能問 AI，也能叫 Siri 幫忙問問題](https://www.kocpc.com.tw/archives/483756) #ChatGPT #AI
@@ -21,3 +22,4 @@ tags: AI, DL, GPT, LLM
 	- [ChatGPT 自動化交易教學文，協助你實現自動化投資理財！(實測有效)](https://www.explainthis.io/zh-hant/chatgpt/trading?fbclid=IwAR1DV3zw6c1ksBHXlN2dMSFAibUDIVOmHwRafeT3VfHx5J-izgULOozEQwU) #ChatGPT #Crypto #Binance #AI
 	- [ChatGPT替代品OpenChatKit來了！由前OpenAI團隊打造，在GitHub上開源發表](https://www.techbang.com/posts/104629-chatgpt-open-source-is-here-out-of-the-box-founded-by-the) #ChatGPT #AI #OpenAI
 	- [ChatGPT for Google 超強擴充功能：補充搜尋結果、免開網站就能聊](https://applealmond.com/posts/178315) #ChatGPT #AI
+	-
