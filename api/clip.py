@@ -108,8 +108,8 @@ def merge_recent_journals(days=7):
     '''
     fns = get_recent_journal_filenames(days)
     lines1 = []
-    for fn in fns:
-        lines2 = get_journal(fn)
+    for fn in reversed(fns):
+        lines2 = get_journal(fn).split('\n')
         lines1 = op.union_links(lines1, lines2)
     return '\n'.join(lines1)
 
@@ -231,14 +231,18 @@ def get_sublist(all, first, last):
 #------------------------------------------------------------------------------
 
 def main():
-    print(get_recent_journal_filenames())
-    print(get_latest_journal_filename())
-    content = get_latest_journal()
+    #print(get_recent_journal_filenames())
+    #print(get_latest_journal_filename())
+    #content = get_latest_journal()
+    #print(f'\n\n{get_categories(content)}\n')
+
+    #lines = get_lines_of_category('AI', content)
+    #print('\n'.join(lines))
+
+    print(get_recent_journal_filenames(2))
+    content = merge_recent_journals(2)
     print(f'\n\n{get_categories(content)}\n')
-
-    lines = get_lines_of_category('AI', content)
-    print('\n'.join(lines))
-
+    print(content)
 
 if __name__ == '__main__':
     main()
