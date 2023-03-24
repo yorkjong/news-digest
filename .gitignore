@@ -15,6 +15,9 @@ Thumbs.db
 # Dropbox system files
 .recycle/
 
+# python
+*.pyc
+
 # Logseq back-up files
 bak/
 
