@@ -129,10 +129,10 @@ def get_categories(content):
     '''
     lines = content.split('\n')
     categorys = []
-    tag = '### '
+    mark = '### '
     for line in lines:
-        if line.startswith(tag):
-            categorys += [line[len(tag):]]
+        if line.startswith(mark):
+            categorys += [line[len(mark):]]
     return categorys
 
 
