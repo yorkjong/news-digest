@@ -19,7 +19,7 @@
    2. Fill parameters of a form.
    3. Manually click ► button (means "start run") to get news with selected categories.
 
-<video src="https://user-images.githubusercontent.com/11453572/226691730-013aebfd-00fd-4f9d-b2c1-e3cc35606eff.mov" controls="controls" style="max-width: 730px;">
+<video src="https://user-images.githubusercontent.com/11453572/227774236-4a16750e-afb3-411e-80cc-a9b079113a78.mov" controls="controls" style="max-width: 730px;">
 </video>
 
 ### Dive into on the news-digest Website
@@ -33,3 +33,10 @@
 
 - I used [pengx17/logseq-publish](https://github.com/pengx17/logseq-publish) to publish the Logseq pages and to depoly it to the GitHub Pages (i.e., [yorkjong.github.io/news-digest](https://yorkjong.github.io/news-digest)).
 - I used [Netlify](https://netlify.app) to save backup of the site as [york-news-digest.netlify.app](https://york-news-digest.netlify.app)
+
+#### Demo of applying Line Notify
+
+<video src="https://user-images.githubusercontent.com/11453572/227774419-fe4c7e47-b10a-4c9d-9efa-267997ebb641.mov" controls="controls" style="max-width: 730px;">
+</video>
+
+![Line](https://user-images.githubusercontent.com/11453572/227774718-11c5cd26-b896-4c77-935c-7af1ff04ed96.jpg)
