@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/03/24 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/03/26 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -168,7 +168,7 @@ def get_lines_of_category(category, content, with_hashtags=False):
         if line.startswith("###"):
             if trigger:
                 break
-        if trigger:
+        if trigger and line.startswith('- ['):
             lines += [line]
     return lines
 
@@ -189,9 +189,13 @@ def get_lines_of_categories(categories, content,
     '''
     lines = []
     for category in categories:
+        cate_lines = get_lines_of_category(category, content, with_hashtags)
+        if not cate_lines:
+            continue
         if with_headers:
             lines += [f'### {category}']
-        lines += get_lines_of_category(category, content, with_hashtags)
+        lines += cate_lines
+        lines += ['']
     return lines
 
 
@@ -230,19 +234,32 @@ def get_sublist(all, first, last):
 # Test
 #------------------------------------------------------------------------------
 
-def main():
-    #print(get_recent_journal_filenames())
-    #print(get_latest_journal_filename())
-    #content = get_latest_journal()
-    #print(f'\n\n{get_categories(content)}\n')
+def test_get_latest_journalXX():
+    print(get_latest_journal_filename())
+    content = get_latest_journal()
+    print(f'\n\n{get_categories(content)}\n')
 
-    #lines = get_lines_of_category('AI', content)
-    #print('\n'.join(lines))
+def test_get_lines_of_categories():
+    content = get_latest_journal()
+    lines = get_lines_of_categories(('ABC', 'XYZ'), content)
+    print('\n'.join(lines))
+    print(f"{'-'*80}\n")
+    lines = get_lines_of_categories(('AI', 'Tesla'), content)
+    print('\n'.join(lines))
 
+def test_get_merge_recent_journals():
     print(get_recent_journal_filenames(2))
     content = merge_recent_journals(2)
     print(f'\n\n{get_categories(content)}\n')
     print(content)
+
+def main():
+    test_get_latest_journalXX()
+    print(f"{'-'*80}\n")
+    test_get_lines_of_categories()
+    print(f"{'-'*80}\n")
+    test_get_merge_recent_journals()
+
 
 if __name__ == '__main__':
     main()
