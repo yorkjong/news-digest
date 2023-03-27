@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/03/26 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/03/27 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -149,10 +149,6 @@ def get_lines_of_category(category, content, with_hashtags=False):
     '''
     text = content
 
-    header = category
-    if not header.startswith("### "):
-        header = f'### {header}'
-
     if not with_hashtags:
         # Remove hashtags after each link
         lines = text.split('\n')
@@ -162,12 +158,15 @@ def get_lines_of_category(category, content, with_hashtags=False):
     trigger = False
     lines = []
     for line in text.split('\n'):
-        if header in line:
+        # match the begin of a category
+        if line.startswith('###') and category in line:
             trigger = True
             continue
+        # match the end of a category
         if line.startswith("###"):
             if trigger:
                 break
+        # match a link-line
         if trigger and line.startswith('- ['):
             lines += [line]
     return lines
