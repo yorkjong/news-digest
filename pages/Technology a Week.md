@@ -1,2 +1,4 @@
 - {{query (and [[tech]] (between :-7d :today))}}
+- {{query (and [[science]] (not [[tech]]) (between :-7d :today))}}
+- {{query (and [[health]] (not [[tech]]) (not [[science]]) (between :-7d :today))}}
 -

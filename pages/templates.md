@@ -11,7 +11,7 @@
 	-
 	- ### Crypto
 	-
-	- ### Technology
+	- ### Science & Technology
 	-
 	- ### AI
 - Page metadata
