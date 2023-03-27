@@ -2,7 +2,7 @@
 Hashtag querying
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/24 (initial version) ~ 2023/03/24 (last revision)"
+__date__ = "2023/03/24 (initial version) ~ 2023/03/27 (last revision)"
 
 __all__ = [
     'get_hashtags',
@@ -32,7 +32,7 @@ def get_hashtags(lines):
 
 
 def get_lines_with_any_hashtag(lines, query_tags):
-    '''Gets lines with any given hashtags.
+    '''Gets lines with any hashtag in given guery hashtags.
 
     Args:
         lines ([str]): a list of lines of markdown text.
@@ -41,17 +41,20 @@ def get_lines_with_any_hashtag(lines, query_tags):
     Retruns:
         ([str]): a list of lines with any given hashtags.
     '''
+    def is_line_with_any_hashtag(line):
+        line_tags = re.findall(r'\s+(#[\S]+)', line)
+        for t in line_tags:
+            return t in query_tags
+        return False
+
     out_lines = []
 
     for line in lines:
         if not line.startswith('- ['):
             out_lines.append(line)
             continue
-        line_tags = re.findall(r'\s+(#[\S]+)', line)
-        for t in line_tags:
-            if t in query_tags:
-                out_lines.append(line)
-                continue
+        if is_line_with_any_hashtag(line):
+            out_lines.append(line)
 
     return out_lines
 
@@ -66,6 +69,10 @@ def get_lines_with_all_hashtags(lines, query_tags):
     Retruns:
         ([str]): a list of lines with all given hashtags.
     '''
+    def is_line_with_all_hashtags(line):
+        line_tags = re.findall(r'\s+(#[\S]+)', line)
+        return query_tags.issubset(line_tags)
+
     out_lines = []
     query_tags = set(query_tags)
 
@@ -73,8 +80,7 @@ def get_lines_with_all_hashtags(lines, query_tags):
         if not line.startswith('- ['):
             out_lines.append(line)
             continue
-        line_tags = re.findall(r'\s+(#[\S]+)', line)
-        if query_tags.issubset(line_tags):
+        if is_line_with_all_hashtags(line):
             out_lines.append(line)
 
     return out_lines
@@ -85,7 +91,9 @@ def main():
     content = clip.merge_recent_journals(3)
     lines = clip.get_lines_of_categories(
                 ['AI', 'Tesla', 'Tech'], content, with_hashtags=True)
-    #print('\n'.join(get_lines_with_any_hashtag(lines, ['#OpenAI', '#ChatGPT'])))
+
+    print('\n'.join(get_lines_with_any_hashtag(lines, ['#OpenAI', '#ChatGPT'])))
+    print(f"{'-'*80}\n")
     print('\n'.join(get_lines_with_all_hashtags(lines, ['#NVDA', '#semicon'])))
 
 
