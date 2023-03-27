@@ -35,3 +35,9 @@ tags: AI, AID, Diffusion
 	- [stability-ai/stable-diffusion](https://replicate.com/stability-ai/stable-diffusion) #AI #AID #SD
 	- [Stable Diffusion Online](https://stablediffusionweb.com/#demo) #AI #AID #SD
 	- [面向 Web 的机器学习编译突破：纯浏览器运行 Stable Diffusion](https://zhuanlan.zhihu.com/p/612517660) #AI #AID #SD #WebAssembly #WebGPU
+-
+- Principle
+	- [【生成式AI】速覽圖像生成常見模型](https://www.youtube.com/watch?v=z83Edfvgd9g) #YouTube #HungYiLee #AID #Diffusion
+	- [【生成式AI】淺談圖像生成模型 Diffusion Model 原理](https://www.youtube.com/watch?v=azBugJzmz-o) #YouTube #HungYiLee #AID #Diffusion
+	- [【生成式AI】Stable Diffusion、DALL-E、Imagen 背後共同的套路](https://www.youtube.com/watch?v=JbfcAaBT66U) #YouTube #HungYiLee #SD #AID
+	-

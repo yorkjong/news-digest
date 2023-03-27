@@ -6,8 +6,8 @@ tags: AI, Diffusion
 
 - [[Stable Diffusion]]
 - Generative AI 原理
-	- [【生成式AI】速覽圖像生成常見模型](https://www.youtube.com/watch?v=z83Edfvgd9g) #YouTube #Hung-yiLee #AID
-	- [【生成式AI】Stable Diffusion、DALL-E、Imagen 背後共同的套路](https://www.youtube.com/watch?v=JbfcAaBT66U) #YouTube #Hung-yiLee #SD #Diffusion #AID
+	- [【生成式AI】速覽圖像生成常見模型](https://www.youtube.com/watch?v=z83Edfvgd9g) #YouTube #HungYiLee #AID
+	- [【生成式AI】Stable Diffusion、DALL-E、Imagen 背後共同的套路](https://www.youtube.com/watch?v=JbfcAaBT66U) #YouTube #HungYiLee #SD #Diffusion #AID
 - ---
 - ### Midjourney
 	- [Midjourney 輸入關鍵字，讓 AI 自動產生出超美圖片（完全免費）](https://www.kocpc.com.tw/archives/453331) #AI #AID #Midjourney
