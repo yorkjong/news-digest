@@ -47,14 +47,28 @@ def get_lines_with_any_hashtag(lines, query_tags):
             return t in query_tags
         return False
 
-    out_lines = []
+    lines = [line.strip() for line in lines]
+    header, link_lines, out_lines = '', [], []
 
     for line in lines:
-        if not line.startswith('- ['):
-            out_lines.append(line)
-            continue
-        if is_line_with_any_hashtag(line):
-            out_lines.append(line)
+        if line.startswith('- ###'):
+            line = line[2:]
+        if line.startswith('###'):
+            header = line
+            link_lines = []
+        elif line.startswith('- [') and is_line_with_any_hashtag(line):
+            link_lines.append(line)
+        elif line in ('', '-') and link_lines:
+            if header:
+                out_lines.append(header)
+            out_lines += link_lines
+            out_lines.append('')
+            header = ''
+            link_lines = []
+    if link_lines:
+        if header:
+            out_lines.append(header)
+        out_lines += link_lines
 
     return out_lines
 
@@ -73,15 +87,29 @@ def get_lines_with_all_hashtags(lines, query_tags):
         line_tags = re.findall(r'\s+(#[\S]+)', line)
         return query_tags.issubset(line_tags)
 
-    out_lines = []
+    lines = [line.strip() for line in lines]
+    header, link_lines, out_lines = '', [], []
     query_tags = set(query_tags)
 
     for line in lines:
-        if not line.startswith('- ['):
-            out_lines.append(line)
-            continue
-        if is_line_with_all_hashtags(line):
-            out_lines.append(line)
+        if line.startswith('- ###'):
+            line = line[2:]
+        if line.startswith('###'):
+            header = line
+            link_lines = []
+        elif line.startswith('- [') and is_line_with_all_hashtags(line):
+            link_lines.append(line)
+        elif line in ('', '-') and link_lines:
+            if header:
+                out_lines.append(header)
+            out_lines += link_lines
+            out_lines.append('')
+            header = ''
+            link_lines = []
+    if link_lines:
+        if header:
+            out_lines.append(header)
+        out_lines += link_lines
 
     return out_lines
 
