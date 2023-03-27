@@ -168,7 +168,7 @@ def get_lines_of_category(category, content, with_hashtags=False):
         if line.startswith("###"):
             if trigger:
                 break
-        # match a link-line
+        # match a link line
         if trigger and line.startswith('- ['):
             lines += [line]
     return lines
