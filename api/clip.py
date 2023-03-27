@@ -158,6 +158,8 @@ def get_lines_of_category(category, content, with_hashtags=False):
     trigger = False
     lines = []
     for line in text.split('\n'):
+        if line.startswith('- ### '):
+            line = line[2:]
         # match the begin of a category
         if line.startswith('###') and category in line:
             trigger = True
