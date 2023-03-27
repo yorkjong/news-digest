@@ -12,7 +12,7 @@ tags: AI, DL, GPT, LLM
 	- [ChatGPT技术原理解析：从RL之PPO算法、RLHF到GPT-N、instructGPT](https://blog.csdn.net/v_JULY_v/article/details/128579457) #ChatGPT #AI
 	-
 - ### Application
-	- [ChatGPT插件开发指南](https://juejin.cn/post/7214053344810074171) #ChatGPT #AI #Plugin #Python #☆
+	- [ChatGPT插件开发指南](https://juejin.cn/post/7214053344810074171) #ChatGPT #AI #Plugins #Python #☆
 	- [AIPRM for ChatGPT 集結超過 1,000 個 prompt 範本，瞬間變成 ChatGPT 專家的免費擴充功能](https://www.kocpc.com.tw/archives/483360) #ChatGPT #AI #☆
 	- [ChatGPT Sidebar 讓你在網頁側邊就能跟 ChatGPT 對談，任何網頁都支援](https://www.kocpc.com.tw/archives/483538) #ChatGPT #AI
 	- [ChatGPT 捷徑建立教學！點捷徑就能問 AI，也能叫 Siri 幫忙問問題](https://www.kocpc.com.tw/archives/483756) #ChatGPT #AI
