@@ -3,7 +3,7 @@ Operations (e.g., difference, union) of links between markdown lines with a
 sequence of header:links structures.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/23 (initial version) ~ 2023/03/24 (last revision)"
+__date__ = "2023/03/23 (initial version) ~ 2023/03/27 (last revision)"
 
 __all__ = [
     'diff_links',
@@ -98,6 +98,8 @@ def build_markdown_lines(header_links):
     """
     lines = []
     for header, links in header_links.items():
+        if not links:
+            continue
         lines += [f'{header}']
         for link in links:
             lines += [f'{link}']
@@ -146,9 +148,12 @@ def main():
         lines2 = f2.readlines()
 
     lines = diff_links(lines1, lines2)
-    #lines = union_links(lines1, lines2)
-    md = '\n'.join(lines)
-    print(md)
+    print('\n'.join(lines))
+
+    print(f"\n{'-'*80}\n")
+
+    lines = union_links(lines1, lines2)
+    print('\n'.join(lines))
 
 
 if __name__ == '__main__':
