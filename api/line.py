@@ -2,7 +2,7 @@
 Line Notify.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/23 (initial version) ~ 2023/03/23 (last revision)"
+__date__ = "2023/03/23 (initial version) ~ 2023/03/28 (last revision)"
 
 __all__ = [
     'notify_message',
@@ -25,8 +25,9 @@ def split_string(input_str, max_chars=1000):
         max_chars (int): The maximum number of characters per substring.
 
     Returns:
-        A list of substrings, where each substring has at most 'max_chars'
-        characters and ends with a '\n' character, if one is present.
+        (List[str]): A list of substrings, where each substring has at most
+            'max_chars' characters and ends with a '\n' character, if one is
+            present.
 
     Examples:
         >>> s = '\n'.join(['1'*9, '2'*8, '3'*3, '4'*5])

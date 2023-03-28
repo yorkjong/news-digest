@@ -34,7 +34,7 @@ def get_all_journal_filenames():
     '''Get all filenames of journals.
 
     Returns:
-        ([str]): a list of filenames with YYYY_MM_DD.md format.
+        (List[str]): a list of filenames with YYYY_MM_DD.md format.
     '''
     api_url = f"https://api.github.com/repos/{repo}/contents/{path}"
 
@@ -56,7 +56,7 @@ def get_recent_journal_filenames(days=7):
         days (int): max number of the recent days.
 
     Returns:
-        ([str]): a list of filenames with YYYY_MM_DD.md format.
+        (List[str]): a list of filenames with YYYY_MM_DD.md format.
     '''
     return sorted(get_all_journal_filenames())[-days:]
 
@@ -125,7 +125,7 @@ def get_categories(content):
         content (str): the content of a YYYY_MM_DD.md news file.
 
     Returns:
-        ([str]): a list of categories (i.e., header texts).
+        (List[str]): a list of categories (i.e., header texts).
     '''
     lines = content.split('\n')
     categorys = []
@@ -145,7 +145,7 @@ def get_lines_of_category(category, content, with_hashtags=False):
         with_hashtags (bool): decide if keep the hashtags.
 
     Returns:
-        ([str]): a list of lines of news links with desired category.
+        (List[str]): a list of lines of news links with desired category.
     '''
     text = content
 
@@ -180,13 +180,13 @@ def get_lines_of_categories(categories, content,
     This will also show the category as headers.
 
     Args:
-        categories ([str]): a sequence of categories to get lines.
+        categories (List[str]): a sequence of categories to get lines.
         content (str): the content of a YYYY_MM_DD.md news file.
         with_hashtags (bool): decide if keep the hashtags.
         with_headers (bool): decide if keep the headers.
 
     Returns:
-        ([str]): a list of lines of news links with desired categories.
+        (List[str]): a list of lines of news links with desired categories.
     '''
     lines = []
     for category in categories:
@@ -208,12 +208,12 @@ def get_sublist(all, first, last):
     '''Get a subset of a list of given range.
 
     Args:
-        all (list): The lsit of all items
+        all (List[str]): The lsit of all items
         first (str): first item you want
         last (str): last item you want
 
     Returns:
-        ([str]) The subset between [first last]
+        (List[str]) The subset between [first last]
 
     Examples
         >>> get_sublist(list('abcdefg'), 'b', 'd')

@@ -18,10 +18,10 @@ def get_hashtags(lines):
     '''Gets all hastags for given markdown lines.
 
     Args:
-        lines (list[str]): a list of lines of markdown text.
+        lines (List[str]): a list of lines of markdown text.
 
     Returns:
-        (list[str]): a list of hashtags.
+        (List[str]): a list of hashtags.
     '''
     tags = set()
     for line in lines:
@@ -35,11 +35,11 @@ def get_lines_with_any_hashtags(lines, query_tags):
     '''Get lines that have at least one of the specified query hashtags.
 
     Args:
-        lines (list[str]): a list of lines of markdown text.
-        query_tags (list[str]): a list of hashtags to query.
+        lines (List[str]): a list of lines of markdown text.
+        query_tags (List[str]): a list of hashtags to query.
 
     Returns:
-        (list[str]): a list of lines having at least one of query hashtags.
+        (List[str]): a list of lines having at least one of query hashtags.
     '''
     def is_line_with_any_hashtags(line):
         line_tags = re.findall(r'\s+(#[\S]+)', line)
@@ -81,11 +81,11 @@ def get_lines_with_all_hashtags(lines, query_tags):
     '''Get lines that have all of the specified query hashtags.
 
     Args:
-        lines (list[str]): a list of lines of markdown text.
-        query_tags (list[str]): a list of hashtags to query.
+        lines (List[str]): a list of lines of markdown text.
+        query_tags (List[str]): a list of hashtags to query.
 
     Returns:
-        (list[str]): a list of lines containing all query hashtags.
+        (List[str]): a list of lines containing all query hashtags.
     '''
     def is_line_with_all_hashtags(line):
         line_tags = re.findall(r'\s+(#[\S]+)', line)
