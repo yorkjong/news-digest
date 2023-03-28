@@ -71,7 +71,7 @@ def get_lines_with_any_hashtags(lines, query_tags):
             link_lines.append(line)
         elif line in ('', '-'):
             out_lines.extend(hedear_links_lines(header, link_lines))
-            if header:
+            if header and link_lines:
                 out_lines.append('')
             header, link_lines = '', []
     out_lines.extend(hedear_links_lines(header, link_lines))
@@ -107,7 +107,7 @@ def get_lines_with_all_hashtags(lines, query_tags):
             link_lines.append(line)
         elif line in ('', '-'):
             out_lines.extend(hedear_links_lines(header, link_lines))
-            if header:
+            if header and link_lines:
                 out_lines.append('')
             header, link_lines = '', []
     out_lines.extend(hedear_links_lines(header, link_lines))
