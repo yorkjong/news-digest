@@ -2,11 +2,11 @@
 Hashtag querying
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/24 (initial version) ~ 2023/03/27 (last revision)"
+__date__ = "2023/03/24 (initial version) ~ 2023/03/28 (last revision)"
 
 __all__ = [
     'get_hashtags',
-    'get_lines_with_any_hashtag',
+    'get_lines_with_any_hashtags',
     'get_lines_with_all_hashtags',
 ]
 
@@ -18,10 +18,10 @@ def get_hashtags(lines):
     '''Gets all hastags for given markdown lines.
 
     Args:
-        lines ([str]): a list of lines of markdown text.
+        lines (list[str]): a list of lines of markdown text.
 
     Returns:
-        ([str]): a list of hashtags.
+        (list[str]): a list of hashtags.
     '''
     tags = set()
     for line in lines:
@@ -31,20 +31,22 @@ def get_hashtags(lines):
     return sorted(tags)
 
 
-def get_lines_with_any_hashtag(lines, query_tags):
-    '''Gets lines with any hashtag in given guery hashtags.
+def get_lines_with_any_hashtags(lines, query_tags):
+    '''Get lines that have at least one of the specified query hashtags.
 
     Args:
-        lines ([str]): a list of lines of markdown text.
-        query_tags ([str]): a list of hashtags to query.
+        lines (list[str]): a list of lines of markdown text.
+        query_tags (list[str]): a list of hashtags to query.
 
-    Retruns:
-        ([str]): a list of lines with any given hashtags.
+    Returns:
+        (list[str]): a list of lines having at least one of query hashtags.
     '''
-    def is_line_with_any_hashtag(line):
+    def is_line_with_any_hashtags(line):
         line_tags = re.findall(r'\s+(#[\S]+)', line)
+        print(line_tags)
         for t in line_tags:
-            return t in query_tags
+            if t in query_tags:
+                return True
         return False
 
     def append_hedear_links():
@@ -65,7 +67,7 @@ def get_lines_with_any_hashtag(lines, query_tags):
         if line.startswith('###'):
             append_hedear_links()
             header, link_lines = line, []
-        elif line.startswith('- [') and is_line_with_any_hashtag(line):
+        elif line.startswith('- [') and is_line_with_any_hashtags(line):
             link_lines.append(line)
         elif line in ('', '-'):
             append_hedear_links()
@@ -76,14 +78,14 @@ def get_lines_with_any_hashtag(lines, query_tags):
 
 
 def get_lines_with_all_hashtags(lines, query_tags):
-    '''Gets lines with all given hashtags.
+    '''Get lines that have all of the specified query hashtags.
 
     Args:
-        lines ([str]): a list of lines of markdown text.
-        query_tags ([str]): a list of hashtags to query.
+        lines (list[str]): a list of lines of markdown text.
+        query_tags (list[str]): a list of hashtags to query.
 
-    Retruns:
-        ([str]): a list of lines with all given hashtags.
+    Returns:
+        (list[str]): a list of lines containing all query hashtags.
     '''
     def is_line_with_all_hashtags(line):
         line_tags = re.findall(r'\s+(#[\S]+)', line)
@@ -124,7 +126,7 @@ def main():
     lines = clip.get_lines_of_categories(
                 ['AI', 'Tesla', 'Tech'], content, with_hashtags=True)
 
-    print('\n'.join(get_lines_with_any_hashtag(lines, ['#OpenAI', '#ChatGPT'])))
+    print('\n'.join(get_lines_with_any_hashtags(lines, ['#OpenAI', '#ChatGPT'])))
     print(f"{'-'*80}")
     print('\n'.join(get_lines_with_all_hashtags(lines, ['#NVDA', '#semicon'])))
 
