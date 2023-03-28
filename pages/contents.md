@@ -6,9 +6,11 @@
 	- [[投资TALK君]]
 	- [[北美韭菜日记]]
 	- [[小丹尼]]
+	- [[安築]]
 	- [[Alan]]
 	- [[Anastasi]]
 - AI
+  collapsed:: true
 	- [[AI Drawing]]
 	- [[Stable Diffusion]]
 	- [[ChatGPT]]
