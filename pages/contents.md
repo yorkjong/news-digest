@@ -14,6 +14,7 @@
 	- [[ChatGPT]]
 	- [[LLaMA]]
 	- [[LLM]]
+- [[Programming]]
 - Tags
 	- [[☆☆☆]]
 	- [[☆☆]]

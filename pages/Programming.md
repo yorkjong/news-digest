@@ -1,0 +1,9 @@
+- Colab
+	- [html - How can I open images in a Google Colaboratory notebook cell from uploaded png files? - Stack Overflow](https://stackoverflow.com/questions/49478791/how-can-i-open-images-in-a-google-colaboratory-notebook-cell-from-uploaded-png-f) #Colab #Image
+	- [Reading Files Python - Google Colab](https://colab.research.google.com/github/computationalcore/introduction-to-python/blob/master/notebooks/4-files/PY0101EN-4-1-ReadFile.ipynb) #Colab
+- Jupyter Widgets
+	- [Widget List — Jupyter Widgets 7.7.2 documentation](https://ipywidgets.readthedocs.io/en/7.x/examples/Widget%20List.html) #Jupyter
+	- [Output widgets: leveraging Jupyter’s display system — Jupyter Widgets 8.0.5 documentation](https://ipywidgets.readthedocs.io/en/latest/examples/Output%20Widget.html)
+- ChatGPT
+	- [【尝鲜版】ChatGPT插件开发指南 - 掘金](https://juejin.cn/post/7214053344810074171) #ChatGPT #Plugins #Python
+	-
