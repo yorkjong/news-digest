@@ -43,7 +43,6 @@ def get_lines_with_any_hashtags(lines, query_tags):
     '''
     def is_line_with_any_hashtags(line):
         line_tags = re.findall(r'\s+(#[\S]+)', line)
-        print(line_tags)
         for t in line_tags:
             if t in query_tags:
                 return True
