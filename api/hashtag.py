@@ -31,6 +31,16 @@ def get_hashtags(lines):
     return sorted(tags)
 
 
+def hedear_links_lines(header, link_lines):
+    if not link_lines:
+        return []
+    lines = []
+    if header:
+        lines.append(header)
+    lines += link_lines
+    return lines
+
+
 def get_lines_with_any_hashtags(lines, query_tags):
     '''Get lines that have at least one of the specified query hashtags.
 
@@ -48,15 +58,6 @@ def get_lines_with_any_hashtags(lines, query_tags):
                 return True
         return False
 
-    def append_hedear_links():
-        nonlocal link_lines, header, out_lines
-        if not link_lines:
-            return
-        if header:
-            out_lines.append(header)
-        out_lines += link_lines
-        header, link_lines = '', []
-
     lines = [line.strip() for line in lines]
     header, link_lines, out_lines = '', [], []
 
@@ -64,14 +65,16 @@ def get_lines_with_any_hashtags(lines, query_tags):
         if line.startswith('- ###'):
             line = line[2:]
         if line.startswith('###'):
-            append_hedear_links()
+            out_lines.extend(hedear_links_lines(header, link_lines))
             header, link_lines = line, []
         elif line.startswith('- [') and is_line_with_any_hashtags(line):
             link_lines.append(line)
         elif line in ('', '-'):
-            append_hedear_links()
-            out_lines.append('')
-    append_hedear_links()
+            out_lines.extend(hedear_links_lines(header, link_lines))
+            if header:
+                out_lines.append('')
+            header, link_lines = '', []
+    out_lines.extend(hedear_links_lines(header, link_lines))
 
     return out_lines
 
@@ -90,15 +93,6 @@ def get_lines_with_all_hashtags(lines, query_tags):
         line_tags = re.findall(r'\s+(#[\S]+)', line)
         return query_tags.issubset(line_tags)
 
-    def append_hedear_links():
-        nonlocal link_lines, header, out_lines
-        if not link_lines:
-            return
-        if header:
-            out_lines.append(header)
-        out_lines += link_lines
-        header, link_lines = '', []
-
     lines = [line.strip() for line in lines]
     header, link_lines, out_lines = '', [], []
     query_tags = set(query_tags)
@@ -107,14 +101,16 @@ def get_lines_with_all_hashtags(lines, query_tags):
         if line.startswith('- ###'):
             line = line[2:]
         if line.startswith('###'):
-            append_hedear_links()
+            out_lines.extend(hedear_links_lines(header, link_lines))
             header, link_lines = line, []
         elif line.startswith('- [') and is_line_with_all_hashtags(line):
             link_lines.append(line)
         elif line in ('', '-'):
-            append_hedear_links()
-            out_lines.append('')
-    append_hedear_links()
+            out_lines.extend(hedear_links_lines(header, link_lines))
+            if header:
+                out_lines.append('')
+            header, link_lines = '', []
+    out_lines.extend(hedear_links_lines(header, link_lines))
 
     return out_lines
 
