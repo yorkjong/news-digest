@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/03/27 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/03/29 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -131,6 +131,8 @@ def get_categories(content):
     categorys = []
     mark = '### '
     for line in lines:
+        if line.startswith(f'- {mark}'):
+            line = line[2:]
         if line.startswith(mark):
             categorys += [line[len(mark):]]
     return categorys
