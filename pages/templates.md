@@ -13,7 +13,7 @@
 	-
 	- ### Science & Technology
 	-
-	- ### AI
+	- ### IT
 - Page metadata
 	- ---
 	  title:
