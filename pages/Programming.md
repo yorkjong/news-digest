@@ -1,6 +1,11 @@
 - Colab
 	- [html - How can I open images in a Google Colaboratory notebook cell from uploaded png files? - Stack Overflow](https://stackoverflow.com/questions/49478791/how-can-i-open-images-in-a-google-colaboratory-notebook-cell-from-uploaded-png-f) #Colab #Image
 	- [Reading Files Python - Google Colab](https://colab.research.google.com/github/computationalcore/introduction-to-python/blob/master/notebooks/4-files/PY0101EN-4-1-ReadFile.ipynb) #Colab
+	- [External data: Local Files, Drive, Sheets, and Cloud Storage - Google Colab](https://colab.research.google.com/notebooks/io.ipynb) #Colab #file
+	- [How to access Google Sheets on Google Colaboratory](https://medium.com/mlearning-ai/how-to-access-google-sheets-on-google-colaboratory-8766b3a0996f) #Colab #gspread #file
+	- [筆記 for Python (Google Colab + gspread)](https://medium.com/@fsflyingsoar/筆記-for-python-google-colab-gspread-a397e80d071d) #Colab #gspread
+		-
+	-
 - Jupyter Widgets
 	- [Widget List — Jupyter Widgets 7.7.2 documentation](https://ipywidgets.readthedocs.io/en/7.x/examples/Widget%20List.html) #Jupyter
 	- [Output widgets: leveraging Jupyter’s display system — Jupyter Widgets 8.0.5 documentation](https://ipywidgets.readthedocs.io/en/latest/examples/Output%20Widget.html)

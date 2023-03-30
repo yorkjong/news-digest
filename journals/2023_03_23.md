@@ -40,9 +40,9 @@
 - [美知名醫療體系導入IBM量子電腦，為醫學界首例](https://www.ithome.com.tw/news/156030) #IBM
 -
 ### AI
-- [GPT-4為何這麼強？輝達GPU如何助攻？OpenAI首席科學家、黃仁勳解密](https://www.bnext.com.tw/article/74540/nvidia-openai) #GPT4 #NVDA #GPU #LLM #AI #☆
+- [GPT-4為何這麼強？輝達GPU如何助攻？OpenAI首席科學家、黃仁勳解密](https://www.bnext.com.tw/article/74540/nvidia-openai) #GPT #NVDA #GPU #LLM #AI #☆
 - [ChatGPT修補曝露用戶對話紀錄標題的漏洞](https://www.ithome.com.tw/news/156068) #ChatGPT
-- [GitHub發表AI軟體開發願景Copilot X，嵌入GPT-4能力](https://www.ithome.com.tw/news/156070) #GitHub #AI #CoppilotX #GPT4 #LLM
+- [GitHub發表AI軟體開發願景Copilot X，嵌入GPT-4能力](https://www.ithome.com.tw/news/156070) #GitHub #AI #CoppilotX #GPT #LLM
 - [「AI專家」李飛飛來台：AI是智能，還不到智慧](https://www.gvm.com.tw/article/100949) #AI
 - [ChatGPT 擴充功能夾帶惡意外掛，竊取 Facebook 帳號](https://technews.tw/2023/03/23/facebook-accounts-hijacked-by-new-malicious-chatgpt-chrome-extension/) #ChatGPT #META
 - [現在大家對 ChatGPT 有多依賴？幾天前 ChatGPT 當機一堆國外網友在社群叫苦：已經不知道怎麼工作](https://www.kocpc.com.tw/archives/485230) #ChatGPT #work

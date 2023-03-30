@@ -5,6 +5,17 @@ tags: AI, Diffusion
 ---
 
 - [[Stable Diffusion]]
+-
+- [淺談AI繪畫技術的影響，盤點免費瀏覽AI繪畫作品的網站](https://www.youtube.com/watch?v=YMBEpHhivqY) #AID
+	- [Civitai | Stable Diffusion models, embeddings, hypernetworks and more](https://civitai.com/) #SD
+	- [StableDiffusion](https://www.reddit.com/r/StableDiffusion/)
+	- [pornpen.ai - AI Generated Porn](https://pornpen.ai/)
+	- https://twitter.com/pdouglasr
+	- https://twitter.com/ChromedSets
+	- https://twitter.com/rinomaw
+	- [Deepnude.to | 😈 Your X-Ray Vision App 😈](https://deepnude.to/)
+	-
+	-
 - Generative AI 原理
 	- [【生成式AI】速覽圖像生成常見模型](https://www.youtube.com/watch?v=z83Edfvgd9g) #YouTube #HungYiLee #AID
 	- [【生成式AI】Stable Diffusion、DALL-E、Imagen 背後共同的套路](https://www.youtube.com/watch?v=JbfcAaBT66U) #YouTube #HungYiLee #SD #Diffusion #AID

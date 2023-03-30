@@ -4,6 +4,7 @@ tags: AI, DL, GPT, LLM
 ---
 
 - ### Principle
+	- [GPT-4 登場！先理解 ChatGPT 原理，才知道怎麼利用 AI 幫你輸入！](https://www.youtube.com/watch?v=sL1BNTU-4PI) #AI #LLM #ChatGPT #science
 	- [【生成式AI】能夠使用工具的AI：New Bing, WebGPT, Toolformer - YouTube](https://www.youtube.com/watch?v=ZID220t_MpI) #WebGPT #Bing #Toolformer #AI #HungYiLee #☆
 	- [【生成式AI】ChatGPT 原理剖析 (1/3) — 對 ChatGPT 的常見誤解 - YouTube](https://www.youtube.com/watch?v=yiY4nPOzJEg) #ChatGPT #AI #HungYiLee  #☆
 	- [【生成式AI】ChatGPT 原理剖析 (2/3) — 預訓練 (Pre-train) - YouTube](https://www.youtube.com/watch?v=1ah7Qsri_c8) #ChatGPT #AI #HungYiLee #☆

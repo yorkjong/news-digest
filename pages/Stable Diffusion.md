@@ -5,11 +5,16 @@ tags: AI, AID, Diffusion
 ---
 
 - Web UI on Colab
-	- [免安裝 Stable Diffusion 繪圖教學：教你用 Google Colab 做出擬真 AI 美女圖](https://applealmond.com/posts/178039) #AI #AID #SD
-	- [[AI繪圖] Stable Diffusion WebUI Colab TW 支援多種SD模型 支援ControlNet](https://home.gamer.com.tw/artwork.php?sn=5664550) #AI #AID #SD
-	- [如何在Google colab上安装和使用Stable Diffusion WebUI](https://www.youtube.com/watch?v=nwyxpTOmcJ4)  #AI #AID #SD
-	- [[教學懶人包] Midjourney做不到的完美！三分鐘搞定Stable Diffusion！只需瀏覽器就能免費打造你的AI女神！(免顯卡版)](https://www.youtube.com/watch?v=jR6vLdzECDw) #AI #AID #SD
-	- [GitHub - AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) #AI #AID #SD
+	- [AI教你安裝StableDiffusion colab / 讓你喜歡的老師陪你上課](https://www.youtube.com/watch?v=4UsGQH8mjGc) #AI #AID #SD #Colab
+	- [教你用 Google colab 免費玩 Stable Diffusion 作出擬真美女圖片！ Lora、ControlNet 教學](https://www.youtube.com/watch?v=NlRNe2pV3TU) #AI #AID #SD #Colab
+	- [免安裝 Stable Diffusion 繪圖教學：教你用 Google Colab 做出擬真 AI 美女圖](https://applealmond.com/posts/178039) #AI #AID #SD #Colab
+	- [[AI繪圖] Stable Diffusion WebUI Colab TW 支援多種SD模型 支援ControlNet](https://home.gamer.com.tw/artwork.php?sn=5664550) #AI #AID #SD #Colab
+	- [如何在Google colab上安装和使用Stable Diffusion WebUI](https://www.youtube.com/watch?v=nwyxpTOmcJ4)  #AI #AID #SD #Colab
+	- [[教學懶人包] Midjourney做不到的完美！三分鐘搞定Stable Diffusion！只需瀏覽器就能免費打造你的AI女神！(免顯卡版)](https://www.youtube.com/watch?v=jR6vLdzECDw) #AI #AID #SD #Colab
+	- [【AI绘画】把Stable Diffusion安装到Google Drive上 一键部署随处运行](https://www.youtube.com/watch?v=S2W6DP57fw0) #AI #AID #SD #Colab
+		- [GitHub - camenduru/stable-diffusion-webui-colab: stable diffusion webui colab](https://github.com/camenduru/stable-diffusion-webui-colab)
+	- [【AI绘画】如何在谷歌云上训练lora模型](https://www.youtube.com/watch?v=WbYxqy1DlY4) #AI #AID #SD #Colab
+	- [GitHub - AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) #AI #AID #SD #Colab
 	-
 - Web UI on Desktop
 	- [「教學」如何使用 Midjourney / nijijourney / Stable diffusion AI繪圖工具畫出繪師等級動漫風格美少女圖片，保證學會](https://www.youtube.com/watch?v=c5xeERCwHgM) #AI #AID #SD
@@ -25,7 +30,9 @@ tags: AI, AID, Diffusion
 	- [[AI 繪圖教學] 讓超擬真美女做出特定動作(上) | ControlNet  | OpenPos | Chilloutmix-Ni](https://www.youtube.com/watch?v=C7IT8hP50P4) #AI #AID #SD
 	- [產業生態將大變？Stable Diffusion 超強擴充外掛 ControlNet 亮相，只需上傳草圖、簡易骨架即可生成精美圖像](https://www.incgmedia.com/new-release/stable-diffusion-addon-controlnet) #AI #AID #SD
 	- [[閒聊] Multi-Controlnet AI精準手部控制](https://www.ptt.cc/bbs/C_Chat/M.1677484755.A.7B8.html) #AI #AID #SD
+	- [Stable Diffusion教學 ControlNet 2  控制 AI女友](https://www.youtube.com/watch?v=OaNzIgGqgsU) #AI #AID #SD #OpenPose #RoLA #☆
 	-
+-
 - Prompt
 	- [AIGC 圖像生成咒語最強辭庫　Stable Diffusion/NovelAI 魔導書](https://www.pcmarket.com.hk/stable-diffusion-novelai-nai-prompt-cookbooks/) #AI #AID #SD
 	- [[AI 繪圖教學] ChatGPT 結合 AI 繪圖 | 這個世界太好了玩了 | 如何訓練 ChatGPT 寫 Prompt | 魔法咒語](https://www.youtube.com/watch?v=B0X54ilrOsQ) #AI #AID #SD #ChatGPT
