@@ -14,6 +14,7 @@ tags: AI, AID, Diffusion
 	- [【AI绘画】把Stable Diffusion安装到Google Drive上 一键部署随处运行](https://www.youtube.com/watch?v=S2W6DP57fw0) #AI #AID #SD #Colab
 		- [GitHub - camenduru/stable-diffusion-webui-colab: stable diffusion webui colab](https://github.com/camenduru/stable-diffusion-webui-colab)
 	- [【AI绘画】如何在谷歌云上训练lora模型](https://www.youtube.com/watch?v=WbYxqy1DlY4) #AI #AID #SD #Colab
+	- [用手機免費玩 Stable Diffusion 畫 AI 擬真美女圖的三種方法教學（Google colab、機畫師、Draw Things）](https://www.youtube.com/watch?v=j7mOdyIrfh4) #YouTube #SD #AI #AID #Colab
 	- [GitHub - AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) #AI #AID #SD #Colab
 	-
 - Web UI on Desktop
