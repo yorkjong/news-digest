@@ -11,9 +11,9 @@ tags: AI, AID, Diffusion
 	- [[AI繪圖] Stable Diffusion WebUI Colab TW 支援多種SD模型 支援ControlNet](https://home.gamer.com.tw/artwork.php?sn=5664550) #AI #AID #SD #Colab
 	- [如何在Google colab上安装和使用Stable Diffusion WebUI](https://www.youtube.com/watch?v=nwyxpTOmcJ4)  #AI #AID #SD #Colab
 	- [[教學懶人包] Midjourney做不到的完美！三分鐘搞定Stable Diffusion！只需瀏覽器就能免費打造你的AI女神！(免顯卡版)](https://www.youtube.com/watch?v=jR6vLdzECDw) #AI #AID #SD #Colab
-	- [【AI绘画】把Stable Diffusion安装到Google Drive上 一键部署随处运行](https://www.youtube.com/watch?v=S2W6DP57fw0) #AI #AID #SD #Colab
+	- [【AI绘画】把Stable Diffusion安装到Google Drive上 一键部署随处运行](https://www.youtube.com/watch?v=S2W6DP57fw0) #AI #AID #SD #Colab #GoogleDrive
 		- [GitHub - camenduru/stable-diffusion-webui-colab: stable diffusion webui colab](https://github.com/camenduru/stable-diffusion-webui-colab)
-	- [【AI绘画】如何在谷歌云上训练lora模型](https://www.youtube.com/watch?v=WbYxqy1DlY4) #AI #AID #SD #Colab
+		- [【AI绘画】如何在谷歌云上训练lora模型](https://www.youtube.com/watch?v=WbYxqy1DlY4) #AI #AID #SD #Colab
 	- [用手機免費玩 Stable Diffusion 畫 AI 擬真美女圖的三種方法教學（Google colab、機畫師、Draw Things）](https://www.youtube.com/watch?v=j7mOdyIrfh4) #YouTube #SD #AI #AID #Colab
 	- [GitHub - AUTOMATIC1111/stable-diffusion-webui: Stable Diffusion web UI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) #AI #AID #SD #Colab
 	-
