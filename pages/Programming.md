@@ -1,4 +1,5 @@
 - Colab
+	- [Widgets.ipynb -- Colab](https://colab.research.google.com/notebooks/widgets.ipynb) #Colab
 	- [html - How can I open images in a Google Colaboratory notebook cell from uploaded png files? - Stack Overflow](https://stackoverflow.com/questions/49478791/how-can-i-open-images-in-a-google-colaboratory-notebook-cell-from-uploaded-png-f) #Colab #Image
 	- [Reading Files Python - Google Colab](https://colab.research.google.com/github/computationalcore/introduction-to-python/blob/master/notebooks/4-files/PY0101EN-4-1-ReadFile.ipynb) #Colab #file
 	- [External data: Local Files, Drive, Sheets, and Cloud Storage - Google Colab](https://colab.research.google.com/notebooks/io.ipynb) #Colab #file
