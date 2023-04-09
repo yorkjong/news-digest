@@ -14,6 +14,7 @@ __all__ = [
     'get_categories',
     'get_lines_of_category',
     'get_lines_of_categories',
+    'markdown_to_readable',
     'get_sublist',
 ]
 
@@ -201,6 +202,43 @@ def get_lines_of_categories(categories, content,
         lines += ['']
     return lines
 
+#------------------------------------------------------------------------------
+
+def non_ascii_ratio(title, link):
+    c_l = sum(ord(c) >= 128 for c in link)
+    c_t = sum(ord(c) >= 128 for c in title)
+    c_t = max(c_t, 1)
+    return c_l/c_t
+
+
+def markdown_to_readable(markdown_string):
+    """
+    Convert a string in markdown format to a more readable format.
+
+    Args:
+        markdown_string (str): A string in markdown format.
+
+    Returns:
+        str: The input string converted to a more readable format.
+    """
+    output = ""
+    for line in markdown_string.split('\n'):
+        if line.startswith('#'):
+            # Process heading
+            heading = line.replace('#', '').strip()
+            output += f"{heading}:\n\n"
+        elif line.startswith('- '):
+            # Process link
+            title, link = line[2:].split('(')
+            title = title.strip()[1:-1] # Remove square brackets '[', ']'
+            link = link.split(')')[0]   # Remove text after ')'
+            if non_ascii_ratio(title, link) > 0.69:
+                output += f"{link}\n\n"
+            else:
+                output += f"{title} {link}\n\n"
+
+    return output
+
 
 #------------------------------------------------------------------------------
 # Utility Functions
@@ -256,12 +294,18 @@ def test_get_merge_recent_journals():
     print(f'\n\n{get_categories(content)}\n')
     print(content)
 
+def test_markdown_to_readable():
+    content = get_latest_journal()
+    print(markdown_to_readable(content))
+
 def main():
     test_get_latest_journalXX()
     print(f"{'-'*80}\n")
     test_get_lines_of_categories()
     print(f"{'-'*80}\n")
     test_get_merge_recent_journals()
+    print(f"{'-'*80}\n")
+    test_markdown_to_readable()
 
 
 if __name__ == '__main__':
