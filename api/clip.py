@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/03/29 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/04/09 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -125,7 +125,7 @@ def get_categories(content):
         content (str): the content of a YYYY_MM_DD.md news file.
 
     Returns:
-        (List[str]): a list of categories (i.e., header texts).
+        (List[str]): a list of categories (i.e., heading texts).
     '''
     lines = content.split('\n')
     categorys = []
@@ -142,7 +142,7 @@ def get_lines_of_category(category, content, with_hashtags=False):
     '''Get links of given category.
 
     Args:
-        category (str): the header-text of a category.
+        category (str): the heading-text of a category.
         content (str): the content of a YYYY_MM_DD.md news file.
         with_hashtags (bool): decide if keep the hashtags.
 
@@ -177,15 +177,15 @@ def get_lines_of_category(category, content, with_hashtags=False):
 
 
 def get_lines_of_categories(categories, content,
-                            with_hashtags=False, with_headers=True):
+                            with_hashtags=False, with_headings=True):
     '''Gets lines of given categories.
-    This will also show the category as headers.
+    This will also show the category as headings.
 
     Args:
         categories (List[str]): a sequence of categories to get lines.
         content (str): the content of a YYYY_MM_DD.md news file.
         with_hashtags (bool): decide if keep the hashtags.
-        with_headers (bool): decide if keep the headers.
+        with_headings (bool): decide if keep the headings.
 
     Returns:
         (List[str]): a list of lines of news links with desired categories.
@@ -195,7 +195,7 @@ def get_lines_of_categories(categories, content,
         cate_lines = get_lines_of_category(category, content, with_hashtags)
         if not cate_lines:
             continue
-        if with_headers:
+        if with_headings:
             lines += [f'### {category}']
         lines += cate_lines
         lines += ['']

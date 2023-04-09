@@ -2,7 +2,7 @@
 Hashtag querying
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/24 (initial version) ~ 2023/03/28 (last revision)"
+__date__ = "2023/03/24 (initial version) ~ 2023/04/09 (last revision)"
 
 __all__ = [
     'get_hashtags',
@@ -31,12 +31,12 @@ def get_hashtags(lines):
     return sorted(tags)
 
 
-def hedear_links_lines(header, link_lines):
+def hedear_links_lines(heading, link_lines):
     if not link_lines:
         return []
     lines = []
-    if header:
-        lines.append(header)
+    if heading:
+        lines.append(heading)
     lines += link_lines
     return lines
 
@@ -59,22 +59,22 @@ def get_lines_with_any_hashtags(lines, query_tags):
         return False
 
     lines = [line.strip() for line in lines]
-    header, link_lines, out_lines = '', [], []
+    heading, link_lines, out_lines = '', [], []
 
     for line in lines:
         if line.startswith('- ###'):
             line = line[2:]
         if line.startswith('###'):
-            out_lines.extend(hedear_links_lines(header, link_lines))
-            header, link_lines = line, []
+            out_lines.extend(hedear_links_lines(heading, link_lines))
+            heading, link_lines = line, []
         elif line.startswith('- [') and is_line_with_any_hashtags(line):
             link_lines.append(line)
         elif line in ('', '-'):
-            out_lines.extend(hedear_links_lines(header, link_lines))
-            if header and link_lines:
+            out_lines.extend(hedear_links_lines(heading, link_lines))
+            if heading and link_lines:
                 out_lines.append('')
-            header, link_lines = '', []
-    out_lines.extend(hedear_links_lines(header, link_lines))
+            heading, link_lines = '', []
+    out_lines.extend(hedear_links_lines(heading, link_lines))
 
     return out_lines
 
@@ -94,23 +94,23 @@ def get_lines_with_all_hashtags(lines, query_tags):
         return query_tags.issubset(line_tags)
 
     lines = [line.strip() for line in lines]
-    header, link_lines, out_lines = '', [], []
+    heading, link_lines, out_lines = '', [], []
     query_tags = set(query_tags)
 
     for line in lines:
         if line.startswith('- ###'):
             line = line[2:]
         if line.startswith('###'):
-            out_lines.extend(hedear_links_lines(header, link_lines))
-            header, link_lines = line, []
+            out_lines.extend(hedear_links_lines(heading, link_lines))
+            heading, link_lines = line, []
         elif line.startswith('- [') and is_line_with_all_hashtags(line):
             link_lines.append(line)
         elif line in ('', '-'):
-            out_lines.extend(hedear_links_lines(header, link_lines))
-            if header and link_lines:
+            out_lines.extend(hedear_links_lines(heading, link_lines))
+            if heading and link_lines:
                 out_lines.append('')
-            header, link_lines = '', []
-    out_lines.extend(hedear_links_lines(header, link_lines))
+            heading, link_lines = '', []
+    out_lines.extend(hedear_links_lines(heading, link_lines))
 
     return out_lines
 
@@ -121,7 +121,7 @@ def main():
     lines = clip.get_lines_of_categories(
                 ['AI', 'Tesla', 'Tech'], content, with_hashtags=True)
 
-    print('\n'.join(get_lines_with_any_hashtags(lines, ['#OpenAI', '#ChatGPT'])))
+    print('\n'.join(get_lines_with_any_hashtags(lines, ['#OpenAI', '#AI'])))
     print(f"{'-'*80}")
     print('\n'.join(get_lines_with_all_hashtags(lines, ['#NVDA', '#semicon'])))
 
