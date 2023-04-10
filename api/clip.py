@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/04/09 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/04/10 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -229,8 +229,8 @@ def markdown_to_readable(markdown_string):
             output += f"{heading}:\n\n"
         elif line.startswith('- '):
             # Process link
-            title, link = line[2:].split('(')
-            title = title.strip()[1:-1] # Remove square brackets '[', ']'
+            title, link = line[2:].split('](')
+            title = title.strip()[1:]   # Remove '['
             link = link.split(')')[0]   # Remove text after ')'
             if non_ascii_ratio(title, link) > 0.69:
                 output += f"{link}\n\n"
