@@ -5,7 +5,10 @@
 	- [External data: Local Files, Drive, Sheets, and Cloud Storage - Google Colab](https://colab.research.google.com/notebooks/io.ipynb) #Colab #file
 	- [How to access Google Sheets on Google Colaboratory](https://medium.com/mlearning-ai/how-to-access-google-sheets-on-google-colaboratory-8766b3a0996f) #Colab #gspread #file
 	- [筆記 for Python (Google Colab + gspread)](https://medium.com/@fsflyingsoar/筆記-for-python-google-colab-gspread-a397e80d071d) #Colab #gspread
-	-
+-
+- Tools
+	- [Code Language Converter - Convert code to other languages using AI](https://codeconverter.com) #translator
+	- [Code Translator](https://ai-code-translator.vercel.app) #translator
 - Jupyter
 	- [4 ways to insert images in Jupyter Notebook | MLJAR](https://mljar.com/blog/jupyter-notebook-insert-image/)
 - Jupyter Widgets
