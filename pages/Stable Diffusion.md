@@ -5,6 +5,7 @@ tags: AI, AID, Diffusion
 ---
 
 - Draw Things
+	- [手機平板AI繪圖模型Draw Things: AI Generation安裝教學](https://5tail.com/手機平板ai繪圖模型draw-things-ai-generation安裝教學/) #AI #AID #SD #AAPL
 	- [Draw Things 教學：讓iPhone、MacBook、Mac也能在本地端用 Stable Diffusion 畫 AI 圖片的免費工具](https://www.youtube.com/watch?v=JEAuSxLK1_M) #YouTube #AID #SD #AAPL
 - Web UI on Colab
 	- [AI教你安裝StableDiffusion colab / 讓你喜歡的老師陪你上課](https://www.youtube.com/watch?v=4UsGQH8mjGc) #AI #AID #SD #Colab
