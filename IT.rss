@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Feed of my news digestion</title>
+    <link>https://news-digest.vercel.app</link>
+    <description>Feed of my news digestion</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 21 Apr 2023 17:39:35 +0800</lastBuildDate>
+    <item>
+      <title>Stability AI開源LLM模型，自詡小但具高效能</title>
+      <link>https://www.ithome.com.tw/news/156485</link>
+      <description>Stability AI開源LLM模型，自詡小但具高效能 #LLM #AI</description>
+      <guid isPermaLink="false">https://www.ithome.com.tw/news/156485</guid>
+      <category>IT</category>
+    </item>
+    <item>
+      <title>GPT-4 有多威？給 ChatGPT 手繪架構就幫你完成網站了（嚇）</title>
+      <link>https://www.kocpc.com.tw/archives/489104</link>
+      <description>GPT-4 有多威？給 ChatGPT 手繪架構就幫你完成網站了（嚇） #GPT #ChatGPT</description>
+      <guid isPermaLink="false">https://www.kocpc.com.tw/archives/489104</guid>
+      <category>IT</category>
+    </item>
+    <item>
+      <title>2.1. 提示詞(Prompt)寫法與範例</title>
+      <link>https://ivonblog.com/posts/stable-diffusion-webui-manuals/features/prompt-guide/</link>
+      <description>2.1. 提示詞(Prompt)寫法與範例 #LLM #AI #Prompt</description>
+      <guid isPermaLink="false">https://ivonblog.com/posts/stable-diffusion-webui-manuals/features/prompt-guide/</guid>
+      <category>IT</category>
+    </item>
+  </channel>
+</rss>
+
