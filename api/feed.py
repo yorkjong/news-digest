@@ -1,3 +1,9 @@
+"""
+RSS/ATOM feed generator for news digestion
+"""
+__author__ = "York <york.jong@gmail.com>"
+__date__ = "2023/04/21 (initial version) ~ 2023/04/21 (last revision)"
+
 import re
 import pytz
 from datetime import datetime
@@ -9,7 +15,6 @@ content = clip.get_latest_journal()
 lines = content.split('\n')
 
 fg = FeedGenerator()
-#fg.id('https://example.com')
 fg.title('Feed of my news digestion')
 fg.author({'name': 'York Jong', 'email': 'york_jong@gmail.com'})
 fg.id('https://news-digest.vercel.app') # for ATOM feed only
