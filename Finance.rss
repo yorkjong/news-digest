@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>news-digest (Finance.rss)</title>
+    <link>https://news-digest.vercel.app</link>
+    <description>Feed of news-digest (Finance.rss)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 21 Apr 2023 19:43:09 +0800</lastBuildDate>
+    <item>
+      <title>美國將提出史無前例限制投資中國新規</title>
+      <link>https://technews.tw/2023/04/19/u-s-to-propose-unprecedented-restrictions-on-investment-in-china/</link>
+      <description>美國將提出史無前例限制投資中國新規 #TradeWar</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/u-s-to-propose-unprecedented-restrictions-on-investment-in-china/</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>美國債務上限逼近 違約風險達2011年來最高</title>
+      <link>https://news.cnyes.com/news/id/5151640</link>
+      <description>美國債務上限逼近 違約風險達2011年來最高 #T-Bill</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151640</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>美國經濟降溫 卡費和貸款開始有拖欠情況</title>
+      <link>https://m.cnyes.com/news/id/5149087</link>
+      <description>美國經濟降溫 卡費和貸款開始有拖欠情況 #bank</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5149087</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>下一代顯示器關鍵要素，康寧展現全新玻璃技術</title>
+      <link>https://technews.tw/2023/04/19/corning-touch-taiwan-2023/</link>
+      <description>下一代顯示器關鍵要素，康寧展現全新玻璃技術 #GLW</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/corning-touch-taiwan-2023/</guid>
+      <category>Finance</category>
+    </item>
+  </channel>
+</rss>
+

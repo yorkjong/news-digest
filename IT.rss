@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
-    <title>Feed of my news digestion</title>
+    <title>news-digest (IT.rss)</title>
     <link>https://news-digest.vercel.app</link>
-    <description>Feed of my news digestion</description>
+    <description>Feed of news-digest (IT.rss)</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 21 Apr 2023 18:53:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Apr 2023 19:43:11 +0800</lastBuildDate>
     <item>
       <title>ChatGPT能讓我們邁向「週休三日」？AI能寫程式、文案，為何說不會取代人類？</title>
       <link>https://www.bnext.com.tw/article/74885/chatgpt-chris-ifanr</link>

@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>news-digest (Science.rss)</title>
+    <link>https://news-digest.vercel.app</link>
+    <description>Feed of news-digest (Science.rss)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 21 Apr 2023 19:43:11 +0800</lastBuildDate>
+    <item>
+      <title>來自「腸道」的感覺訊息：人的「直覺」和「預感」到底是什麼？——《超級感官》</title>
+      <link>https://pansci.asia/archives/364309</link>
+      <description>來自「腸道」的感覺訊息：人的「直覺」和「預感」到底是什麼？——《超級感官》 #biology #science</description>
+      <guid isPermaLink="false">https://pansci.asia/archives/364309</guid>
+      <category>Science</category>
+    </item>
+    <item>
+      <title>串疊型太陽能轉換效率再創新高，轉換效率達 33.2%</title>
+      <link>https://technews.tw/2023/04/20/kaust-tandem-solar/</link>
+      <description>串疊型太陽能轉換效率再創新高，轉換效率達 33.2% #energy #solar #tech</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/kaust-tandem-solar/</guid>
+      <category>Science</category>
+    </item>
+    <item>
+      <title>砍樹燒木材，「綠能」有綠嗎？為什麼說「生質燃料」是乾淨能源的新解方？</title>
+      <link>https://www.bnext.com.tw/article/74882/clean-energy-biomass</link>
+      <description>砍樹燒木材，「綠能」有綠嗎？為什麼說「生質燃料」是乾淨能源的新解方？ #tech #green #energy</description>
+      <guid isPermaLink="false">https://www.bnext.com.tw/article/74882/clean-energy-biomass</guid>
+      <category>Science</category>
+    </item>
+    <item>
+      <title>新合金 GRX-810 抗壓性為現有頂級合金 600 倍，可成火箭發動機、核反應爐新材料</title>
+      <link>https://technews.tw/2023/04/21/superalloy-nasa-grx-810-oxide-dispersion-strengthened/</link>
+      <description>新合金 GRX-810 抗壓性為現有頂級合金 600 倍，可成火箭發動機、核反應爐新材料 #tech</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/superalloy-nasa-grx-810-oxide-dispersion-strengthened/</guid>
+      <category>Science</category>
+    </item>
+  </channel>
+</rss>
+

@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>news-digest (TechTitans.rss)</title>
+    <link>https://news-digest.vercel.app</link>
+    <description>Feed of news-digest (TechTitans.rss)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 21 Apr 2023 19:43:09 +0800</lastBuildDate>
+    <item>
+      <title>傳三星 Exynos 2500 晶片秘密開發中，自主研發的 GPU 將基於 AMD 的技術</title>
+      <link>https://www.techbang.com/posts/105314-it-is-reported-that-the-samsung-exynos-2500-chip-is-under</link>
+      <description>傳三星 Exynos 2500 晶片秘密開發中，自主研發的 GPU 將基於 AMD 的技術 #GPU #AMD #Samsung</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105314-it-is-reported-that-the-samsung-exynos-2500-chip-is-under</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>NVIDIA大失所望：RTX 4070賣崩了！AMD成市場贏家</title>
+      <link>https://news.xfastest.com/nvidia/126863/nvidia-45/</link>
+      <description>NVIDIA大失所望：RTX 4070賣崩了！AMD成市場贏家 #AMD #NVDA</description>
+      <guid isPermaLink="false">https://news.xfastest.com/nvidia/126863/nvidia-45/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>最佳顯示卡性價比不再是AMD 換成Intel Yes了 同價位無敵</title>
+      <link>https://news.xfastest.com/others/126857/intel-yes-a750/</link>
+      <description>最佳顯示卡性價比不再是AMD 換成Intel Yes了 同價位無敵 #INTC #AMD</description>
+      <guid isPermaLink="false">https://news.xfastest.com/others/126857/intel-yes-a750/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>睽違16個月 Meta市值超車特斯拉</title>
+      <link>https://m.cnyes.com/news/id/5151857</link>
+      <description>睽違16個月 Meta市值超車特斯拉 #META</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5151857</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>矽谷大佬轟：Meta人力過剩「員工混日子」；祖克柏再砍4000人、關閉IG倫敦中心</title>
+      <link>https://www.blocktempo.com/zuckerberg-cuts-another-4000-people-in-meta-closes-instagram-london-center/</link>
+      <description>矽谷大佬轟：Meta人力過剩「員工混日子」；祖克柏再砍4000人、關閉IG倫敦中心 #META</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/zuckerberg-cuts-another-4000-people-in-meta-closes-instagram-london-center/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>OpenAI大敵當前！Google嫌自家AI動作太慢、兩大部門合併為一，原DeepMind CEO掌大權</title>
+      <link>https://www.techbang.com/posts/105676-google-accelerated-the-development-of-ai-restructuring</link>
+      <description>OpenAI大敵當前！Google嫌自家AI動作太慢、兩大部門合併為一，原DeepMind CEO掌大權 #LLM #GOOG</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105676-google-accelerated-the-development-of-ai-restructuring</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Google整併AI研發為Google DeepMind</title>
+      <link>https://www.ithome.com.tw/news/156498</link>
+      <description>Google整併AI研發為Google DeepMind #GOOG</description>
+      <guid isPermaLink="false">https://www.ithome.com.tw/news/156498</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Google 自有虛擬電信服務更名 Google Fi Wireless 並推出 7 天免費試用</title>
+      <link>https://www.cool3c.com/article/192334</link>
+      <description>Google 自有虛擬電信服務更名 Google Fi Wireless 並推出 7 天免費試用 #GOOG</description>
+      <guid isPermaLink="false">https://www.cool3c.com/article/192334</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Google 將在聽聲辨曲功能中加入聆聽統計數據</title>
+      <link>https://www.kocpc.com.tw/archives/489103</link>
+      <description>Google 將在聽聲辨曲功能中加入聆聽統計數據 #GOOG</description>
+      <guid isPermaLink="false">https://www.kocpc.com.tw/archives/489103</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>大數據已死？Google老兵吐槽：資料大小不重要，能用才重要</title>
+      <link>https://www.techbang.com/posts/105629-big-data-dead</link>
+      <description>大數據已死？Google老兵吐槽：資料大小不重要，能用才重要 #GOOG</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105629-big-data-dead</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>「Bard 比沒用還糟糕！」Google 員工大肆批評AI 聊天機器人 Bard 危害安全</title>
+      <link>https://www.inside.com.tw/article/31389-Google-bard-AI-employees-criticism</link>
+      <description>「Bard 比沒用還糟糕！」Google 員工大肆批評AI 聊天機器人 Bard 危害安全 #GOOG #Bard #LLM</description>
+      <guid isPermaLink="false">https://www.inside.com.tw/article/31389-Google-bard-AI-employees-criticism</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>蘋果AR/VR 獲測試者盛讚，Reality Pro擴增實境技術力壓業界</title>
+      <link>https://mrmad.com.tw/apple-tester-praise-from-reality-pro</link>
+      <description>蘋果AR/VR 獲測試者盛讚，Reality Pro擴增實境技術力壓業界 #AAPL #AR</description>
+      <guid isPermaLink="false">https://mrmad.com.tw/apple-tester-praise-from-reality-pro</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>「果來電」等於死亡之吻？昔合作夥伴批蘋果抄襲自家專利</title>
+      <link>https://technews.tw/2023/04/21/masimo/</link>
+      <description>「果來電」等於死亡之吻？昔合作夥伴批蘋果抄襲自家專利 #AAPL</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/masimo/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>不只蘋果下單！Marvell 發表採台積電 3 奈米資料中心晶片</title>
+      <link>https://technews.tw/2023/04/21/marvell-announced-the-acquisition-of-tsmcs-3nm-process-data-center-chip/</link>
+      <description>不只蘋果下單！Marvell 發表採台積電 3 奈米資料中心晶片 #TSM #semicon</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/marvell-announced-the-acquisition-of-tsmcs-3nm-process-data-center-chip/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>科林、ASML 鬆口氣：出口限制不影響中國銷售</title>
+      <link>https://technews.tw/2023/04/21/export-restrictions-not-affecting-china-sales/</link>
+      <description>科林、ASML 鬆口氣：出口限制不影響中國銷售 #ASML #China</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/export-restrictions-not-affecting-china-sales/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>洛克希德馬丁成功驗證在軌衛星技術與演算法，全面推動維修機器人長期開發</title>
+      <link>https://technews.tw/2023/04/21/lockheed-martin-declares-success-demonstrating-tech-for-in-orbit-satellite-servicing/</link>
+      <description>洛克希德馬丁成功驗證在軌衛星技術與演算法，全面推動維修機器人長期開發 #LMT #military</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/lockheed-martin-declares-success-demonstrating-tech-for-in-orbit-satellite-servicing/</guid>
+      <category>Tech Titans</category>
+    </item>
+  </channel>
+</rss>
+

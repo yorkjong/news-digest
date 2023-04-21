@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
-    <title>Feed of my news digestion</title>
+    <title>news-digest (Crypto.rss)</title>
     <link>https://news-digest.vercel.app</link>
-    <description>Feed of my news digestion</description>
+    <description>Feed of news-digest (Crypto.rss)</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 21 Apr 2023 18:53:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Apr 2023 19:43:10 +0800</lastBuildDate>
     <item>
       <title>投資 FTX 近億美元全歸零！加拿大養老基金：不敢再碰加密貨幣</title>
       <link>https://blockcast.it/2023/04/21/ontario-teachers-pension-plan-steers-clear-of-crypto-after-95mn-ftx-loss/</link>

@@ -1,68 +1,75 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
   <channel>
-    <title>Feed of my news digestion</title>
+    <title>news-digest (Taiwan.rss)</title>
     <link>https://news-digest.vercel.app</link>
-    <description>Feed of my news digestion</description>
+    <description>Feed of news-digest (Taiwan.rss)</description>
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 21 Apr 2023 18:53:53 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Apr 2023 19:43:10 +0800</lastBuildDate>
     <item>
-      <title>投資 FTX 近億美元全歸零！加拿大養老基金：不敢再碰加密貨幣</title>
-      <link>https://blockcast.it/2023/04/21/ontario-teachers-pension-plan-steers-clear-of-crypto-after-95mn-ftx-loss/</link>
-      <description>投資 FTX 近億美元全歸零！加拿大養老基金：不敢再碰加密貨幣 #FTX #Crypto</description>
-      <guid isPermaLink="false">https://blockcast.it/2023/04/21/ontario-teachers-pension-plan-steers-clear-of-crypto-after-95mn-ftx-loss/</guid>
-      <category>Crypto</category>
+      <title>儲能設備（系統）火熱！儲能概念股有哪些？儲能產業分析！</title>
+      <link>https://www.stockfeel.com.tw/儲能設備-儲能系統-儲能-儲能概念股-儲能電池/</link>
+      <description>儲能設備（系統）火熱！儲能概念股有哪些？儲能產業分析！ #TW #energy</description>
+      <guid isPermaLink="false">https://www.stockfeel.com.tw/儲能設備-儲能系統-儲能-儲能概念股-儲能電池/</guid>
+      <category>Taiwan</category>
     </item>
     <item>
-      <title>為何 Arthur Hayes 要在美財政部帳戶餘額見底時，清倉比特幣？</title>
-      <link>https://blockcast.it/2023/04/20/us-tga-drops-in-line-with-arthur-hayes-market-prediction/</link>
-      <description>為何 Arthur Hayes 要在美財政部帳戶餘額見底時，清倉比特幣？ #Crypto #BTC</description>
-      <guid isPermaLink="false">https://blockcast.it/2023/04/20/us-tga-drops-in-line-with-arthur-hayes-market-prediction/</guid>
-      <category>Crypto</category>
+      <title>半導體產業仍在去庫存，但進入尾聲了</title>
+      <link>https://blog.moneydj.com/joe/2023/04/20/半導體產業仍在去庫存，但進入尾聲了/</link>
+      <description>半導體產業仍在去庫存，但進入尾聲了 #TW #semicon</description>
+      <guid isPermaLink="false">https://blog.moneydj.com/joe/2023/04/20/半導體產業仍在去庫存，但進入尾聲了/</guid>
+      <category>Taiwan</category>
     </item>
     <item>
-      <title>基於以太坊發行！法國興業銀行推出「歐元穩定幣 EURCV 」</title>
-      <link>https://blockcast.it/2023/04/20/societe-generale-launches-euro-stablecoin-on-ethereum/</link>
-      <description>基於以太坊發行！法國興業銀行推出「歐元穩定幣 EURCV 」 #Crypto #ETH</description>
-      <guid isPermaLink="false">https://blockcast.it/2023/04/20/societe-generale-launches-euro-stablecoin-on-ethereum/</guid>
-      <category>Crypto</category>
+      <title>兩岸植林逾3萬公頃 華紙躍居碳匯富豪</title>
+      <link>https://ctee.com.tw/news/industry/847627.html</link>
+      <description>兩岸植林逾3萬公頃 華紙躍居碳匯富豪 #TW #華紙</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/industry/847627.html</guid>
+      <category>Taiwan</category>
     </item>
     <item>
-      <title>USDCTreasury今日凌晨銷毀逾1億枚USDC</title>
-      <link>https://m.cnyes.com/news/id/5152301</link>
-      <description>USDCTreasury今日凌晨銷毀逾1億枚USDC #USDC #Crypto</description>
-      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152301</guid>
-      <category>Crypto</category>
+      <title>〈台積電法說〉今年資本支出金額不變 3奈米維持Q3放量</title>
+      <link>https://m.cnyes.com/news/id/5151468</link>
+      <description>〈台積電法說〉今年資本支出金額不變 3奈米維持Q3放量 #TSM #TW</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5151468</guid>
+      <category>Taiwan</category>
     </item>
     <item>
-      <title>Doge 日嘉年華 — 交易 DOGE 和特定的迷因幣，瓜分 1,000,000 DOGE</title>
-      <link>https://www.bitget.com/zh-TW/support/articles/12560603781790</link>
-      <description>Doge 日嘉年華 — 交易 DOGE 和特定的迷因幣，瓜分 1,000,000 DOGE #DOGE #Crypto</description>
-      <guid isPermaLink="false">https://www.bitget.com/zh-TW/support/articles/12560603781790</guid>
-      <category>Crypto</category>
+      <title>外媒：台積電支出不變是最大意外，為搶搭 AI 熱</title>
+      <link>https://technews.tw/2023/04/21/tsmc-keeps-spending-to-leverage-the-ai-boom/</link>
+      <description>外媒：台積電支出不變是最大意外，為搶搭 AI 熱 #TSM #TW</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/tsmc-keeps-spending-to-leverage-the-ai-boom/</guid>
+      <category>Taiwan</category>
     </item>
     <item>
-      <title>里程碑！歐盟批准加密監管法《MiCA》，幣安CZ：世界最大市場擁抱Web3</title>
-      <link>https://www.blocktempo.com/eu-approves-crypto-regulatory-law-mica/</link>
-      <description>里程碑！歐盟批准加密監管法《MiCA》，幣安CZ：世界最大市場擁抱Web3 #Crypto #Web3</description>
-      <guid isPermaLink="false">https://www.blocktempo.com/eu-approves-crypto-regulatory-law-mica/</guid>
-      <category>Crypto</category>
+      <title>功耗降低30%，台積電稱2nm客戶熱情高漲：2025年量產</title>
+      <link>https://www.techbang.com/posts/105680-power-consumption-reduced-by-30-tsmc-said-2nm-customer</link>
+      <description>功耗降低30%，台積電稱2nm客戶熱情高漲：2025年量產 #TSM #TW</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105680-power-consumption-reduced-by-30-tsmc-said-2nm-customer</guid>
+      <category>Taiwan</category>
     </item>
     <item>
-      <title>Tornado Cash開發者傳已被釋放，治理代幣TORN暴漲27%</title>
-      <link>https://www.blocktempo.com/alex-pertsev-have-released-from-netherlands-jail/</link>
-      <description>Tornado Cash開發者傳已被釋放，治理代幣TORN暴漲27% #Crypto</description>
-      <guid isPermaLink="false">https://www.blocktempo.com/alex-pertsev-have-released-from-netherlands-jail/</guid>
-      <category>Crypto</category>
+      <title>台積電砍單40%？ASML曝光機根本不擔心 1.3兆訂單在排隊</title>
+      <link>https://news.xfastest.com/asml/126819/asml-tsmc/</link>
+      <description>台積電砍單40%？ASML曝光機根本不擔心 1.3兆訂單在排隊 #ASML #TSM #TW</description>
+      <guid isPermaLink="false">https://news.xfastest.com/asml/126819/asml-tsmc/</guid>
+      <category>Taiwan</category>
     </item>
     <item>
-      <title>推特換名「改賣迷因幣」！SBF曾力捧的Solana交易所Serum，分叉下場淒涼</title>
-      <link>https://www.blocktempo.com/serum-twitter-account-recently-deleted-all-tweets-and-began-shilling-shitcoins/</link>
-      <description>推特換名「改賣迷因幣」！SBF曾力捧的Solana交易所Serum，分叉下場淒涼 #SOL #Crypto</description>
-      <guid isPermaLink="false">https://www.blocktempo.com/serum-twitter-account-recently-deleted-all-tweets-and-began-shilling-shitcoins/</guid>
-      <category>Crypto</category>
+      <title>晶心科攜手IAR 協助奕力加速開發車用TDDI</title>
+      <link>https://m.cnyes.com/news/id/5151493</link>
+      <description>晶心科攜手IAR 協助奕力加速開發車用TDDI #TW #晶心科</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5151493</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>鴻海旗下工業富聯澄清丟單傳聞不實 股價應聲暴漲10%</title>
+      <link>https://news.cnyes.com/news/id/5151244</link>
+      <description>鴻海旗下工業富聯澄清丟單傳聞不實 股價應聲暴漲10% #TW #鴻海</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151244</guid>
+      <category>Taiwan</category>
     </item>
   </channel>
 </rss>

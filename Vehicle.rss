@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>news-digest (Vehicle.rss)</title>
+    <link>https://news-digest.vercel.app</link>
+    <description>Feed of news-digest (Vehicle.rss)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 21 Apr 2023 19:43:08 +0800</lastBuildDate>
+    <item>
+      <title>Elon Musk：Tesla 已準備好在 Q3 舉辦 Cybertruck 交付活動</title>
+      <link>https://chinese.engadget.com/tesla-has-scheduled-a-cybertruck-delivery-event-for-the-third-quarter-musk-says-010022064.html</link>
+      <description>Elon Musk：Tesla 已準備好在 Q3 舉辦 Cybertruck 交付活動 #TSLA #EV</description>
+      <guid isPermaLink="false">https://chinese.engadget.com/tesla-has-scheduled-a-cybertruck-delivery-event-for-the-third-quarter-musk-says-010022064.html</guid>
+      <category>Vehicle</category>
+    </item>
+    <item>
+      <title>史上「最熱鬧」的上海車展，特斯拉缺席了</title>
+      <link>https://technews.tw/2023/04/20/tesla-absent-from-shanghai-auto-show-2023/</link>
+      <description>史上「最熱鬧」的上海車展，特斯拉缺席了 #EV #TSLA</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/tesla-absent-from-shanghai-auto-show-2023/</guid>
+      <category>Vehicle</category>
+    </item>
+    <item>
+      <title>《中資異動》比亞迪電子跌近5%失守50天線,現報22.85元</title>
+      <link>https://m.cnyes.com/news/id/5152440</link>
+      <description>《中資異動》比亞迪電子跌近5%失守50天線,現報22.85元 #EV #BYD</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152440</guid>
+      <category>Vehicle</category>
+    </item>
+    <item>
+      <title>太好偷！美18州檢察長致函NHTSA 要求現代、起亞車大批召回</title>
+      <link>https://news.cnyes.com/news/id/5151864</link>
+      <description>太好偷！美18州檢察長致函NHTSA 要求現代、起亞車大批召回 #EV</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151864</guid>
+      <category>Vehicle</category>
+    </item>
+    <item>
+      <title>HYUNDAI IONIQ 6電動車 橫掃世界年度風雲車三大獎</title>
+      <link>https://ctee.com.tw/industrynews/consumption/847792.html</link>
+      <description>HYUNDAI IONIQ 6電動車 橫掃世界年度風雲車三大獎 #EV</description>
+      <guid isPermaLink="false">https://ctee.com.tw/industrynews/consumption/847792.html</guid>
+      <category>Vehicle</category>
+    </item>
+    <item>
+      <title>Lordstown Motors收到那斯達克下市提醒 尋求反向股票分拆</title>
+      <link>https://news.cnyes.com/news/id/5151688</link>
+      <description>Lordstown Motors收到那斯達克下市提醒 尋求反向股票分拆 #EV</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151688</guid>
+      <category>Vehicle</category>
+    </item>
+    <item>
+      <title>瑞典電動車業者 CAKE 推出高性能永磁馬達「Jante」 (192371)</title>
+      <link>https://www.cool3c.com/article/192371</link>
+      <description>瑞典電動車業者 CAKE 推出高性能永磁馬達「Jante」 (192371) #EV #motor</description>
+      <guid isPermaLink="false">https://www.cool3c.com/article/192371</guid>
+      <category>Vehicle</category>
+    </item>
+  </channel>
+</rss>
+
