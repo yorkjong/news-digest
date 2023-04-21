@@ -1,0 +1,440 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>Feed of my news digestion</title>
+    <link>https://news-digest.vercel.app/feed.xml</link>
+    <description>Feed of my news digestion</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Fri, 21 Apr 2023 14:54:14 +0800</lastBuildDate>
+    <item>
+      <title>2.1. 提示詞(Prompt)寫法與範例</title>
+      <link>https://ivonblog.com/posts/stable-diffusion-webui-manuals/features/prompt-guide/</link>
+      <description>2.1. 提示詞(Prompt)寫法與範例 #LLM #AI #Prompt</description>
+      <guid isPermaLink="false">https://ivonblog.com/posts/stable-diffusion-webui-manuals/features/prompt-guide/</guid>
+      <category>IT</category>
+    </item>
+    <item>
+      <title>GPT-4 有多威？給 ChatGPT 手繪架構就幫你完成網站了（嚇）</title>
+      <link>https://www.kocpc.com.tw/archives/489104</link>
+      <description>GPT-4 有多威？給 ChatGPT 手繪架構就幫你完成網站了（嚇） #GPT #ChatGPT</description>
+      <guid isPermaLink="false">https://www.kocpc.com.tw/archives/489104</guid>
+      <category>IT</category>
+    </item>
+    <item>
+      <title>Stability AI開源LLM模型，自詡小但具高效能</title>
+      <link>https://www.ithome.com.tw/news/156485</link>
+      <description>Stability AI開源LLM模型，自詡小但具高效能 #LLM #AI</description>
+      <guid isPermaLink="false">https://www.ithome.com.tw/news/156485</guid>
+      <category>IT</category>
+    </item>
+    <item>
+      <title>香蕉用1方法保存在冰箱，1周都不會變黑；香蕉吃多了會傷腎?</title>
+      <link>https://today.line.me/tw/v2/article/zNy82wP</link>
+      <description>香蕉用1方法保存在冰箱，1周都不會變黑；香蕉吃多了會傷腎? #food #health</description>
+      <guid isPermaLink="false">https://today.line.me/tw/v2/article/zNy82wP</guid>
+      <category>Science &amp; Technology</category>
+    </item>
+    <item>
+      <title>串疊型太陽能轉換效率再創新高，轉換效率達 33.2%</title>
+      <link>https://technews.tw/2023/04/20/kaust-tandem-solar/</link>
+      <description>串疊型太陽能轉換效率再創新高，轉換效率達 33.2% #solar #energy #tech</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/kaust-tandem-solar/</guid>
+      <category>Science &amp; Technology</category>
+    </item>
+    <item>
+      <title>技術有極限，科學家：砸幾十億美元打造深空住所是白費力氣</title>
+      <link>https://technews.tw/2023/04/20/human-in-deep-space-need-sustainable-energy/</link>
+      <description>技術有極限，科學家：砸幾十億美元打造深空住所是白費力氣 #tech #space</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/human-in-deep-space-need-sustainable-energy/</guid>
+      <category>Science &amp; Technology</category>
+    </item>
+    <item>
+      <title>聚光太陽能新應用，以「人工光合作用」製綠色氫氣</title>
+      <link>https://technews.tw/2023/04/19/solar-dish-reactor-hydrogen/</link>
+      <description>聚光太陽能新應用，以「人工光合作用」製綠色氫氣 #energy #tech</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/solar-dish-reactor-hydrogen/</guid>
+      <category>Science &amp; Technology</category>
+    </item>
+    <item>
+      <title>香港法院首度認定「加密貨幣是財產」！信託持有就算法定資產</title>
+      <link>https://www.blocktempo.com/hong-kong-court-ruling-recognizes-the-attribution-of-cryptocurrency-assets/</link>
+      <description>香港法院首度認定「加密貨幣是財產」！信託持有就算法定資產 #Crypto #China</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/hong-kong-court-ruling-recognizes-the-attribution-of-cryptocurrency-assets/</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>法拍2.6萬USDT「溢價買主」找到了！律師陳靜芳專訪：參與台灣司法處理加密貨幣</title>
+      <link>https://www.blocktempo.com/interview-with-attorney-of-law-jing-fang-chena-bout-usdt-foreclosure/</link>
+      <description>法拍2.6萬USDT「溢價買主」找到了！律師陳靜芳專訪：參與台灣司法處理加密貨幣 #Crypto</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/interview-with-attorney-of-law-jing-fang-chena-bout-usdt-foreclosure/</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>以太坊Gas費用居高不下，兇手抓到了！迷因幣竟是最大幫兇</title>
+      <link>https://abmedia.io/why-ethereum-gas-so-high</link>
+      <description>以太坊Gas費用居高不下，兇手抓到了！迷因幣竟是最大幫兇 #Crypto #ETH</description>
+      <guid isPermaLink="false">https://abmedia.io/why-ethereum-gas-so-high</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>以太坊域名服務ENS新版本上線！舊域名可進行升級，以支援新功能</title>
+      <link>https://abmedia.io/new-ens-app-is-live</link>
+      <description>以太坊域名服務ENS新版本上線！舊域名可進行升級，以支援新功能 #Crypto #ETH</description>
+      <guid isPermaLink="false">https://abmedia.io/new-ens-app-is-live</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>Galaxy Digital：不希望比特幣太快漲至100萬鎂！全球經濟會崩盤</title>
+      <link>https://www.blocktempo.com/dont-want-bitcoin-to-go-up-to-1-million-magnesium-fast/</link>
+      <description>Galaxy Digital：不希望比特幣太快漲至100萬鎂！全球經濟會崩盤 #Crypto #BTC</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/dont-want-bitcoin-to-go-up-to-1-million-magnesium-fast/</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>Tether單季大賺7億鎂！詳解穩定幣USDT的營收煉金術</title>
+      <link>https://www.blocktempo.com/explain-in-detail-how-to-make-money-with-the-stablecoin-usdt/</link>
+      <description>Tether單季大賺7億鎂！詳解穩定幣USDT的營收煉金術 #USDT #Crypto</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/explain-in-detail-how-to-make-money-with-the-stablecoin-usdt/</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>對抗美國制裁！俄羅斯央行要用加密貨幣進行跨境支付</title>
+      <link>https://blockcast.it/2023/04/20/russia-plans-to-use-crypto-for-cross-border-deals-says-central-bank/</link>
+      <description>對抗美國制裁！俄羅斯央行要用加密貨幣進行跨境支付 #Crypto #Russia</description>
+      <guid isPermaLink="false">https://blockcast.it/2023/04/20/russia-plans-to-use-crypto-for-cross-border-deals-says-central-bank/</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>邊睡邊賺 》GoSleep治理代幣 $ZZZ 今晚8點上架Bitget、Gate.io和MEXC</title>
+      <link>https://www.blocktempo.com/gosleepzzz-new-listing-on-bitget%E3%80%81gate-io-and-mexc/</link>
+      <description>邊睡邊賺 》GoSleep治理代幣 $ZZZ 今晚8點上架Bitget、Gate.io和MEXC #Crypto #GoSleep</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/gosleepzzz-new-listing-on-bitget%E3%80%81gate-io-and-mexc/</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>FTX 重啟有望！彭博：風投基金Tribe Capital考慮注資2.5億鎂、FTT跳漲20%</title>
+      <link>https://www.blocktempo.com/vc-firm-tribe-capital-considers-raising-250-million/</link>
+      <description>FTX 重啟有望！彭博：風投基金Tribe Capital考慮注資2.5億鎂、FTT跳漲20% #FTX #Crypto</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/vc-firm-tribe-capital-considers-raising-250-million/</guid>
+      <category>Crypto</category>
+    </item>
+    <item>
+      <title>政府舉報投資詐騙廣告，Meta 下架逾四成 Google 為 0</title>
+      <link>https://technews.tw/2023/04/19/investment-scam-ads-meta-google/</link>
+      <description>政府舉報投資詐騙廣告，Meta 下架逾四成 Google 為 0 #META #GOOG #TW</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/investment-scam-ads-meta-google/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>全台首創，浸沒式冷卻電池進駐台電彰濱儲能案場</title>
+      <link>https://technews.tw/2023/04/19/xing-mobility-immersio/</link>
+      <description>全台首創，浸沒式冷卻電池進駐台電彰濱儲能案場 #TW #energy</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/xing-mobility-immersio/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>全台首創線上綠電顧問！台泥旗下能元超商轉供宏碁千萬度綠電</title>
+      <link>https://technews.tw/2023/04/19/cppa/</link>
+      <description>全台首創線上綠電顧問！台泥旗下能元超商轉供宏碁千萬度綠電 #TW #台泥</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/cppa/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>新店裕隆城預計9月開幕營運 年收入3-4億元</title>
+      <link>https://news.cnyes.com/news/id/5149865</link>
+      <description>新店裕隆城預計9月開幕營運 年收入3-4億元 #TW</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5149865</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>鴻海旗下工業富聯午盤股價急殺跌停　單日市值蒸發逾1600億</title>
+      <link>https://tw.nextapple.com/finance/20230419/12180C5EEC718DA3976BF446D9E3689A</link>
+      <description>鴻海旗下工業富聯午盤股價急殺跌停　單日市值蒸發逾1600億 #TW #鴻海</description>
+      <guid isPermaLink="false">https://tw.nextapple.com/finance/20230419/12180C5EEC718DA3976BF446D9E3689A</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>微軟同意 15 億購鴻海威州園區土地，建大型資料中心</title>
+      <link>https://technews.tw/2023/04/20/microsoft-agrees-to-buy-50m-foxconn-parcel-in-wisconsin/</link>
+      <description>微軟同意 15 億購鴻海威州園區土地，建大型資料中心 #MSFT #鴻海 #TW</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/microsoft-agrees-to-buy-50m-foxconn-parcel-in-wisconsin/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>碳交易平台要來了 減碳國家隊出列 三檔碳匯富翁飆漲停</title>
+      <link>https://news.cnyes.com/news/id/5150858</link>
+      <description>碳交易平台要來了 減碳國家隊出列 三檔碳匯富翁飆漲停 #TW #華紙 #永豐餘 #農林</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150858</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>〈智慧顯示展〉友達彭双浪：Micro LED成本可望如摩爾定律 每兩年降50%</title>
+      <link>https://news.cnyes.com/news/id/5150173</link>
+      <description>〈智慧顯示展〉友達彭双浪：Micro LED成本可望如摩爾定律 每兩年降50% #TW #友達</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150173</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>Micro OLED 來勢洶洶，錼創董座樂觀看待：業界較青睞 Micro LED</title>
+      <link>https://technews.tw/2023/04/19/playnitride-micro-led-2/</link>
+      <description>Micro OLED 來勢洶洶，錼創董座樂觀看待：業界較青睞 Micro LED #TW</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/playnitride-micro-led-2/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>〈智慧顯示展〉群創洪進揚：5.5代廠生產利基品 低軌衛星天線、Micro LED都有可能</title>
+      <link>https://news.cnyes.com/news/id/5150139</link>
+      <description>〈智慧顯示展〉群創洪進揚：5.5代廠生產利基品 低軌衛星天線、Micro LED都有可能 #TW #群創</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150139</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>群創送分題來了?老手:1理由「這裡」可撿</title>
+      <link>https://ctee.com.tw/news/stocks/846967.html</link>
+      <description>群創送分題來了?老手:1理由「這裡」可撿 #TW #群創</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/stocks/846967.html</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>〈智慧顯示展〉群創印度投資案6月明朗 瘦身精實體質加速轉型</title>
+      <link>https://m.cnyes.com/news/id/5150414</link>
+      <description>〈智慧顯示展〉群創印度投資案6月明朗 瘦身精實體質加速轉型 #TW #群創</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5150414</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>Readmoo與元太科技合作推出 E Ink Gallery™ 3 彩色8 吋折疊電子書閱讀器</title>
+      <link>https://www.techbang.com/posts/105649-readmoo-cooperated-with-yuantai-technology-to-launch-the-eink</link>
+      <description>Readmoo與元太科技合作推出 E Ink Gallery™ 3 彩色8 吋折疊電子書閱讀器 #EInk #TW</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105649-readmoo-cooperated-with-yuantai-technology-to-launch-the-eink</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>先進製程材料分析有解方！國科會原子針尖斷層影像儀發表</title>
+      <link>https://technews.tw/2023/04/19/national-science-council-atomic-needle-tip-tomography-released/</link>
+      <description>先進製程材料分析有解方！國科會原子針尖斷層影像儀發表 #TSM #TW</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/19/national-science-council-atomic-needle-tip-tomography-released/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>護國神山發威！彭博：義大利尋求台灣晶片幫助　有意退出中國一帶一路</title>
+      <link>https://tw.nextapple.com/international/20230420/D1B0290A551D5DDA6A189D8D5DA25C9B</link>
+      <description>護國神山發威！彭博：義大利尋求台灣晶片幫助　有意退出中國一帶一路 #TSM #TW</description>
+      <guid isPermaLink="false">https://tw.nextapple.com/international/20230420/D1B0290A551D5DDA6A189D8D5DA25C9B</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>WSJ：台積電向美國尋求高達150億美元補助建廠 但反對某些附加條件</title>
+      <link>https://news.cnyes.com/news/id/5150066</link>
+      <description>WSJ：台積電向美國尋求高達150億美元補助建廠 但反對某些附加條件 #TSM #TW</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150066</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>〈台積電法說〉Q2營收估季減6.7% 下半年將強勁成長</title>
+      <link>https://news.cnyes.com/news/id/5151146</link>
+      <description>〈台積電法說〉Q2營收估季減6.7% 下半年將強勁成長 #TSM #TW</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151146</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>英特爾、台積電將赴歐洲設半導體廠 三星和海力士預料不會跟進</title>
+      <link>https://news.cnyes.com/news/id/5150859</link>
+      <description>英特爾、台積電將赴歐洲設半導體廠 三星和海力士預料不會跟進 #INTC #TSM #TW</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150859</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>中國稱取得6G重要突破 完成重要實時無線傳輸通信實驗</title>
+      <link>https://m.cnyes.com/news/id/5150201</link>
+      <description>中國稱取得6G重要突破 完成重要實時無線傳輸通信實驗 #China</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5150201</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>中國擬提振企業家信心，傳螞蟻集團罰款降至 7 億美元</title>
+      <link>https://finance.technews.tw/2023/04/19/ant-group-fined-down/</link>
+      <description>中國擬提振企業家信心，傳螞蟻集團罰款降至 7 億美元 #China</description>
+      <guid isPermaLink="false">https://finance.technews.tw/2023/04/19/ant-group-fined-down/</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>〈財報〉高利率提升利息收入 美國合眾銀行上季獲利超過預期</title>
+      <link>https://news.cnyes.com/news/id/5150178</link>
+      <description>〈財報〉高利率提升利息收入 美國合眾銀行上季獲利超過預期 #bank</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150178</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>美元走軟 Nvidia等5檔可望搭上順風車</title>
+      <link>https://news.cnyes.com/news/id/5150516</link>
+      <description>美元走軟 Nvidia等5檔可望搭上順風車 #USD #NVDA #MU #CAT #PM #EL</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150516</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>Fed褐皮書：美國經濟停滯 通膨和就業市場降溫、信貸收緊</title>
+      <link>https://news.cnyes.com/news/id/5150212</link>
+      <description>Fed褐皮書：美國經濟停滯 通膨和就業市場降溫、信貸收緊 #Fed</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150212</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>突發！黃金又暴跌了！為何金價跌不停？</title>
+      <link>https://www.dailyfxasia.com/cn/cmarkets/20230419-23758.html</link>
+      <description>突發！黃金又暴跌了！為何金價跌不停？ #gold</description>
+      <guid isPermaLink="false">https://www.dailyfxasia.com/cn/cmarkets/20230419-23758.html</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>第一張骨牌倒下！美國知名地產商爆出1.6億美元違約</title>
+      <link>https://news.cnyes.com/news/id/5150154</link>
+      <description>第一張骨牌倒下！美國知名地產商爆出1.6億美元違約 #RealEstate</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150154</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>阿里巴巴股價被低估50%？  日經中文網</title>
+      <link>https://zh.cn.nikkei.com/china/ccompany/52086-2023-04-18-05-00-00.html</link>
+      <description>阿里巴巴股價被低估50%？  日經中文網 #BABA #China</description>
+      <guid isPermaLink="false">https://zh.cn.nikkei.com/china/ccompany/52086-2023-04-18-05-00-00.html</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>ASML 稱客戶有些保守、記憶體商延遲採購，股價挫</title>
+      <link>https://finance.technews.tw/2023/04/20/asml-stock-price-0419/</link>
+      <description>ASML 稱客戶有些保守、記憶體商延遲採購，股價挫 #ASML #semicon</description>
+      <guid isPermaLink="false">https://finance.technews.tw/2023/04/20/asml-stock-price-0419/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>中国也有自己的ChatGPT和Copilot了？国内人工智能弯道超车的机会在工具应用？【大小马聊科技52】-上</title>
+      <link>https://www.youtube.com/watch?v=ZABeX_OIDXc</link>
+      <description>中国也有自己的ChatGPT和Copilot了？国内人工智能弯道超车的机会在工具应用？【大小马聊科技52】-上 #YouTube #小丹尼 #AI #LLM #ChatGPT #AI #AID #MSFT #BABA #China</description>
+      <guid isPermaLink="false">https://www.youtube.com/watch?v=ZABeX_OIDXc</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>傳三星 Exynos 2500 晶片秘密開發中，自主研發的 GPU 將基於 AMD 的技術</title>
+      <link>https://www.techbang.com/posts/105314-it-is-reported-that-the-samsung-exynos-2500-chip-is-under</link>
+      <description>傳三星 Exynos 2500 晶片秘密開發中，自主研發的 GPU 將基於 AMD 的技術 #Samsung #GPU #AMD</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105314-it-is-reported-that-the-samsung-exynos-2500-chip-is-under</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>人工智慧大老報效美軍，前 Google AI 副總任職中央司令部</title>
+      <link>https://technews.tw/2023/04/20/former-google-ai-vp-joined-uscentcom/</link>
+      <description>人工智慧大老報效美軍，前 Google AI 副總任職中央司令部 #AI #military</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/former-google-ai-vp-joined-uscentcom/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Google摺疊機要亮相了？「Pixel Fold」傳5/10登場，7大預測亮點一次看</title>
+      <link>https://www.bnext.com.tw/article/74903/google-pixel-fold-foldable</link>
+      <description>Google摺疊機要亮相了？「Pixel Fold」傳5/10登場，7大預測亮點一次看 #GOOG</description>
+      <guid isPermaLink="false">https://www.bnext.com.tw/article/74903/google-pixel-fold-foldable</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>新型電池專利：中國量居首,日美質佔優  日經中文網</title>
+      <link>https://zh.cn.nikkei.com/industry/scienceatechnology/52106-2023-04-20-05-02-20.html</link>
+      <description>新型電池專利：中國量居首,日美質佔優  日經中文網 #battery #EV</description>
+      <guid isPermaLink="false">https://zh.cn.nikkei.com/industry/scienceatechnology/52106-2023-04-20-05-02-20.html</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>价格战厮杀后，车企还能靠啥制胜？【大小马聊科技】-中</title>
+      <link>https://www.youtube.com/watch?v=ErGgVMAwjSk</link>
+      <description>价格战厮杀后，车企还能靠啥制胜？【大小马聊科技】-中 #YouTube #小丹尼 #XPEV</description>
+      <guid isPermaLink="false">https://www.youtube.com/watch?v=ErGgVMAwjSk</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>Sam Altman和马斯克分道扬镳？【大小马聊科技52】-下</title>
+      <link>https://www.youtube.com/watch?v=OvEvXy47RDQ</link>
+      <description>Sam Altman和马斯克分道扬镳？【大小马聊科技52】-下 #YouTube #小丹尼 #Altman #ChatGPT #☆</description>
+      <guid isPermaLink="false">https://www.youtube.com/watch?v=OvEvXy47RDQ</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>一个糟糕的财报？ 特斯拉23 Q1体检报告 “我们卖车可以不赚钱”</title>
+      <link>https://www.youtube.com/watch?v=LAJWgb2rqj8</link>
+      <description>一个糟糕的财报？ 特斯拉23 Q1体检报告 “我们卖车可以不赚钱” #YouTube #Alan #TSLA</description>
+      <guid isPermaLink="false">https://www.youtube.com/watch?v=LAJWgb2rqj8</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>馬斯克宣布打造 ChatGPT 競品！OpenAI CEO 潑冷水：GPT-5 可能大改</title>
+      <link>https://technews.tw/2023/04/20/musk-vs-openai-chatgpt/</link>
+      <description>馬斯克宣布打造 ChatGPT 競品！OpenAI CEO 潑冷水：GPT-5 可能大改 #Elon #LLM</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/musk-vs-openai-chatgpt/</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>馬斯克揚言提告 控微軟用推特資料非法訓練AI</title>
+      <link>https://news.cnyes.com/news/id/5150537</link>
+      <description>馬斯克揚言提告 控微軟用推特資料非法訓練AI #Elon #TWTR</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150537</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>131 萬元入手 Model 3 LR 長續航電動車，特斯拉原廠認證中古車也降價了！</title>
+      <link>https://www.ddcar.com.tw/article/34959</link>
+      <description>131 萬元入手 Model 3 LR 長續航電動車，特斯拉原廠認證中古車也降價了！ #TSLA #EV</description>
+      <guid isPermaLink="false">https://www.ddcar.com.tw/article/34959</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>特斯拉空頭今年迄今巨虧55.2億美元</title>
+      <link>https://news.cnyes.com/news/id/5150507</link>
+      <description>特斯拉空頭今年迄今巨虧55.2億美元 #TSLA</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150507</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>等 3 年多馬斯克終於官宣：Q3 舉辦 Cybertruck 交車</title>
+      <link>https://technews.tw/2023/04/20/elon-musk-announces-tesla-cybertruck-delivery-event-in-third-quarter-of-2023/</link>
+      <description>等 3 年多馬斯克終於官宣：Q3 舉辦 Cybertruck 交車 #TSLA #EV</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/elon-musk-announces-tesla-cybertruck-delivery-event-in-third-quarter-of-2023/</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>無懼財報獲利下滑，特斯拉會繼續降價</title>
+      <link>https://finance.technews.tw/2023/04/20/tesla-price-cut-margin-fall/</link>
+      <description>無懼財報獲利下滑，特斯拉會繼續降價 #TSLA #EV</description>
+      <guid isPermaLink="false">https://finance.technews.tw/2023/04/20/tesla-price-cut-margin-fall/</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>馬斯克：特斯拉將持續追求銷量 而非利潤率</title>
+      <link>https://m.cnyes.com/news/id/5151072</link>
+      <description>馬斯克：特斯拉將持續追求銷量 而非利潤率 #TSLA #EV</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5151072</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>〈財報〉降價副作用 特斯拉Q1毛利率逾兩年最低 盤後續挫逾5%</title>
+      <link>https://news.cnyes.com/news/id/5150512</link>
+      <description>〈財報〉降價副作用 特斯拉Q1毛利率逾兩年最低 盤後續挫逾5% #TSLA #EV</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5150512</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>馬斯克賣露營神器！縮小版星艦火炬烤肉必備</title>
+      <link>https://today.line.me/tw/v2/article/rmyR7NX</link>
+      <description>馬斯克賣露營神器！縮小版星艦火炬烤肉必備 #SpaceX</description>
+      <guid isPermaLink="false">https://today.line.me/tw/v2/article/rmyR7NX</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+    <item>
+      <title>沒在怕墜落，SpaceX 繼續發射新一批 V2 Mini 星鏈衛星</title>
+      <link>https://technews.tw/2023/04/20/spacex-starlink-satellite-v2-mini/</link>
+      <description>沒在怕墜落，SpaceX 繼續發射新一批 V2 Mini 星鏈衛星 #SpaceX</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/20/spacex-starlink-satellite-v2-mini/</guid>
+      <category>Tesla &amp; SpaceX; Vehicle</category>
+    </item>
+  </channel>
+</rss>
+
