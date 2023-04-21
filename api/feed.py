@@ -1,47 +1,77 @@
 """
-RSS/ATOM feed generator for news digestion
+RSS feed generation for news digestion
 """
 __author__ = "York <york.jong@gmail.com>"
 __date__ = "2023/04/21 (initial version) ~ 2023/04/21 (last revision)"
 
+__all__ = [
+    'rss_from_lines',
+]
+
+import sys
 import re
 import pytz
 from datetime import datetime
-import clip
 from feedgen.feed import FeedGenerator
+import clip
+import hashtag
 
 
-content = clip.get_latest_journal()
-lines = content.split('\n')
+def rss_from_lines(lines):
+    '''Get RSS string from the lines of markdown text.
 
-fg = FeedGenerator()
-fg.title('Feed of my news digestion')
-fg.author({'name': 'York Jong', 'email': 'york.jong@gmail.com'})
-fg.id('https://news-digest.vercel.app') # for ATOM feed only
-fg.link(href='https://news-digest.vercel.app/feed.xml', rel='alternate')
-fg.description('Feed of my news digestion')
+    Args:
+        lines ([str]): lines of markdown text.
 
-fg.language('zh-TW')
-pst = pytz.timezone('Asia/Taipei')
-now = datetime.now(pst)
-fg.updated(now)
+    Returns:
+        (str): RSS string.
 
-for line in lines:
-    if line.startswith('### '):
-        heading = line.strip('# ')
-    elif line.startswith('- ['):
-        title = re.search(r'\[(.+)\]\(', line).group(1)
-        url = re.search(r'\]\((.+)\)', line).group(1)
-        tags = re.search(r'\) +(#.+)', line).group(1)
-        fe = fg.add_entry()
-        fe.id(url)  # for ATOM feed only
-        fe.title(title)
-        fe.link(href=url)
-        fe.description(f'{title} {tags}')
-        fe.category(term=heading, label=heading)
-        #fe.content(title, type='html')
+    '''
+    fg = FeedGenerator()
+    fg.title('Feed of my news digestion')
+    fg.author({'name': 'York Jong', 'email': 'york.jong@gmail.com'})
+    fg.id('https://news-digest.vercel.app') # for ATOM feed only
+    fg.link(href='https://news-digest.vercel.app', rel='alternate')
+    fg.description('Feed of my news digestion')
 
-#fg.rss_file('feed.xml', pretty=True)
-#print(fg.atom_str(pretty=True).decode('utf-8'))
-print(fg.rss_str(pretty=True).decode('utf-8'))
+    fg.language('zh-TW')
+    pst = pytz.timezone('Asia/Taipei')
+    now = datetime.now(pst)
+    fg.updated(now)
+
+    for line in lines:
+        if line.startswith('### '):
+            heading = line.strip('# ')
+        elif line.startswith('- ['):
+            title = re.search(r'\[(.+)\]\(', line).group(1)
+            url = re.search(r'\]\((.+)\)', line).group(1)
+            tags = re.search(r'\) +(#.+)', line).group(1)
+            fe = fg.add_entry(order='append')
+            fe.id(url)  # for ATOM feed only
+            fe.title(title)
+            fe.link(href=url)
+            fe.description(f'{title} {tags}')
+            fe.category(term=heading, label=heading)
+
+    return fg.rss_str(pretty=True).decode('utf-8')
+
+
+def main():
+    topices = [t.strip() for t in sys.argv[1].split(',')]
+    headings = [topice for topice in topices if not topice.startswith('#')]
+    tags = [topice for topice in topices if topice.startswith('#')]
+    content = clip.get_latest_journal()
+    categories = headings
+    if not categories and tags:
+        categories = clip.get_categories(content)
+    if tags:
+        lines = clip.get_lines_of_categories(categories, content, True, True)
+        lines = hashtag.get_lines_with_any_hashtags(lines, tags)
+    else:
+        lines = clip.get_lines_of_categories(categories, content, True, True)
+    print(rss_from_lines(lines))
+
+
+if __name__ == '__main__':
+    main()
 
