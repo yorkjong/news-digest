@@ -17,22 +17,23 @@ import clip
 import hashtag
 
 
-def rss_from_lines(lines):
+def rss_from_lines(lines, name=''):
     '''Get RSS string from the lines of markdown text.
 
     Args:
         lines ([str]): lines of markdown text.
+        name (str): name of the RSS feed.
 
     Returns:
         (str): RSS string.
 
     '''
     fg = FeedGenerator()
-    fg.title('Feed of my news digestion')
+    fg.title(f'news-digest ({name})')
     fg.author({'name': 'York Jong', 'email': 'york.jong@gmail.com'})
-    fg.id('https://news-digest.vercel.app') # for ATOM feed only
+    fg.id(f'https://news-digest.vercel.app/{name}') # for ATOM feed only
     fg.link(href='https://news-digest.vercel.app', rel='alternate')
-    fg.description('Feed of my news digestion')
+    fg.description(f'Feed of news-digest ({name})')
 
     fg.language('zh-TW')
     pst = pytz.timezone('Asia/Taipei')
@@ -60,6 +61,7 @@ def main():
     topices = [t.strip() for t in sys.argv[1].split(',')]
     headings = [topice for topice in topices if not topice.startswith('#')]
     tags = [topice for topice in topices if topice.startswith('#')]
+    name = sys.argv[2]
     content = clip.get_latest_journal()
     categories = headings
     if not categories and tags:
@@ -69,7 +71,7 @@ def main():
         lines = hashtag.get_lines_with_any_hashtags(lines, tags)
     else:
         lines = clip.get_lines_of_categories(categories, content, True, True)
-    print(rss_from_lines(lines))
+    print(rss_from_lines(lines, name))
 
 
 if __name__ == '__main__':
