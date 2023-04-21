@@ -30,14 +30,22 @@ jobs:
         run: rm $GITHUB_WORKSPACE/www/trace.zip
       - name: Install feedgen
         run: pip install feedgen
-      - name: Generate IT.rss
-        run: python api/feed.py "IT" > $GITHUB_WORKSPACE/www/IT.rss
-      - name: Generate Crypto.rss
-        run: python api/feed.py "Crypto" > $GITHUB_WORKSPACE/www/Crypto.rss
-      - name: Generate Taiwan.rss
-        run: python api/feed.py "Crypto" > $GITHUB_WORKSPACE/www/Taiwan.rss
+      - name: Generate Vehicle.rss
+        run: python api/feed.py "Vehicle" Vehicle.rss > $GITHUB_WORKSPACE/www/Vehicle.rss
+      - name: Generate TechTitans.rss
+        run: python api/feed.py "Tech Titans" TechTitans.rss > $GITHUB_WORKSPACE/www/TechTitans.rss
+      - name: Generate Finance.rss
+        run: python api/feed.py "Finance" Finance.rss > $GITHUB_WORKSPACE/www/Finance.rss
       - name: Generate news.rss (Tesla, Tech, Finance)
-        run: python api/feed.py "Tesla, Tech, Finance" > $GITHUB_WORKSPACE/www/news.rss
+        run: python api/feed.py "Tesla, Tech, Finance" news.rss > $GITHUB_WORKSPACE/www/news.rss
+      - name: Generate Taiwan.rss
+        run: python api/feed.py "Taiwan" Taiwan.rss > $GITHUB_WORKSPACE/www/Taiwan.rss
+      - name: Generate Crypto.rss
+        run: python api/feed.py "Crypto" Crypto.rss > $GITHUB_WORKSPACE/www/Crypto.rss
+      - name: Generate Science.rss
+        run: python api/feed.py "Science" Science.rss > $GITHUB_WORKSPACE/www/Science.rss
+      - name: Generate IT.rss
+        run: python api/feed.py "IT" IT.rss > $GITHUB_WORKSPACE/www/IT.rss
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
         with:
