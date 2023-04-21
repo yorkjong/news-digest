@@ -7,26 +7,26 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 21 Apr 2023 17:39:35 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 21 Apr 2023 18:53:53 +0800</lastBuildDate>
     <item>
-      <title>Stability AI開源LLM模型，自詡小但具高效能</title>
-      <link>https://www.ithome.com.tw/news/156485</link>
-      <description>Stability AI開源LLM模型，自詡小但具高效能 #LLM #AI</description>
-      <guid isPermaLink="false">https://www.ithome.com.tw/news/156485</guid>
+      <title>ChatGPT能讓我們邁向「週休三日」？AI能寫程式、文案，為何說不會取代人類？</title>
+      <link>https://www.bnext.com.tw/article/74885/chatgpt-chris-ifanr</link>
+      <description>ChatGPT能讓我們邁向「週休三日」？AI能寫程式、文案，為何說不會取代人類？ #ChatGPT #AI #work</description>
+      <guid isPermaLink="false">https://www.bnext.com.tw/article/74885/chatgpt-chris-ifanr</guid>
       <category>IT</category>
     </item>
     <item>
-      <title>GPT-4 有多威？給 ChatGPT 手繪架構就幫你完成網站了（嚇）</title>
-      <link>https://www.kocpc.com.tw/archives/489104</link>
-      <description>GPT-4 有多威？給 ChatGPT 手繪架構就幫你完成網站了（嚇） #GPT #ChatGPT</description>
-      <guid isPermaLink="false">https://www.kocpc.com.tw/archives/489104</guid>
+      <title>AI真會產生感情？DeepMind CEO：總有一天會有自我意識</title>
+      <link>https://www.bnext.com.tw/article/74930/deepmind-tcb-april-23</link>
+      <description>AI真會產生感情？DeepMind CEO：總有一天會有自我意識 #AI #GOOG</description>
+      <guid isPermaLink="false">https://www.bnext.com.tw/article/74930/deepmind-tcb-april-23</guid>
       <category>IT</category>
     </item>
     <item>
-      <title>2.1. 提示詞(Prompt)寫法與範例</title>
-      <link>https://ivonblog.com/posts/stable-diffusion-webui-manuals/features/prompt-guide/</link>
-      <description>2.1. 提示詞(Prompt)寫法與範例 #LLM #AI #Prompt</description>
-      <guid isPermaLink="false">https://ivonblog.com/posts/stable-diffusion-webui-manuals/features/prompt-guide/</guid>
+      <title>詳解 Notion AI 的介面及指令：如何快速用GPT產生建立草稿、社群內容、翻譯文章？問答中斷怎麼辦？</title>
+      <link>https://www.techbang.com/posts/105370-notion-ais-10-ways-to-use-this-powerful-new-tool</link>
+      <description>詳解 Notion AI 的介面及指令：如何快速用GPT產生建立草稿、社群內容、翻譯文章？問答中斷怎麼辦？ #Notion #AI</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105370-notion-ais-10-ways-to-use-this-powerful-new-tool</guid>
       <category>IT</category>
     </item>
   </channel>
