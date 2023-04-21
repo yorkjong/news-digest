@@ -28,6 +28,10 @@ jobs:
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
       - name: remove trace.zip
         run: rm $GITHUB_WORKSPACE/www/trace.zip
+      - name: Install feedgen
+        run: pip install feedgen
+      - name: Generate feed.xml
+        run: python api/feed.py > $GITHUB_WORKSPACE/www/feed.xml
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
         with:
