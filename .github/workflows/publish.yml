@@ -30,8 +30,14 @@ jobs:
         run: rm $GITHUB_WORKSPACE/www/trace.zip
       - name: Install feedgen
         run: pip install feedgen
-      - name: Generate feed.xml
-        run: python api/feed.py > $GITHUB_WORKSPACE/www/feed.xml
+      - name: Generate IT.rss
+        run: python api/feed.py "IT" > $GITHUB_WORKSPACE/www/IT.rss
+      - name: Generate Crypto.rss
+        run: python api/feed.py "Crypto" > $GITHUB_WORKSPACE/www/Crypto.rss
+      - name: Generate Taiwan.rss
+        run: python api/feed.py "Crypto" > $GITHUB_WORKSPACE/www/Taiwan.rss
+      - name: Generate news.rss (Tesla, Tech, Finance)
+        run: python api/feed.py "Tesla, Tech, Finance" > $GITHUB_WORKSPACE/www/news.rss
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
         with:
