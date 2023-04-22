@@ -7,33 +7,103 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 21 Apr 2023 19:43:09 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Apr 2023 22:57:04 +0800</lastBuildDate>
     <item>
-      <title>美國將提出史無前例限制投資中國新規</title>
-      <link>https://technews.tw/2023/04/19/u-s-to-propose-unprecedented-restrictions-on-investment-in-china/</link>
-      <description>美國將提出史無前例限制投資中國新規 #TradeWar</description>
-      <guid isPermaLink="false">https://technews.tw/2023/04/19/u-s-to-propose-unprecedented-restrictions-on-investment-in-china/</guid>
+      <title>〈陸港盤後〉半導體、人工智能概念股重挫 上證指數跌近2% 險守3000點</title>
+      <link>https://news.cnyes.com/news/id/5152437</link>
+      <description>〈陸港盤後〉半導體、人工智能概念股重挫 上證指數跌近2% 險守3000點 #AI #China</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5152437</guid>
       <category>Finance</category>
     </item>
     <item>
-      <title>美國債務上限逼近 違約風險達2011年來最高</title>
-      <link>https://news.cnyes.com/news/id/5151640</link>
-      <description>美國債務上限逼近 違約風險達2011年來最高 #T-Bill</description>
-      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151640</guid>
+      <title>台積ADR暴跌4.39％ 拖累費半收黑</title>
+      <link>https://ctee.com.tw/news/global/849070.html</link>
+      <description>台積ADR暴跌4.39％ 拖累費半收黑 #TSM #semicon</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/global/849070.html</guid>
       <category>Finance</category>
     </item>
     <item>
-      <title>美國經濟降溫 卡費和貸款開始有拖欠情況</title>
-      <link>https://m.cnyes.com/news/id/5149087</link>
-      <description>美國經濟降溫 卡費和貸款開始有拖欠情況 #bank</description>
-      <guid isPermaLink="false">https://m.cnyes.com/news/id/5149087</guid>
+      <title>大家懼怕美元崩壞，但什麼能取代美元？</title>
+      <link>https://www.blocktempo.com/arthur-hayes-well-who-or-what-could-possibly-replace-the-dollar/</link>
+      <description>大家懼怕美元崩壞，但什麼能取代美元？ #USD</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/arthur-hayes-well-who-or-what-could-possibly-replace-the-dollar/</guid>
       <category>Finance</category>
     </item>
     <item>
-      <title>下一代顯示器關鍵要素，康寧展現全新玻璃技術</title>
-      <link>https://technews.tw/2023/04/19/corning-touch-taiwan-2023/</link>
-      <description>下一代顯示器關鍵要素，康寧展現全新玻璃技術 #GLW</description>
-      <guid isPermaLink="false">https://technews.tw/2023/04/19/corning-touch-taiwan-2023/</guid>
+      <title>美元喪失儲備貨幣地位，比特幣、黃金將取而代之</title>
+      <link>https://blockcast.it/2023/04/21/athur-hayes-believes-more-countries-will-consider-bitcoin-as-savings-vehicle/</link>
+      <description>美元喪失儲備貨幣地位，比特幣、黃金將取而代之 #USD #gold</description>
+      <guid isPermaLink="false">https://blockcast.it/2023/04/21/athur-hayes-believes-more-countries-will-consider-bitcoin-as-savings-vehicle/</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>印尼央行總裁：正實行去美元化 金磚國家都想推動</title>
+      <link>https://news.cnyes.com/news/id/5152873</link>
+      <description>印尼央行總裁：正實行去美元化 金磚國家都想推動 #USD</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5152873</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>美前財長桑默斯：美元未失去全球經濟主導地位</title>
+      <link>https://news.cnyes.com/news/id/5153186</link>
+      <description>美前財長桑默斯：美元未失去全球經濟主導地位 #USD</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5153186</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>華爾街將有新的恐慌指數 「一日VIX」下周推出</title>
+      <link>https://news.cnyes.com/news/id/5153206</link>
+      <description>華爾街將有新的恐慌指數 「一日VIX」下周推出 #VIX</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5153206</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>野村：5月不是升息終點站 6月再升息可能性增加</title>
+      <link>https://m.cnyes.com/news/id/5152904</link>
+      <description>野村：5月不是升息終點站 6月再升息可能性增加 #QT</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152904</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>老債王葛洛斯抄底區域銀行股 坐等大型銀行溢價收購</title>
+      <link>https://news.cnyes.com/news/id/5153180</link>
+      <description>老債王葛洛斯抄底區域銀行股 坐等大型銀行溢價收購 #T-Bill</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5153180</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>瑞信AT1債券投資人血本無歸 提告瑞士監管機構</title>
+      <link>https://m.cnyes.com/news/id/5152869</link>
+      <description>瑞信AT1債券投資人血本無歸 提告瑞士監管機構 #AT1</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152869</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>Fed考慮修補導致SVB破產的監管漏洞</title>
+      <link>https://news.cnyes.com/news/id/5153165</link>
+      <description>Fed考慮修補導致SVB破產的監管漏洞 #Fed #SIVB</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5153165</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>中國兩上市公司涉嫌詐欺 遭證監會摘牌</title>
+      <link>https://news.cnyes.com/news/id/5152936</link>
+      <description>中國兩上市公司涉嫌詐欺 遭證監會摘牌 #China</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5152936</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>印度將成世界人口最多國家，研究：印度人得先熬過極端熱浪</title>
+      <link>https://technews.tw/2023/04/21/heat-wave-and-population/</link>
+      <description>印度將成世界人口最多國家，研究：印度人得先熬過極端熱浪 #India</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/heat-wave-and-population/</guid>
+      <category>Finance</category>
+    </item>
+    <item>
+      <title>對抗解放軍必備，美軍印太司令列出三款飛彈</title>
+      <link>https://technews.tw/2023/04/21/general-aquilino-listed-3-missiles-to-face-the-pla-challenges/</link>
+      <description>對抗解放軍必備，美軍印太司令列出三款飛彈 #military</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/general-aquilino-listed-3-missiles-to-face-the-pla-challenges/</guid>
       <category>Finance</category>
     </item>
   </channel>

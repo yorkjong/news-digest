@@ -7,26 +7,40 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 21 Apr 2023 19:43:11 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Apr 2023 22:57:06 +0800</lastBuildDate>
     <item>
-      <title>ChatGPT能讓我們邁向「週休三日」？AI能寫程式、文案，為何說不會取代人類？</title>
-      <link>https://www.bnext.com.tw/article/74885/chatgpt-chris-ifanr</link>
-      <description>ChatGPT能讓我們邁向「週休三日」？AI能寫程式、文案，為何說不會取代人類？ #ChatGPT #AI #work</description>
-      <guid isPermaLink="false">https://www.bnext.com.tw/article/74885/chatgpt-chris-ifanr</guid>
+      <title>GPT-4識圖功能不開放，MiniGPT-4搶先開放試用！OpenAI有的它都有</title>
+      <link>https://www.techbang.com/posts/105663-minigpt-4-openai-ai</link>
+      <description>GPT-4識圖功能不開放，MiniGPT-4搶先開放試用！OpenAI有的它都有 #GPT #LLM #AI</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105663-minigpt-4-openai-ai</guid>
       <category>IT</category>
     </item>
     <item>
-      <title>AI真會產生感情？DeepMind CEO：總有一天會有自我意識</title>
-      <link>https://www.bnext.com.tw/article/74930/deepmind-tcb-april-23</link>
-      <description>AI真會產生感情？DeepMind CEO：總有一天會有自我意識 #AI #GOOG</description>
-      <guid isPermaLink="false">https://www.bnext.com.tw/article/74930/deepmind-tcb-april-23</guid>
+      <title>Vectorizer.AI – 將你的圖片轉為向量檔，可無限放大變超清晰</title>
+      <link>https://steachs.com/archives/62539</link>
+      <description>Vectorizer.AI – 將你的圖片轉為向量檔，可無限放大變超清晰 #AI #AID</description>
+      <guid isPermaLink="false">https://steachs.com/archives/62539</guid>
       <category>IT</category>
     </item>
     <item>
-      <title>詳解 Notion AI 的介面及指令：如何快速用GPT產生建立草稿、社群內容、翻譯文章？問答中斷怎麼辦？</title>
-      <link>https://www.techbang.com/posts/105370-notion-ais-10-ways-to-use-this-powerful-new-tool</link>
-      <description>詳解 Notion AI 的介面及指令：如何快速用GPT產生建立草稿、社群內容、翻譯文章？問答中斷怎麼辦？ #Notion #AI</description>
-      <guid isPermaLink="false">https://www.techbang.com/posts/105370-notion-ais-10-ways-to-use-this-powerful-new-tool</guid>
+      <title>這可能是下一代 AI 曙光：MIT 模擬生物神經元，打造 LNN 液體神經網路</title>
+      <link>https://www.inside.com.tw/article/31410-liquid-neural-network-grants-drone-autonomy</link>
+      <description>這可能是下一代 AI 曙光：MIT 模擬生物神經元，打造 LNN 液體神經網路 #AI #neuron</description>
+      <guid isPermaLink="false">https://www.inside.com.tw/article/31410-liquid-neural-network-grants-drone-autonomy</guid>
+      <category>IT</category>
+    </item>
+    <item>
+      <title>第一家無記者的AI新聞網站面世，新聞業的“遊戲規則”正在被改寫？</title>
+      <link>https://hao.cnyes.com/post/38315</link>
+      <description>第一家無記者的AI新聞網站面世，新聞業的“遊戲規則”正在被改寫？ #AI #news</description>
+      <guid isPermaLink="false">https://hao.cnyes.com/post/38315</guid>
+      <category>IT</category>
+    </item>
+    <item>
+      <title>驚！　ChatGPT竟然可能生成電腦病毒！</title>
+      <link>https://today.line.me/tw/v2/article/RBOKDoq</link>
+      <description>驚！　ChatGPT竟然可能生成電腦病毒！ #ChatGPT #AI #security</description>
+      <guid isPermaLink="false">https://today.line.me/tw/v2/article/RBOKDoq</guid>
       <category>IT</category>
     </item>
   </channel>

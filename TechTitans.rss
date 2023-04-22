@@ -7,117 +7,96 @@
     <docs>http://www.rssboard.org/rss-specification</docs>
     <generator>python-feedgen</generator>
     <language>zh-TW</language>
-    <lastBuildDate>Fri, 21 Apr 2023 19:43:09 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 22 Apr 2023 22:57:03 +0800</lastBuildDate>
     <item>
-      <title>傳三星 Exynos 2500 晶片秘密開發中，自主研發的 GPU 將基於 AMD 的技術</title>
-      <link>https://www.techbang.com/posts/105314-it-is-reported-that-the-samsung-exynos-2500-chip-is-under</link>
-      <description>傳三星 Exynos 2500 晶片秘密開發中，自主研發的 GPU 將基於 AMD 的技術 #GPU #AMD #Samsung</description>
-      <guid isPermaLink="false">https://www.techbang.com/posts/105314-it-is-reported-that-the-samsung-exynos-2500-chip-is-under</guid>
+      <title>搭配輝達頂級資料中心GPU，Dell推首款8-GPU伺服器</title>
+      <link>https://www.ithome.com.tw/review/156425</link>
+      <description>搭配輝達頂級資料中心GPU，Dell推首款8-GPU伺服器 #GPU #NVDA #DELL</description>
+      <guid isPermaLink="false">https://www.ithome.com.tw/review/156425</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>NVIDIA大失所望：RTX 4070賣崩了！AMD成市場贏家</title>
-      <link>https://news.xfastest.com/nvidia/126863/nvidia-45/</link>
-      <description>NVIDIA大失所望：RTX 4070賣崩了！AMD成市場贏家 #AMD #NVDA</description>
-      <guid isPermaLink="false">https://news.xfastest.com/nvidia/126863/nvidia-45/</guid>
+      <title>Google 推出號稱速度更快、更省電的 AI 超級電腦，輝達為何沒在怕？</title>
+      <link>https://technews.tw/2023/04/22/why-googles-ai-supercomputer-breakthrough-wont-both-nvidia/</link>
+      <description>Google 推出號稱速度更快、更省電的 AI 超級電腦，輝達為何沒在怕？ #NVDA #GOOG</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/22/why-googles-ai-supercomputer-breakthrough-wont-both-nvidia/</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>最佳顯示卡性價比不再是AMD 換成Intel Yes了 同價位無敵</title>
-      <link>https://news.xfastest.com/others/126857/intel-yes-a750/</link>
-      <description>最佳顯示卡性價比不再是AMD 換成Intel Yes了 同價位無敵 #INTC #AMD</description>
-      <guid isPermaLink="false">https://news.xfastest.com/others/126857/intel-yes-a750/</guid>
+      <title>Google不意外地也讓聊天機器人「Bard」也能幫忙編寫程式、檢查或驗證原始碼</title>
+      <link>https://mashdigi.com/not-surprisingly-google-has-also-let-the-chatbot-bard-also-help-write-programs-check-or-verify-source-code/</link>
+      <description>Google不意外地也讓聊天機器人「Bard」也能幫忙編寫程式、檢查或驗證原始碼 #GOOG #LLM #Bard #AI</description>
+      <guid isPermaLink="false">https://mashdigi.com/not-surprisingly-google-has-also-let-the-chatbot-bard-also-help-write-programs-check-or-verify-source-code/</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>睽違16個月 Meta市值超車特斯拉</title>
-      <link>https://m.cnyes.com/news/id/5151857</link>
-      <description>睽違16個月 Meta市值超車特斯拉 #META</description>
-      <guid isPermaLink="false">https://m.cnyes.com/news/id/5151857</guid>
+      <title>谷歌AI機器人Bard可寫程式和除錯 力拚微軟</title>
+      <link>https://m.cnyes.com/news/id/5152908</link>
+      <description>谷歌AI機器人Bard可寫程式和除錯 力拚微軟 #GOOG #Bard #AI</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152908</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>矽谷大佬轟：Meta人力過剩「員工混日子」；祖克柏再砍4000人、關閉IG倫敦中心</title>
-      <link>https://www.blocktempo.com/zuckerberg-cuts-another-4000-people-in-meta-closes-instagram-london-center/</link>
-      <description>矽谷大佬轟：Meta人力過剩「員工混日子」；祖克柏再砍4000人、關閉IG倫敦中心 #META</description>
-      <guid isPermaLink="false">https://www.blocktempo.com/zuckerberg-cuts-another-4000-people-in-meta-closes-instagram-london-center/</guid>
+      <title>谷歌傳將引進生成式AI技術來創建廣告</title>
+      <link>https://news.cnyes.com/news/id/5151145</link>
+      <description>谷歌傳將引進生成式AI技術來創建廣告 #GOOG #AI</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151145</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>OpenAI大敵當前！Google嫌自家AI動作太慢、兩大部門合併為一，原DeepMind CEO掌大權</title>
-      <link>https://www.techbang.com/posts/105676-google-accelerated-the-development-of-ai-restructuring</link>
-      <description>OpenAI大敵當前！Google嫌自家AI動作太慢、兩大部門合併為一，原DeepMind CEO掌大權 #LLM #GOOG</description>
-      <guid isPermaLink="false">https://www.techbang.com/posts/105676-google-accelerated-the-development-of-ai-restructuring</guid>
+      <title>Google Pixel 7a 與 Google Pixel Fold 開賣資訊曝光？！ 兩款手機的起售價同步洩漏</title>
+      <link>https://today.line.me/tw/v2/article/NvQz5nk</link>
+      <description>Google Pixel 7a 與 Google Pixel Fold 開賣資訊曝光？！ 兩款手機的起售價同步洩漏 #GOOG</description>
+      <guid isPermaLink="false">https://today.line.me/tw/v2/article/NvQz5nk</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>Google整併AI研發為Google DeepMind</title>
-      <link>https://www.ithome.com.tw/news/156498</link>
-      <description>Google整併AI研發為Google DeepMind #GOOG</description>
-      <guid isPermaLink="false">https://www.ithome.com.tw/news/156498</guid>
+      <title>Meta大幅裁員、留下的員工需證明自己的「存在價值」，員工吐槽如真實版飢餓遊戲</title>
+      <link>https://www.techbang.com/posts/105448-metas-drastic-layoffs-are-seriously-involved-in-employees</link>
+      <description>Meta大幅裁員、留下的員工需證明自己的「存在價值」，員工吐槽如真實版飢餓遊戲 #META #work</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105448-metas-drastic-layoffs-are-seriously-involved-in-employees</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>Google 自有虛擬電信服務更名 Google Fi Wireless 並推出 7 天免費試用</title>
-      <link>https://www.cool3c.com/article/192334</link>
-      <description>Google 自有虛擬電信服務更名 Google Fi Wireless 並推出 7 天免費試用 #GOOG</description>
-      <guid isPermaLink="false">https://www.cool3c.com/article/192334</guid>
+      <title>ChatGPT問世，科技圈全在拚AI...蘋果卻安靜了？看看Siri早就過時</title>
+      <link>https://www.bnext.com.tw/article/74922/chatgpt-apple-wy-april--23</link>
+      <description>ChatGPT問世，科技圈全在拚AI...蘋果卻安靜了？看看Siri早就過時 #AAPL #LLM</description>
+      <guid isPermaLink="false">https://www.bnext.com.tw/article/74922/chatgpt-apple-wy-april--23</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>Google 將在聽聲辨曲功能中加入聆聽統計數據</title>
-      <link>https://www.kocpc.com.tw/archives/489103</link>
-      <description>Google 將在聽聲辨曲功能中加入聆聽統計數據 #GOOG</description>
-      <guid isPermaLink="false">https://www.kocpc.com.tw/archives/489103</guid>
+      <title>穆迪：蘋果新儲蓄帳戶不利傳統銀行 其他科技巨頭也可能跟進</title>
+      <link>https://news.cnyes.com/news/id/5153199</link>
+      <description>穆迪：蘋果新儲蓄帳戶不利傳統銀行 其他科技巨頭也可能跟進 #AAPL #bank</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5153199</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>大數據已死？Google老兵吐槽：資料大小不重要，能用才重要</title>
-      <link>https://www.techbang.com/posts/105629-big-data-dead</link>
-      <description>大數據已死？Google老兵吐槽：資料大小不重要，能用才重要 #GOOG</description>
-      <guid isPermaLink="false">https://www.techbang.com/posts/105629-big-data-dead</guid>
+      <title>AMD 宣布加強嵌入式產品組合 推出 Ryzen 嵌入式 5000 系列處理器</title>
+      <link>https://gnn.gamer.com.tw/detail.php?sn=248646</link>
+      <description>AMD 宣布加強嵌入式產品組合 推出 Ryzen 嵌入式 5000 系列處理器 #AMD #semicon</description>
+      <guid isPermaLink="false">https://gnn.gamer.com.tw/detail.php?sn=248646</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>「Bard 比沒用還糟糕！」Google 員工大肆批評AI 聊天機器人 Bard 危害安全</title>
-      <link>https://www.inside.com.tw/article/31389-Google-bard-AI-employees-criticism</link>
-      <description>「Bard 比沒用還糟糕！」Google 員工大肆批評AI 聊天機器人 Bard 危害安全 #GOOG #Bard #LLM</description>
-      <guid isPermaLink="false">https://www.inside.com.tw/article/31389-Google-bard-AI-employees-criticism</guid>
+      <title>AMD 發布 Adrenalin Edition 23.4.2 WHQL</title>
+      <link>https://www.coolaler.com/index/amd-發布-adrenalin-edition-23-4-2-whql/</link>
+      <description>AMD 發布 Adrenalin Edition 23.4.2 WHQL #AMD #semicon</description>
+      <guid isPermaLink="false">https://www.coolaler.com/index/amd-發布-adrenalin-edition-23-4-2-whql/</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>蘋果AR/VR 獲測試者盛讚，Reality Pro擴增實境技術力壓業界</title>
-      <link>https://mrmad.com.tw/apple-tester-praise-from-reality-pro</link>
-      <description>蘋果AR/VR 獲測試者盛讚，Reality Pro擴增實境技術力壓業界 #AAPL #AR</description>
-      <guid isPermaLink="false">https://mrmad.com.tw/apple-tester-praise-from-reality-pro</guid>
+      <title>2023胡潤全球獨角獸榜：字節跳動蟬聯第一 前十名5家來自中國</title>
+      <link>https://news.cnyes.com/news/id/5152875</link>
+      <description>2023胡潤全球獨角獸榜：字節跳動蟬聯第一 前十名5家來自中國 #China #ByteDance #SpaceX</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5152875</guid>
       <category>Tech Titans</category>
     </item>
     <item>
-      <title>「果來電」等於死亡之吻？昔合作夥伴批蘋果抄襲自家專利</title>
-      <link>https://technews.tw/2023/04/21/masimo/</link>
-      <description>「果來電」等於死亡之吻？昔合作夥伴批蘋果抄襲自家專利 #AAPL</description>
-      <guid isPermaLink="false">https://technews.tw/2023/04/21/masimo/</guid>
-      <category>Tech Titans</category>
-    </item>
-    <item>
-      <title>不只蘋果下單！Marvell 發表採台積電 3 奈米資料中心晶片</title>
-      <link>https://technews.tw/2023/04/21/marvell-announced-the-acquisition-of-tsmcs-3nm-process-data-center-chip/</link>
-      <description>不只蘋果下單！Marvell 發表採台積電 3 奈米資料中心晶片 #TSM #semicon</description>
-      <guid isPermaLink="false">https://technews.tw/2023/04/21/marvell-announced-the-acquisition-of-tsmcs-3nm-process-data-center-chip/</guid>
-      <category>Tech Titans</category>
-    </item>
-    <item>
-      <title>科林、ASML 鬆口氣：出口限制不影響中國銷售</title>
-      <link>https://technews.tw/2023/04/21/export-restrictions-not-affecting-china-sales/</link>
-      <description>科林、ASML 鬆口氣：出口限制不影響中國銷售 #ASML #China</description>
-      <guid isPermaLink="false">https://technews.tw/2023/04/21/export-restrictions-not-affecting-china-sales/</guid>
-      <category>Tech Titans</category>
-    </item>
-    <item>
-      <title>洛克希德馬丁成功驗證在軌衛星技術與演算法，全面推動維修機器人長期開發</title>
-      <link>https://technews.tw/2023/04/21/lockheed-martin-declares-success-demonstrating-tech-for-in-orbit-satellite-servicing/</link>
-      <description>洛克希德馬丁成功驗證在軌衛星技術與演算法，全面推動維修機器人長期開發 #LMT #military</description>
-      <guid isPermaLink="false">https://technews.tw/2023/04/21/lockheed-martin-declares-success-demonstrating-tech-for-in-orbit-satellite-servicing/</guid>
+      <title>IBM發表全新大型主機z16與LinuxONE 4單機櫃產品</title>
+      <link>https://www.techbang.com/posts/105500-ibm-releases-new-z16-and-linuxone-4-single-cabinet-versions</link>
+      <description>IBM發表全新大型主機z16與LinuxONE 4單機櫃產品 #IBM</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105500-ibm-releases-new-z16-and-linuxone-4-single-cabinet-versions</guid>
       <category>Tech Titans</category>
     </item>
   </channel>
