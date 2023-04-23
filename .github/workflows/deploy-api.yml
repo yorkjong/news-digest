@@ -2,7 +2,7 @@ name: Deploy APIs
 on:
   push:
     branches: [ "main" ]
-    paths: ["api/*.py"]
+    paths: ["api/*.py", "requirements.txt"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
