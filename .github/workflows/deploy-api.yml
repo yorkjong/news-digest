@@ -18,7 +18,7 @@ jobs:
           git config user.email "york.jong@gmail.com"
           git fetch origin gh-pages
           git checkout -B gh-pages origin/gh-pages
-          git merge origin/main --no-edit
+          git merge origin/main --no-edit --allow-unrelated-histories
           git add api/*.py
           git commit -m "Deploy API to gh-pages"
           git push -f origin gh-pages
