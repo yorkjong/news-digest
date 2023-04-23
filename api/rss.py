@@ -4,17 +4,18 @@ from urllib.parse import urlparse, parse_qs
 
 class MyRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
-        params = parse_qs(urlparse(self.path).query)
-        topices = params.get('topices', [None])[0]
-        name = params.get('name', [None])[0]
+        query = urlparse(self.path).query
+        params = parse_qs(query)
+        topices = params.get('topice', [None])[0]
+        name = f"rss?{query}"
 
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write(gen(topices, name))
+        self.wfile.write(rss(topices, name))
 
 
-def gen(topices, name):
+def rss(topices, name):
     headings = [topice for topice in topices if not topice.startswith('#')]
     tags = [topice for topice in topices if topice.startswith('#')]
     content = clip.get_latest_journal()
