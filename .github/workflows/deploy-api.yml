@@ -11,22 +11,19 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout main branch
-      uses: actions/checkout@v2
-      with:
-        ref: main
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          ref: main
 
-    - name: Create or switch to gh-pages branch
-      run: |
-        git checkout gh-pages || git checkout -b gh-pages
-        git pull origin gh-pages
+      - name: Copy files to gh-pages
+        run: |
+          mkdir gh-pages
+          cp -R api/ gh-pages/
+        working-directory: ${{ github.workspace }}
 
-    - name: Copy API files to gh-pages
-      run: |
-        mkdir -p api
-        git checkout main -- api/*.py
-        git add api/*.py
-        git commit -m "Update API files from main branch"
-        git config user.email "york.jong@gmail.com"
-        git config user.name "YorkJong"
-        git push origin gh-pages
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@4.1.1
+        with:
+          branch: gh-pages
+          folder: gh-pages
