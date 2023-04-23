@@ -2,7 +2,7 @@ name: Deploy APIs
 on:
   push:
     branches: [ "main" ]
-    paths: ["api/**/*.py"]
+    paths: ["api/*.py"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -11,21 +11,29 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout main branch
+        uses: actions/checkout@v2
+        with:
+          ref: main
+          path: main
+
+      - name: Checkout gh-pages branch
         uses: actions/checkout@v2
         with:
           ref: gh-pages
-          fetch-depth: 0
-      - name: Copy API files
-        run: cp -r api/*.py .
-      - name: Commit changes
+          path: gh-pages
+
+      - name: Copy api/*.py files from main to gh-pages
         run: |
-          git config user.name "${{ secrets.GITHUB_USER }}"
-          git config user.email "${{ secrets.GITHUB_EMAIL }}"
-          git add -A
-          git commit -m "Deploy API files"
-      - name: Push changes
-        uses: ad-m/github-push-action@master
+          cp -r main/api/*.py gh-pages/api/
+
+      - name: Commit and push changes
+        uses: EndBug/add-and-commit@v7
         with:
-          branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          author_name: YorkJong
+          author_email: york.jong@gmail.com
+          message: "Update api/*.py files"
+          add: .
+          push: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
