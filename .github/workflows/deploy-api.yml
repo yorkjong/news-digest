@@ -9,7 +9,6 @@ on:
 
 jobs:
   deploy:
-    needs: [test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,9 +29,3 @@ jobs:
         with:
           branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
-
-
-
-Regenerate response
