@@ -2,7 +2,7 @@
 RSS feed generation for news digestion
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/04/21 (initial version) ~ 2023/04/21 (last revision)"
+__date__ = "2023/04/21 (initial version) ~ 2023/04/24 (last revision)"
 
 __all__ = [
     'rss_from_lines',
@@ -13,8 +13,11 @@ import re
 import pytz
 from datetime import datetime
 from feedgen.feed import FeedGenerator
-from . import clip
-from . import hashtag
+
+try:
+    from . import clip, hashtag
+except:
+    import clip, hashtag
 
 
 def rss_from_lines(lines, name=''):

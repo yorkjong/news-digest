@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/04/10 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/04/24 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -21,7 +21,10 @@ __all__ = [
 import requests
 import re
 
-from . import op
+try:
+    from . import op
+except:
+    import op
 
 #------------------------------------------------------------------------------
 # Journals
