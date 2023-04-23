@@ -11,14 +11,16 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Deploy
-        run: |
-          git config user.name "York Jong"
-          git config user.email "york.jong@gmail.com"
-          git fetch origin gh-pages
-          git checkout -B gh-pages origin/gh-pages
-          git merge origin/main --no-edit --allow-unrelated-histories
-          git add api/*.py
-          git commit -m "Deploy API to gh-pages"
-          git push -f origin gh-pages
+    - name: Checkout main branch
+      uses: actions/checkout@v2
+      with:
+        ref: main
+
+    - name: Copy API files to gh-pages
+      run: |
+        mkdir gh-pages
+        git checkout gh-pages
+        git checkout main -- api/*.py
+        git add api/*.py
+        git commit -m "Update API files from main branch"
+        git push origin gh-pages
