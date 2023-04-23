@@ -1,13 +1,15 @@
+"""
+This module define handler of a Vercel's serverless function.
+"""
+__author__ = "York <york.jong@gmail.com>"
+__date__ = "2023/04/23 (initial version) ~ 2023/04/23 (last revision)"
+
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
-from . import clip
-from . import hashtag
-from . import feed
+from . import clip, hashtag, feed
 
 
-def rss(topices, name):
-    headings = [topice for topice in topices if not topice.startswith('#')]
-    tags = [topice for topice in topices if topice.startswith('#')]
+def rss(headings, tags, name):
     content = clip.get_latest_journal()
     categories = headings
     if not categories and tags:
@@ -20,20 +22,19 @@ def rss(topices, name):
     return feed.rss_from_lines(lines, name)
 
 
-class MyRequestHandler(BaseHTTPRequestHandler):
+# NOTE: must name "handler" (call-back class)
+class handler(BaseHTTPRequestHandler):
     def do_GET(self):
         query = urlparse(self.path).query
         params = parse_qs(query)
-        headings = params.get('heading', ['Tesla', 'Tech', 'Finance'])
-        tags = params.get('tag', [])
 
-        hashtags = [f"#{t}" for t in tags]
-        topices = headings + hashtags
+        headings = params.get('heading', ['Tesla', 'Tech', 'Finance'])
+        tags = [f"#{t}" for t in params.get('tag', [])]
 
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
         self.end_headers()
-        self.wfile.write(rss(topices, f"api/rss?{query}").encode())
+        self.wfile.write(rss(headings, tags, f"api/rss?{query}").encode())
 
 
 def test():
@@ -46,5 +47,4 @@ def test():
 
 if __name__ == '__main__':
     test()
-    pass
 
