@@ -22,7 +22,6 @@ jobs:
         git config user.name "YorkJong"
         git checkout -b gh-pages
         git fetch origin
-        git checkout gh-pages
         git checkout main -- api/*.py
         git add api/*.py
         git commit -m "Update API files from main branch"
