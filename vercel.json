@@ -8,7 +8,7 @@
     { "source": "/Science.rss", "destination": "/api/rss?heading=Science" },
     { "source": "/IT.rss", "destination": "/api/rss?heading=IT" },
     { "source": "/news.rss",
-      "destination": "/api/rss?heading=Tesla&heading=Tech&heading=Finance" },
+      "destination": "https://feeds.feedburner.com/news-digest/U7yXREKdySl" },
     { "source": "/(.*).tag.rss", "destination": "/api/rss?tag=$1" }
   ]
 }
