@@ -12,7 +12,9 @@ jobs:
         run: |
           git config user.name "York Jong"
           git config user.email "york.jong@gmail.com"
-          git checkout -B gh-pages
+          git fetch origin gh-pages
+          git checkout -B gh-pages origin/gh-pages
+          git merge origin/main --no-edit
           git add api/*.py
           git commit -m "Deploy API to gh-pages"
           git push -f origin gh-pages
