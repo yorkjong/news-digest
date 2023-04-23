@@ -13,8 +13,8 @@ import re
 import pytz
 from datetime import datetime
 from feedgen.feed import FeedGenerator
-import clip
-import hashtag
+from . import clip
+from . import hashtag
 
 
 def rss_from_lines(lines, name=''):

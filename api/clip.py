@@ -21,7 +21,7 @@ __all__ = [
 import requests
 import re
 
-import op
+from . import op
 
 #------------------------------------------------------------------------------
 # Journals
