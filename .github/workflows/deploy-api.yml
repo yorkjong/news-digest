@@ -23,7 +23,7 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy api/*.py files requirements.txt from main to gh-pages
+      - name: Copy api/*.py files and requirements.txt from main to gh-pages
         run: |
           cp -R main/api/ gh-pages/
           cp main/requirements.txt gh-pages/
@@ -34,7 +34,7 @@ jobs:
           git config --local user.email "york.jong@gmail.com"
           git config --local user.name "York Jong"
           git add .
-          git commit -m "Update api/*.py files"
+          git commit -m "Update api/*.py files and requirements.txt"
           git push origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
