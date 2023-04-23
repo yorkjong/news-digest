@@ -18,6 +18,8 @@ jobs:
 
     - name: Copy API files to gh-pages
       run: |
+        git config user.email "york.jong@gmail.com"
+        git config user.name "YorkJong"
         git checkout -b gh-pages
         git fetch origin
         git checkout gh-pages
