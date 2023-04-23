@@ -9,21 +9,30 @@ on:
 
 jobs:
   deploy:
+    needs: [test]
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v2
         with:
-          ref: main
-
-      - name: Copy files to gh-pages
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Copy API files
+        run: cp -r api/*.py .
+      - name: Commit changes
         run: |
-          mkdir gh-pages
-          cp -R api/ gh-pages/
-        working-directory: ${{ github.workspace }}
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+          git config user.name "${{ secrets.GITHUB_USER }}"
+          git config user.email "${{ secrets.GITHUB_EMAIL }}"
+          git add -A
+          git commit -m "Deploy API files"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
         with:
           branch: gh-pages
-          folder: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+
+
+
+Regenerate response
