@@ -10,6 +10,6 @@
     { "source": "/news.rss",
       "destination": "/api/rss?heading=Tesla&heading=Tech&heading=Finance" },
     { "source": "/AI.rss", "destination": "/api/rss?tag=AI" },
-    { "source": "^/tag_(.*).rss$", "destination": "/api/rss?tag=$1" }
+    { "source": "/(.*).tag.rss", "destination": "/api/rss?tag=$1" }
   ]
 }
