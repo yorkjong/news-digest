@@ -36,10 +36,14 @@ class MyRequestHandler(BaseHTTPRequestHandler):
         self.wfile.write(rss(topices, f"api/rss?{query}").encode())
 
 
-if __name__ == '__main__':
+def test():
     # Start the HTTP server on port 8080
     server_address = ('', 8080)
     httpd = HTTPServer(server_address, MyRequestHandler)
     print('Starting server...')
     httpd.serve_forever()
 
+
+if __name__ == '__main__':
+    #test()
+    pass
