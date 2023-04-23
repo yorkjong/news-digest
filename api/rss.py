@@ -6,7 +6,11 @@ __date__ = "2023/04/23 (initial version) ~ 2023/04/23 (last revision)"
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
-from . import clip, hashtag, feed
+
+try:
+    from . import clip, hashtag, feed
+except:
+    import clip, hashtag, feed
 
 
 def rss(headings, tags, name):
