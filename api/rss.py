@@ -21,7 +21,7 @@ class MyRequestHandler(BaseHTTPRequestHandler):
     def do_GET(self):
         query = urlparse(self.path).query
         params = parse_qs(query)
-        topices = params.get('topice', [None])[0]
+        topices = params.get('topice', ['Tesla', 'Tech', 'Finance'])
 
         self.send_response(200)
         self.send_header('Content-type', 'text/plain')
