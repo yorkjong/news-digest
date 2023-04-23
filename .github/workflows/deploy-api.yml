@@ -18,7 +18,6 @@ jobs:
 
     - name: Copy API files to gh-pages
       run: |
-        mkdir gh-pages
         git checkout gh-pages
         git checkout main -- api/*.py
         git add api/*.py
