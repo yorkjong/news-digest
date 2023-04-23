@@ -1,8 +1,8 @@
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
-import clip
-import hashtag
-import feed
+from . import clip
+from . import hashtag
+from . import feed
 
 
 def rss(topices, name):
@@ -46,4 +46,5 @@ def test():
 
 if __name__ == '__main__':
     test()
+    pass
 
