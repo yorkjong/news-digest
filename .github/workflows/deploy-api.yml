@@ -2,7 +2,7 @@ name: Deploy APIs
 on:
   push:
     branches: [ "main" ]
-    paths: ["api/*.py", "requirements.txt"]
+    paths: ["api/*.py", "requirements.txt", "vercel.json"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -23,11 +23,14 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy api/*.py files and requirements.txt from main to gh-pages
+      - name: Copy api/*.py from main to gh-pages
         run: |
-          cp -R main/api/ gh-pages/
-          cp main/requirements.txt gh-pages/
-
+          [ -d gh-pages/api ] || mkdir gh-pages/api
+          cp main/api/*.py gh-pages/api/
+      - name: Copy requirements.txt from main to gh-pages
+        run: cp main/requirements.txt gh-pages/
+      - name: Copy vercel.json from main to gh-pages
+        run: cp main/vercel.json gh-pages/
       - name: Commit and push changes
         run: |
           cd gh-pages
