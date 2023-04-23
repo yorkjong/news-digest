@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>news-digest (Taiwan.rss)</title>
+    <link>https://news-digest.vercel.app</link>
+    <description>Feed of news-digest (Taiwan.rss)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 23 Apr 2023 15:39:05 +0800</lastBuildDate>
+    <item>
+      <title>響應世界地球日，台積電簽訂 200 億度再生能源聯合採購合約</title>
+      <link>https://technews.tw/2023/04/21/tsmc-signed-a-joint-procurement-contract-for-20-billion-kilowatt-hours-of-renewable-energy/</link>
+      <description>響應世界地球日，台積電簽訂 200 億度再生能源聯合採購合約 #TSM #TW</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/tsmc-signed-a-joint-procurement-contract-for-20-billion-kilowatt-hours-of-renewable-energy/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>美依賴台灣晶片不安全？官員：現有分工模式最有利</title>
+      <link>https://technews.tw/2023/04/21/taiwan-chip-usa/</link>
+      <description>美依賴台灣晶片不安全？官員：現有分工模式最有利 #TSM #TW #semicon</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/taiwan-chip-usa/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>爽進台積電10年！他嘆離不開　真實關鍵曝光</title>
+      <link>https://today.line.me/tw/v2/article/RBOKLLq</link>
+      <description>爽進台積電10年！他嘆離不開　真實關鍵曝光 #TSM #work #TW</description>
+      <guid isPermaLink="false">https://today.line.me/tw/v2/article/RBOKLLq</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>軍工股回落能買?老手:2檔不宜 6檔火藥足</title>
+      <link>https://ctee.com.tw/news/stocks/848469.html</link>
+      <description>軍工股回落能買?老手:2檔不宜 6檔火藥足 #military #TW</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/stocks/848469.html</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>在中韓的面板價格戰下求生！群創怎麼靠多角經營，打進特斯拉、BMW供應鏈？</title>
+      <link>https://www.bnext.com.tw/article/74940/innolux-touch-taiwan</link>
+      <description>在中韓的面板價格戰下求生！群創怎麼靠多角經營，打進特斯拉、BMW供應鏈？ #TW #群創</description>
+      <guid isPermaLink="false">https://www.bnext.com.tw/article/74940/innolux-touch-taiwan</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>11檔碳權概念股 熱情不減</title>
+      <link>https://ctee.com.tw/news/stocks/848950.html</link>
+      <description>11檔碳權概念股 熱情不減 #TW #green</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/stocks/848950.html</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>MIH 電動車 10 月東京車展亮相，攻智慧城市應用</title>
+      <link>https://technews.tw/2023/04/21/mih-poc-project-x/</link>
+      <description>MIH 電動車 10 月東京車展亮相，攻智慧城市應用 #TW #MIH #鴻海</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/21/mih-poc-project-x/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>土洋聯手重砍 聯發科挫11%探三個月低點</title>
+      <link>https://m.cnyes.com/news/id/5152770</link>
+      <description>土洋聯手重砍 聯發科挫11%探三個月低點 #MTK #TW</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152770</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>國巨破500元 同欣電重挫 被動元件倒一片</title>
+      <link>https://ctee.com.tw/news/stocks/848617.html</link>
+      <description>國巨破500元 同欣電重挫 被動元件倒一片 #TW #國巨</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/stocks/848617.html</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>長榮海運最新評價 亞系外資這樣看</title>
+      <link>https://ctee.com.tw/news/stocks/848709.html</link>
+      <description>長榮海運最新評價 亞系外資這樣看 #TW #長榮</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/stocks/848709.html</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>宏達電股東紀念亮相 網淚推:公園套件組+1</title>
+      <link>https://ctee.com.tw/news/industry/848446.html</link>
+      <description>宏達電股東紀念亮相 網淚推:公園套件組+1 #TW #宏碁</description>
+      <guid isPermaLink="false">https://ctee.com.tw/news/industry/848446.html</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>Acer發表全新設計的Predator Orion X電競桌機，44.5吋曲面螢幕同步登場</title>
+      <link>https://www.techbang.com/posts/105688-acer-unveiled-newly-designed-predator-orion-x-gaming-desktop</link>
+      <description>Acer發表全新設計的Predator Orion X電競桌機，44.5吋曲面螢幕同步登場 #TW #宏碁</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105688-acer-unveiled-newly-designed-predator-orion-x-gaming-desktop</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>國泰世華年底增至8家太陽能分行 無紙化年省紙張約49座101大樓高度</title>
+      <link>https://m.cnyes.com/news/id/5152266</link>
+      <description>國泰世華年底增至8家太陽能分行 無紙化年省紙張約49座101大樓高度 #TW</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152266</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>金管會插手管AI！特殊小組嚴審「理財機器人」最高罰1500萬</title>
+      <link>https://www.blocktempo.com/financial-supervisory-commission-sniping-ai-robot-financial-management/</link>
+      <description>金管會插手管AI！特殊小組嚴審「理財機器人」最高罰1500萬 #TW</description>
+      <guid isPermaLink="false">https://www.blocktempo.com/financial-supervisory-commission-sniping-ai-robot-financial-management/</guid>
+      <category>Taiwan</category>
+    </item>
+    <item>
+      <title>新北公布第2波違法雇主名單　236家開罰逾1200萬</title>
+      <link>https://www.taiwanhot.net/news/1029453/新北公布第2波違法雇主名單+236家開罰逾1200萬</link>
+      <description>新北公布第2波違法雇主名單　236家開罰逾1200萬 #TW</description>
+      <guid isPermaLink="false">https://www.taiwanhot.net/news/1029453/新北公布第2波違法雇主名單+236家開罰逾1200萬</guid>
+      <category>Taiwan</category>
+    </item>
+  </channel>
+</rss>
+

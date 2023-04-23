@@ -1,0 +1,104 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>news-digest (TechTitans.rss)</title>
+    <link>https://news-digest.vercel.app</link>
+    <description>Feed of news-digest (TechTitans.rss)</description>
+    <docs>http://www.rssboard.org/rss-specification</docs>
+    <generator>python-feedgen</generator>
+    <language>zh-TW</language>
+    <lastBuildDate>Sun, 23 Apr 2023 15:39:03 +0800</lastBuildDate>
+    <item>
+      <title>搭配輝達頂級資料中心GPU，Dell推首款8-GPU伺服器</title>
+      <link>https://www.ithome.com.tw/review/156425</link>
+      <description>搭配輝達頂級資料中心GPU，Dell推首款8-GPU伺服器 #GPU #NVDA #DELL</description>
+      <guid isPermaLink="false">https://www.ithome.com.tw/review/156425</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Google 推出號稱速度更快、更省電的 AI 超級電腦，輝達為何沒在怕？</title>
+      <link>https://technews.tw/2023/04/22/why-googles-ai-supercomputer-breakthrough-wont-both-nvidia/</link>
+      <description>Google 推出號稱速度更快、更省電的 AI 超級電腦，輝達為何沒在怕？ #NVDA #GOOG</description>
+      <guid isPermaLink="false">https://technews.tw/2023/04/22/why-googles-ai-supercomputer-breakthrough-wont-both-nvidia/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Google不意外地也讓聊天機器人「Bard」也能幫忙編寫程式、檢查或驗證原始碼</title>
+      <link>https://mashdigi.com/not-surprisingly-google-has-also-let-the-chatbot-bard-also-help-write-programs-check-or-verify-source-code/</link>
+      <description>Google不意外地也讓聊天機器人「Bard」也能幫忙編寫程式、檢查或驗證原始碼 #GOOG #LLM #Bard #AI</description>
+      <guid isPermaLink="false">https://mashdigi.com/not-surprisingly-google-has-also-let-the-chatbot-bard-also-help-write-programs-check-or-verify-source-code/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>谷歌AI機器人Bard可寫程式和除錯 力拚微軟</title>
+      <link>https://m.cnyes.com/news/id/5152908</link>
+      <description>谷歌AI機器人Bard可寫程式和除錯 力拚微軟 #GOOG #Bard #AI</description>
+      <guid isPermaLink="false">https://m.cnyes.com/news/id/5152908</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>谷歌傳將引進生成式AI技術來創建廣告</title>
+      <link>https://news.cnyes.com/news/id/5151145</link>
+      <description>谷歌傳將引進生成式AI技術來創建廣告 #GOOG #AI</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5151145</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Google Pixel 7a 與 Google Pixel Fold 開賣資訊曝光？！ 兩款手機的起售價同步洩漏</title>
+      <link>https://today.line.me/tw/v2/article/NvQz5nk</link>
+      <description>Google Pixel 7a 與 Google Pixel Fold 開賣資訊曝光？！ 兩款手機的起售價同步洩漏 #GOOG</description>
+      <guid isPermaLink="false">https://today.line.me/tw/v2/article/NvQz5nk</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>Meta大幅裁員、留下的員工需證明自己的「存在價值」，員工吐槽如真實版飢餓遊戲</title>
+      <link>https://www.techbang.com/posts/105448-metas-drastic-layoffs-are-seriously-involved-in-employees</link>
+      <description>Meta大幅裁員、留下的員工需證明自己的「存在價值」，員工吐槽如真實版飢餓遊戲 #META #work</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105448-metas-drastic-layoffs-are-seriously-involved-in-employees</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>ChatGPT問世，科技圈全在拚AI...蘋果卻安靜了？看看Siri早就過時</title>
+      <link>https://www.bnext.com.tw/article/74922/chatgpt-apple-wy-april--23</link>
+      <description>ChatGPT問世，科技圈全在拚AI...蘋果卻安靜了？看看Siri早就過時 #AAPL #LLM</description>
+      <guid isPermaLink="false">https://www.bnext.com.tw/article/74922/chatgpt-apple-wy-april--23</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>穆迪：蘋果新儲蓄帳戶不利傳統銀行 其他科技巨頭也可能跟進</title>
+      <link>https://news.cnyes.com/news/id/5153199</link>
+      <description>穆迪：蘋果新儲蓄帳戶不利傳統銀行 其他科技巨頭也可能跟進 #AAPL #bank</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5153199</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>AMD 宣布加強嵌入式產品組合 推出 Ryzen 嵌入式 5000 系列處理器</title>
+      <link>https://gnn.gamer.com.tw/detail.php?sn=248646</link>
+      <description>AMD 宣布加強嵌入式產品組合 推出 Ryzen 嵌入式 5000 系列處理器 #AMD #semicon</description>
+      <guid isPermaLink="false">https://gnn.gamer.com.tw/detail.php?sn=248646</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>AMD 發布 Adrenalin Edition 23.4.2 WHQL</title>
+      <link>https://www.coolaler.com/index/amd-發布-adrenalin-edition-23-4-2-whql/</link>
+      <description>AMD 發布 Adrenalin Edition 23.4.2 WHQL #AMD #semicon</description>
+      <guid isPermaLink="false">https://www.coolaler.com/index/amd-發布-adrenalin-edition-23-4-2-whql/</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>2023胡潤全球獨角獸榜：字節跳動蟬聯第一 前十名5家來自中國</title>
+      <link>https://news.cnyes.com/news/id/5152875</link>
+      <description>2023胡潤全球獨角獸榜：字節跳動蟬聯第一 前十名5家來自中國 #China #ByteDance #SpaceX</description>
+      <guid isPermaLink="false">https://news.cnyes.com/news/id/5152875</guid>
+      <category>Tech Titans</category>
+    </item>
+    <item>
+      <title>IBM發表全新大型主機z16與LinuxONE 4單機櫃產品</title>
+      <link>https://www.techbang.com/posts/105500-ibm-releases-new-z16-and-linuxone-4-single-cabinet-versions</link>
+      <description>IBM發表全新大型主機z16與LinuxONE 4單機櫃產品 #IBM</description>
+      <guid isPermaLink="false">https://www.techbang.com/posts/105500-ibm-releases-new-z16-and-linuxone-4-single-cabinet-versions</guid>
+      <category>Tech Titans</category>
+    </item>
+  </channel>
+</rss>
+
