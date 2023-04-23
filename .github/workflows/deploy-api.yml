@@ -25,7 +25,7 @@ jobs:
 
       - name: Copy api/*.py files from main to gh-pages
         run: |
-          cp -rpT main/api/*.py gh-pages/api/
+          cp -R main/api/ gh-pages/
 
       - name: Commit and push changes
         uses: EndBug/add-and-commit@v7
