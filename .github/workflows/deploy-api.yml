@@ -28,12 +28,12 @@ jobs:
           cp -R main/api/ gh-pages/
 
       - name: Commit and push changes
-        uses: EndBug/add-and-commit@v7
-        with:
-          author_name: YorkJong
-          author_email: york.jong@gmail.com
-          message: "Update api/*.py files"
-          add: .
-          push: true
+        run: |
+          cd gh-pages
+          git config --local user.email "york.jong@gmail.com"
+          git config --local user.name "York Jong"
+          git add .
+          git commit -m "Update api/*.py files"
+          git push origin gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
