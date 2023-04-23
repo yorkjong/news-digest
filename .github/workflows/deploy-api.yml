@@ -1,0 +1,18 @@
+name: Deploy APIs
+on:
+  push:
+    paths:
+      - 'api/**/*.py'
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy
+        run: |
+          git config user.name "York Jong"
+          git config user.email "york.jong@gmail.com"
+          git checkout -B gh-pages
+          git add api/*.py
+          git commit -m "Deploy API to gh-pages"
+          git push -f origin gh-pages
