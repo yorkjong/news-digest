@@ -40,7 +40,7 @@ class handler(BaseHTTPRequestHandler):
 def test():
     # Start the HTTP server on port 8080
     server_address = ('', 8080)
-    httpd = HTTPServer(server_address, MyRequestHandler)
+    httpd = HTTPServer(server_address, handler)
     print('Starting server...')
     httpd.serve_forever()
 
