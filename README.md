@@ -15,6 +15,10 @@
   - https://news-digest.vercel.app/Taiwan.rss
   - https://news-digest.vercel.app/Science.rss
   - https://news-digest.vercel.app/IT.rss
+  - https://news-digest.vercel.app/{heading}.h.rss
+    - {heading} can be any length of prefix of a heading
+  - https://news-digest.vercel.app/{tag}.t.rss
+    - {tag} can be any hashtag (after '#' removal)
 
 ### Getting Started on Colab
 
