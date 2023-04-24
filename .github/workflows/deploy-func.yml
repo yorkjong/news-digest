@@ -27,7 +27,11 @@ jobs:
       - name: Copy api/*.py from main to gh-pages
         run: |
           [ -d gh-pages/api ] || mkdir gh-pages/api
-          cp main/api/*.py gh-pages/api/
+          for file in rss.py, feed.py, clip.py, hashtag.py, op.py
+          do
+            cp api/"$file" gh-pages/api/
+          done
+          #cp main/api/*.py gh-pages/api/
       - name: Copy requirements.txt from main to gh-pages
         run: cp main/requirements.txt gh-pages/
       - name: Copy vercel.json from main to gh-pages
