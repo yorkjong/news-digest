@@ -1,4 +1,5 @@
-name: Deploy APIs
+# Deploy Serverless Functions
+name: Deploy Functions
 on:
   push:
     branches: [ "main" ]
