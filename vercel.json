@@ -9,6 +9,7 @@
     { "source": "/IT.rss", "destination": "/api/rss?heading=IT" },
     { "source": "/news.rss",
       "destination": "/api/rss?heading=Tesla&heading=Tech&heading=Finance" },
-    { "source": "/(.*).tag.rss", "destination": "/api/rss?tag=$1" }
+    { "source": "/(.*).h.rss", "destination": "/api/rss?heading=$1" }
+    { "source": "/(.*).t.rss", "destination": "/api/rss?tag=$1" }
   ]
 }
