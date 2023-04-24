@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/Vehicle.rss", "destination": "/api/rss?heading=Vehicle" },
+    { "source": "/TechTitans.rss", "destination": "/api/rss?heading=Tech" },
+    { "source": "/Finance.rss", "destination": "/api/rss?heading=Finance" },
+    { "source": "/Taiwan.rss", "destination": "/api/rss?heading=Taiwan" },
+    { "source": "/Crypto.rss", "destination": "/api/rss?heading=Crypto" },
+    { "source": "/Science.rss", "destination": "/api/rss?heading=Science" },
+    { "source": "/IT.rss", "destination": "/api/rss?heading=IT" },
+    { "source": "/news.rss",
+      "destination": "/api/rss?heading=Tesla&heading=Tech&heading=Finance" },
+    { "source": "/(.*).h.rss", "destination": "/api/rss?heading=$1" }
+    { "source": "/(.*).t.rss", "destination": "/api/rss?tag=$1" }
+  ]
+}
