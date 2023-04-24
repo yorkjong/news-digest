@@ -28,6 +28,7 @@ jobs:
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
       - name: remove trace.zip
         run: rm www/trace.zip
+
       - name: Copy api/*.py
         run: |
           [ -d www/api ] || mkdir www/api
@@ -36,6 +37,12 @@ jobs:
         run: cp requirements.txt www/
       - name: Copy vercel.json
         run: cp vercel.json www/
+
+      - name: Copy latest journal (YYYY_MM_DD.md)
+        run: |
+          latest=$(find journals -name "????_??_??.md" | sort -r | head -n 1)
+          cp $latest www/
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
         with:

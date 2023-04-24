@@ -32,10 +32,17 @@ jobs:
             cp api/"$file" gh-pages/api/
           done
           #cp main/api/*.py gh-pages/api/
+
       - name: Copy requirements.txt from main to gh-pages
         run: cp main/requirements.txt gh-pages/
       - name: Copy vercel.json from main to gh-pages
         run: cp main/vercel.json gh-pages/
+
+      - name: Copy latest journal (YYYY_MM_DD.md)
+        run: |
+          latest=$(find main/journals -name "????_??_??.md" | sort -r | head -n 1)
+          cp $latest gh-pages/
+
       - name: Commit and push changes
         run: |
           cd gh-pages
