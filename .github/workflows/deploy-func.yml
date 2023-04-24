@@ -29,7 +29,7 @@ jobs:
           [ -d gh-pages/api ] || mkdir gh-pages/api
           for file in rss.py, feed.py, clip.py, hashtag.py, op.py
           do
-            cp api/"$file" gh-pages/api/
+            cp main/api/"$file" gh-pages/api/
           done
           #cp main/api/*.py gh-pages/api/
 
@@ -41,7 +41,7 @@ jobs:
       - name: Copy latest journal (YYYY_MM_DD.md)
         run: |
           latest=$(find main/journals -name "????_??_??.md" | sort -r | head -n 1)
-          cp $latest gh-pages/
+          cp "$latest" gh-pages/
 
       - name: Commit and push changes
         run: |
