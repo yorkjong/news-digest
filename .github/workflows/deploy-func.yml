@@ -1,5 +1,5 @@
-# Deploy Serverless Functions
 name: Deploy Functions
+description: Deploy Vercel Serverless Functions
 on:
   push:
     branches: [ "main" ]
