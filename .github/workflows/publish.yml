@@ -27,7 +27,15 @@ jobs:
       - name: add a nojekyll file # to make sure asset paths are correctly identified
         run: touch $GITHUB_WORKSPACE/www/.nojekyll
       - name: remove trace.zip
-        run: rm $GITHUB_WORKSPACE/www/trace.zip
+        run: rm www/trace.zip
+      - name: Copy api/*.py
+        run: |
+          [ -d www/api ] || mkdir www/api
+          cp api/*.py www/api/
+      - name: Copy requirements.txt
+        run: cp requirements.txt www/
+      - name: Copy vercel.json
+        run: cp vercel.json www/
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
         with:
