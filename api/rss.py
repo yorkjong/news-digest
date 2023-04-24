@@ -1,9 +1,14 @@
 """
-This module define handler of a Vercel's serverless function.
+The module implement a Vercel Serverlesss Function to generate a RSS feed.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/04/23 (initial version) ~ 2023/04/23 (last revision)"
+__date__ = "2023/04/23 (initial version) ~ 2023/04/25 (last revision)"
 
+__all__ = [
+    'handler',
+]
+
+import glob
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 
@@ -13,8 +18,46 @@ except:
     import clip, hashtag, feed
 
 
+#------------------------------------------------------------------------------
+# Utility Functions
+#------------------------------------------------------------------------------
+
+def get_latest_journal_filename():
+    '''Get the filename (YYYY_MM_DD.md) of the latest jurnal.
+
+    Returns:
+        (str): the filename with latest date.
+    '''
+    files = glob.glob(os.path.join(directory, "????_??_??.md"))
+    return max(files)
+
+
+def get_latest_journal():
+    '''Get the content of latest journal.
+
+    Returns:
+        (str): the conetent of latest journal.
+    '''
+    fn = get_latest_journal_filename()
+    with open(fn, 'r') as f:
+        text = f.read()
+    return text
+
+#------------------------------------------------------------------------------
+
 def rss(headings, tags, name):
-    content = clip.get_latest_journal()
+    '''Generate the content of subsdripted RSS feed.
+
+    Args:
+        headings ([str]): a list of headings to subscrip
+        tags ([str]): a list of tags to subscrip
+        name (str): name of the RSS.
+
+    Returns:
+        (str): the generated content of RSS feed
+    '''
+    #content = clip.get_latest_journal()
+    content = get_latest_journal()
     categories = headings
     if not categories and tags:
         categories = clip.get_categories(content)
@@ -26,8 +69,15 @@ def rss(headings, tags, name):
     return feed.rss_from_lines(lines, name)
 
 
-# NOTE: must name "handler" (call-back class)
+#------------------------------------------------------------------------------
+# handler of a Vercel serverless function
+#------------------------------------------------------------------------------
+
 class handler(BaseHTTPRequestHandler):
+    '''handler of the Vercel Serverless Function.
+
+    Note: The class name must be handler.
+    '''
     def do_GET(self):
         query = urlparse(self.path).query
         params = parse_qs(query)
@@ -40,6 +90,9 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
         self.wfile.write(rss(headings, tags, f"api/rss?{query}").encode())
 
+#------------------------------------------------------------------------------
+# Test
+#------------------------------------------------------------------------------
 
 def test():
     # Start the HTTP server on port 8080
