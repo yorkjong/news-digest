@@ -28,7 +28,7 @@ def get_latest_journal_filename():
     Returns:
         (str): the filename with latest date.
     '''
-    files = glob.glob(os.path.join(directory, "????_??_??.md"))
+    files = glob.glob(r"????_??_??.md")
     return max(files)
 
 
