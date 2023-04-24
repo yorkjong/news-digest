@@ -41,7 +41,7 @@ jobs:
       - name: Copy latest journal (YYYY_MM_DD.md)
         run: |
           latest=$(find journals -name "????_??_??.md" | sort -r | head -n 1)
-          cp $latest www/
+          cp "$latest" www/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
