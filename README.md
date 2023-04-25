@@ -7,18 +7,18 @@
   - [news_clip.ipynb](https://colab.research.google.com/github/YorkJong/news-digest/blob/main/notebooks/news_clip.ipynb) -- clip latest news.
   - [news_query.ipynb](https://colab.research.google.com/github/YorkJong/news-digest/blob/main/notebooks/news_query.ipynb) -- query news across multiple days.
 - **RSS feeds:**
-  - https://news-digest.vercel.app/Vehicle.rss
-  - https://news-digest.vercel.app/TechTitans.rss
-  - https://news-digest.vercel.app/Finance.rss
-  - https://news-digest.vercel.app/news.rss (merge above 3 RSS feeds)
-  - https://news-digest.vercel.app/Crypto.rss
-  - https://news-digest.vercel.app/Taiwan.rss
-  - https://news-digest.vercel.app/Science.rss
-  - https://news-digest.vercel.app/IT.rss
-  - https://news-digest.vercel.app/{heading}.h.rss
+  - [Vehicle.rss](https://news-digest.vercel.app/Vehicle.rss)
+  - [TechTitans.rss](https://news-digest.vercel.app/TechTitans.rss)
+  - [Finance.rss](https://news-digest.vercel.app/Finance.rss)
+  - [news.rss](https://news-digest.vercel.app/news.rss) (merge above 3 RSS feeds)
+  - [Crypto.rss](https://news-digest.vercel.app/Crypto.rss)
+  - [Taiwan.rss](https://news-digest.vercel.app/Taiwan.rss)
+  - [Science.rss](https://news-digest.vercel.app/Science.rss)
+  - [IT.rss](https://news-digest.vercel.app/IT.rss)
+  - `https://news-digest.vercel.app/{heading}.h.rss`
     - `{heading}` can be any length of prefix of a heading, e.g., `Science`, `Tech`, `Tesla`.
-  - https://news-digest.vercel.app/{tag}.t.rss
-    - `{tag}` can be any hashtag (`#` removal), e.g., `TSLA`, `NVDA`, `AI`.
+  - `https://news-digest.vercel.app/{tag}.t.rss`
+    - `{tag}` can be any hashtag (`#` removed), e.g., `TSLA`, `NVDA`, `AI`.
 
 ### Getting Started on Colab
 
