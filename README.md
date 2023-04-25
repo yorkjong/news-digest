@@ -16,7 +16,9 @@
   - [Science.rss](https://news-digest.vercel.app/Science.rss)
   - [IT.rss](https://news-digest.vercel.app/IT.rss)
   - `https://news-digest.vercel.app/{heading}.h.rss`
-    - `{heading}` can be any length of prefix of a heading, e.g., `Science`, `Tech`, `Tesla`.
+     - `{heading}` can be any substring of a heading.
+       - Heading "Tesla & SpaceX; Vehicle" can be reduced to "Tesla", "SpaceX", or "Vehicle".
+       - Heading "Tech Titans" can be reduced to "Tech" or "Titans".
   - `https://news-digest.vercel.app/{tag}.t.rss`
     - `{tag}` can be any hashtag (`#` removed), e.g., `TSLA`, `NVDA`, `AI`.
 
@@ -26,8 +28,8 @@
 2. Sign in your Google account if required.
 3. Follow the steps in the demonstration video below.
    1. Install clip module
-      * Click the ► button to start install
-      * We can see `[ ]` symbol at the begin of a cell. It will be changed to ► button while the mouse cursor over it.
+      - Click the ► button to start install
+      - We can see `[ ]` symbol at the begin of a cell. It will be changed to ► button while the mouse cursor over it.
    2. Fill parameters of a form.
    3. Manually click ► button (means "start run") to get news with selected categories.
 
