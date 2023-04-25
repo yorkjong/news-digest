@@ -7,18 +7,20 @@
   - [news_clip.ipynb](https://colab.research.google.com/github/YorkJong/news-digest/blob/main/notebooks/news_clip.ipynb) -- clip latest news.
   - [news_query.ipynb](https://colab.research.google.com/github/YorkJong/news-digest/blob/main/notebooks/news_query.ipynb) -- query news across multiple days.
 - **RSS feeds:**
-  - https://news-digest.vercel.app/Vehicle.rss
-  - https://news-digest.vercel.app/TechTitans.rss
-  - https://news-digest.vercel.app/Finance.rss
-  - https://news-digest.vercel.app/news.rss (merge above 3 RSS feeds)
-  - https://news-digest.vercel.app/Crypto.rss
-  - https://news-digest.vercel.app/Taiwan.rss
-  - https://news-digest.vercel.app/Science.rss
-  - https://news-digest.vercel.app/IT.rss
-  - https://news-digest.vercel.app/{heading}.h.rss
-    - {heading} can be any length of prefix of a heading
-  - https://news-digest.vercel.app/{tag}.t.rss
-    - {tag} can be any hashtag (after '#' removal)
+  - [Vehicle.rss](https://news-digest.vercel.app/Vehicle.rss)
+  - [TechTitans.rss](https://news-digest.vercel.app/TechTitans.rss)
+  - [Finance.rss](https://news-digest.vercel.app/Finance.rss)
+  - [news.rss](https://news-digest.vercel.app/news.rss) (merge above 3 RSS feeds)
+  - [Crypto.rss](https://news-digest.vercel.app/Crypto.rss)
+  - [Taiwan.rss](https://news-digest.vercel.app/Taiwan.rss)
+  - [Science.rss](https://news-digest.vercel.app/Science.rss)
+  - [IT.rss](https://news-digest.vercel.app/IT.rss)
+  - `https://news-digest.vercel.app/{heading}.h.rss`
+     - `{heading}` can be any substring of a heading.
+       - Heading "Tesla & SpaceX; Vehicle" can be reduced to "Tesla", "SpaceX", or "Vehicle".
+       - Heading "Tech Titans" can be reduced to "Tech" or "Titans".
+  - `https://news-digest.vercel.app/{tag}.t.rss`
+    - `{tag}` can be any hashtag (`#` removed), e.g., `TSLA`, `NVDA`, `AI`.
 
 ### Getting Started on Colab
 
@@ -26,8 +28,8 @@
 2. Sign in your Google account if required.
 3. Follow the steps in the demonstration video below.
    1. Install clip module
-      * Click the ► button to start install
-      * We can see `[ ]` symbol at the begin of a cell. It will be changed to ► button while the mouse cursor over it.
+      - Click the ► button to start install
+      - We can see `[ ]` symbol at the begin of a cell. It will be changed to ► button while the mouse cursor over it.
    2. Fill parameters of a form.
    3. Manually click ► button (means "start run") to get news with selected categories.
 
