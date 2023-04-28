@@ -3,7 +3,7 @@
   template-including-parent:: false
 	- ### Tesla & SpaceX; Vehicle
 	-
-	- ### Tech Titans
+	- ### Tech Industry
 	-
 	- ### Finance
 	-
