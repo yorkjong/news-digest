@@ -79,7 +79,7 @@ class handler(BaseHTTPRequestHandler):
         </head>
         <body>
         	<h1>News Subscription Form</h1>
-        	<form method="post" action="/subscribe">
+        	<form method="post" action="/api/subscribe">
         		<label for="topics">Choose topics:</label>
         		<select name="topics" id="topics" multiple>
         			<option value="Finance">Finance</option>
