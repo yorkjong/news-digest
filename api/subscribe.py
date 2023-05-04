@@ -2,7 +2,7 @@
 The module implement a Vercel Serverlesss Function to subscrip topics of news.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/04 (initial version) ~ 2023/05/04 (last revision)"
+__date__ = "2023/05/04 (initial version) ~ 2023/05/05 (last revision)"
 
 __all__ = [
     'handler',
@@ -10,9 +10,13 @@ __all__ = [
 
 import requests
 from urllib.parse import urlparse, parse_qs
-from http.server import BaseHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler, HTTPServer
 from json import JSONDecodeError
 
+
+#------------------------------------------------------------------------------
+# Token Status (Line Notify)
+#------------------------------------------------------------------------------
 
 def token_status(token):
     '''Check status of a Line Access Token.
@@ -48,6 +52,10 @@ def token_target(token):
     return token_status(token).get('target', '')
 
 
+#------------------------------------------------------------------------------
+# handler of the Vercel serverless function
+#------------------------------------------------------------------------------
+
 class handler(BaseHTTPRequestHandler):
     '''handler of the Vercel Serverless Function.
 
@@ -71,26 +79,45 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
 
+        daily_topics = (
+            "Tesla & SpaceX; Vehicle",
+            "Tech Industry",
+            "Finance",
+            "Taiwan",
+            "Crypto",
+            "IT"
+        )
+        weekly_topics = ("Science & Technology",)
+        n_options = len(daily_topics) + len(weekly_topics)
+
+        options_daily = "\n".join(
+            f"{' '*12}<option value={t}>{t}</option>" for t in daily_topics)
+            #f"{' '*12}<option value={t} selected>{t}</option>" for t in daily_topics)
+        options_weekly = "\n".join(
+            f"{' '*12}<option value={t}>{t} (Weekly)</option>" for t in weekly_topics)
         html_body = f"""
         <!DOCTYPE html>
         <html>
         <head>
-        	<title>News Subscription Form</title>
+            <title>News Subscription Form</title>
+            <style>
+                #topics {{
+                    height: {n_options+2}em;
+                }}
+            </style>
         </head>
         <body>
-        	<h1>News Subscription Form</h1>
-        	<form method="post" action="/api/subscribe">
-        		<label for="topics">Choose topics:</label>
-        		<select name="topics" id="topics" multiple>
-        			<option value="Finance">Finance</option>
-        			<option value="Tesla">Tesla</option>
-        			<option value="Crypto">Crypto</option>
-        			<option value="IT">IT</option>
-        			<option value="Taiwan">Taiwan</option>
-        		</select>
-        		<input type="hidden" name="token" value="{token}">
-        		<input type="submit" value="Subscribe">
-        	</form>
+            <h1>News Subscription Form</h1>
+            <form method="post" action="/api/subscribe">
+                <label for="topics">Choose topics:</label><br/><br/>
+                <select name="topics" id="topics" multiple>
+        {options_daily}
+        {options_weekly}
+                </select>
+                <input type="hidden" name="token" value="{token}">
+                <input type="hidden" name="target" value="{target}"><br/><br/>
+                <input type="submit" value="Subscribe">
+            </form>
         </body>
         </html>
         """
@@ -105,6 +132,7 @@ class handler(BaseHTTPRequestHandler):
 
         topics = post_params.get('topics', [])
         token = post_params.get('token', [''])[0]
+        target = post_params.get('target', [''])[0]
 
         # 處理訂閱信息
         # TODO: 在這裡加上訂閱處理的代碼
@@ -113,26 +141,41 @@ class handler(BaseHTTPRequestHandler):
         self.send_header('Content-type', 'text/html')
         self.end_headers()
 
+        html_topics = "\n".join(f"{' '*8}<li>{topic}</li>" for topic in topics)
         html_body = f"""
         <!DOCTYPE html>
         <html>
         <head>
-        	<title>News Subscription Form {token}</title>
+            <meta charset="utf-8">
+            <title>News Subscription Form</title>
         </head>
         <body>
-        	<h1>Thanks for subscribing!</h1>
-        	<p>You have subscribed to the following topics:</p>
-        	<ul>
-        """
-
-        for topic in topics:
-            html_body += f"<li>{topic}</li>"
-
-        html_body += """
-        	</ul>
+            <h1>Thanks for subscribing!</h1>
+            <p>target: {target}</p>
+            <p>token: {token}</p>
+            <p>You have subscribed to the following topics:</p>
+            <ul>
+        {html_topics}
+            </ul>
         </body>
         </html>
         """
 
         self.wfile.write(html_body.encode())
+
+
+#------------------------------------------------------------------------------
+# Test
+#------------------------------------------------------------------------------
+
+def test():
+    # Start the HTTP server on port 8080
+    server_address = ('', 8080)
+    httpd = HTTPServer(server_address, handler)
+    print('Starting server...')
+    httpd.serve_forever()
+
+
+if __name__ == '__main__':
+    test()
 
