@@ -61,9 +61,9 @@ def rss_from_lines(lines, name=''):
 
 
 def main():
-    topices = [t.strip() for t in sys.argv[1].split(',')]
-    headings = [topice for topice in topices if not topice.startswith('#')]
-    tags = [topice for topice in topices if topice.startswith('#')]
+    topics = [t.strip() for t in sys.argv[1].split(',')]
+    headings = [topic for topic in topics if not topic.startswith('#')]
+    tags = [topic for topic in topics if topic.startswith('#')]
     name = sys.argv[2]
     content = clip.get_latest_journal()
     categories = headings
