@@ -11,10 +11,6 @@ __all__ = [
 import requests
 from urllib.parse import urlparse, parse_qs
 from http.server import BaseHTTPRequestHandler
-
-
-import json
-import requests
 from json import JSONDecodeError
 
 
@@ -57,6 +53,7 @@ class handler(BaseHTTPRequestHandler):
 
     Note: The class name must be handler.
     '''
+
     def do_GET(self):
         query = urlparse(self.path).query
         params = parse_qs(query)
@@ -71,7 +68,71 @@ class handler(BaseHTTPRequestHandler):
             return
 
         self.send_response(200)
-        self.send_header('Content-type', 'text/plain')
+        self.send_header('Content-type', 'text/html')
         self.end_headers()
-        self.wfile.write(f"token: {token}".encode())
+
+        html_body = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+        	<title>News Subscription Form</title>
+        </head>
+        <body>
+        	<h1>News Subscription Form</h1>
+        	<form method="post" action="/subscribe">
+        		<label for="topics">Choose topics:</label>
+        		<select name="topics" id="topics" multiple>
+        			<option value="Finance">Finance</option>
+        			<option value="Tesla">Tesla</option>
+        			<option value="Crypto">Crypto</option>
+        			<option value="IT">IT</option>
+        			<option value="Taiwan">Taiwan</option>
+        		</select>
+        		<input type="hidden" name="token" value="{token}">
+        		<input type="submit" value="Subscribe">
+        	</form>
+        </body>
+        </html>
+        """
+
+        self.wfile.write(html_body.encode())
+
+
+    def do_POST(self):
+        content_length = int(self.headers.get('Content-Length', 0))
+        post_data = self.rfile.read(content_length)
+        post_params = parse_qs(post_data.decode())
+
+        topics = post_params.get('topics', [])
+        token = post_params.get('token', [''])[0]
+
+        # 處理訂閱信息
+        # TODO: 在這裡加上訂閱處理的代碼
+
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+
+        html_body = f"""
+        <!DOCTYPE html>
+        <html>
+        <head>
+        	<title>News Subscription Form {token}</title>
+        </head>
+        <body>
+        	<h1>Thanks for subscribing!</h1>
+        	<p>You have subscribed to the following topics:</p>
+        	<ul>
+        """
+
+        for topic in topics:
+            html_body += f"<li>{topic}</li>"
+
+        html_body += """
+        	</ul>
+        </body>
+        </html>
+        """
+
+        self.wfile.write(html_body.encode())
 
