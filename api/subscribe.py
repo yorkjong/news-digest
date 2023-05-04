@@ -8,6 +8,7 @@ __all__ = [
     'handler',
 ]
 
+import os
 import requests
 from urllib.parse import urlparse, parse_qs
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -50,6 +51,35 @@ def token_target(token):
         (str): the target (e.g., the user name or the group name)
     '''
     return token_status(token).get('target', '')
+
+
+#------------------------------------------------------------------------------
+# Operations of the table of access tokens
+#------------------------------------------------------------------------------
+
+def tokens_add_item(access_tokens, token, target):
+    """Add an item to the access_token table.
+
+    Returns
+        (str): the new name of target.
+    """
+    targets = list(access_tokens.keys())
+    tokens = list(access_tokens.values())
+
+    if target in targets and token not in tokens:
+        prog = re.compile(f'{re.escape(target)}(_\d+)?$')
+        d = sum(not not prog.match(t) for t in targets)
+        target = f"{target}_{d}"
+    elif target not in targets and token in tokens:
+        i = tokens.index(token)
+        target = targets[i]
+    elif target in targets and token in tokens:
+        if access_tokens[target] != token:
+            i = tokens.index(token)
+            target = targets[i]
+
+    access_tokens[target] = token
+    return target
 
 
 #------------------------------------------------------------------------------
