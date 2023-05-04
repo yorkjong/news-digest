@@ -59,8 +59,8 @@ class handler(BaseHTTPRequestHandler):
         response = requests.post(url, data=token_params)
         access_token = response.json().get('access_token', '')
 
-        self.send_response(200)
-        self.send_header('Content-type','text/plain')
+        url = f'https://news-digest.vercel.app/api/subscrip?token={access_token}'
+        self.send_response(302)
+        self.send_header('Location', url)
         self.end_headers()
-        self.wfile.write(f'access_token: {access_token}'.encode())
 
