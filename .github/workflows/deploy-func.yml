@@ -27,7 +27,7 @@ jobs:
       - name: Copy api/*.py from main to gh-pages
         run: |
           [ -d gh-pages/api ] || mkdir gh-pages/api
-          for file in rss.py feed.py clip.py hashtag.py op.py oauth.py
+          for file in rss.py feed.py clip.py hashtag.py op.py oauth.py subscrip.py
           do
             cp main/api/"$file" gh-pages/api/
           done
