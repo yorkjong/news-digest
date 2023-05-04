@@ -18,6 +18,11 @@ REDIRECT_URI = 'https://news-digest.vercel.app/api/oauth'
 
 
 class handler(BaseHTTPRequestHandler):
+    '''handler of the Vercel Serverless Function.
+
+    Note: The class name must be handler.
+    '''
+
     def do_GET(self):
         os.environ['STATE'] = secrets.token_hex(16)
         auth_params = {
