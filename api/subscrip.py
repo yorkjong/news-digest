@@ -61,7 +61,7 @@ class handler(BaseHTTPRequestHandler):
         token = params.get('token', [''])[0]
         target = token_target(token)
 
-        if not target(token):
+        if not target:
             self.send_response(401)
             self.end_headers()
             self.wfile.write(b'Invalid access token')
