@@ -64,7 +64,7 @@ class handler(BaseHTTPRequestHandler):
         response = requests.post(url, data=token_params)
         token = response.json().get('access_token', '')
 
-        url = f'https://news-digest.vercel.app/api/subscrip?token={token}'
+        url = f'https://news-digest.vercel.app/api/subscribe?token={token}'
         self.send_response(302)
         self.send_header('Location', url)
         self.end_headers()
