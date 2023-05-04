@@ -62,9 +62,9 @@ class handler(BaseHTTPRequestHandler):
         }
         url = 'https://notify-bot.line.me/oauth/token'
         response = requests.post(url, data=token_params)
-        access_token = response.json().get('access_token', '')
+        token = response.json().get('access_token', '')
 
-        url = f'https://news-digest.vercel.app/api/subscrip?token={access_token}'
+        url = f'https://news-digest.vercel.app/api/subscrip?token={token}'
         self.send_response(302)
         self.send_header('Location', url)
         self.end_headers()
