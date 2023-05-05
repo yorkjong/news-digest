@@ -31,7 +31,7 @@ jobs:
       - name: Copy api/*.py
         run: |
           [ -d "${{ env.TGT_FOLDER }}/api" ] || mkdir "${{ env.TGT_FOLDER }}/api"
-          cp "${{ env.SRC_FOLDER }}/api/*.py" "${{ env.TGT_FOLDER }}/api/"
+          cp "${{ env.SRC_FOLDER }}/api/"*.py "${{ env.TGT_FOLDER }}/api/"
       - name: Copy requirements.txt and vercel.json
         run: |
           for file in requirements.txt vercel.json
