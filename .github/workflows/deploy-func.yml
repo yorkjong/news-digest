@@ -24,22 +24,24 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
-      - name: Copy main/api/*.py
+      - name: Set environment variables to GITHUB_ENV
         run: |
-          [ -d gh-pages/api ] || mkdir gh-pages/api
-          cp main/api/*.py gh-pages/api/
-
+          echo "SRC_FOLDER=main" >> $GITHUB_ENV
+          echo "TGT_FOLDER=gh-pages" >> $GITHUB_ENV
+      - name: Copy api/*.py
+        run: |
+          [ -d "${{ env.TGT_FOLDER }}/api" ] || mkdir "${{ env.TGT_FOLDER }}/api"
+          cp "${{ env.SRC_FOLDER }}/api/*.py" "${{ env.TGT_FOLDER }}/api/"
       - name: Copy requirements.txt and vercel.json
         run: |
           for file in requirements.txt vercel.json
           do
-            cp main/"$file" gh-pages/
+            cp "${{ env.SRC_FOLDER }}/$file" "${{ env.TGT_FOLDER }}/"
           done
-
       - name: Copy latest journal (YYYY_MM_DD.md)
         run: |
-          latest=$(find main/journals -name "????_??_??.md" | sort -r | head -n 1)
-          cp "$latest" gh-pages/
+          latest=$(find "${{ env.SRC_FOLDER }}/journals" -name "????_??_??.md" | sort -r | head -n 1)
+          cp "$latest" "${{ env.TGT_FOLDER }}/"
 
       - name: Commit and push changes
         run: |

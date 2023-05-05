@@ -25,7 +25,7 @@ jobs:
       - name: Logseq Publish 🚩
         uses: pengx17/logseq-publish@v0.1
       - name: add a nojekyll file # to make sure asset paths are correctly identified
-        run: touch $GITHUB_WORKSPACE/www/.nojekyll
+        run: touch "$GITHUB_WORKSPACE/www/.nojekyll"
       - name: remove trace.zip
         run: rm www/trace.zip
 
