@@ -110,21 +110,23 @@ class handler(BaseHTTPRequestHandler):
         self.end_headers()
 
         daily_topics = (
-            "Tesla & SpaceX; Vehicle",
-            "Tech Industry",
-            "Finance",
-            "Taiwan",
-            "Crypto",
-            "IT"
+            ("Tesla & SpaceX; Vehicle", ""),
+            ("Tech Industry", ""),
+            ("Finance", ""),
+            ("Taiwan", ""),
+            ("Crypto", ""),
+            ("IT", " (AI, Software)"),
         )
-        weekly_topics = ("Science & Technology",)
+        weekly_topics = (
+            ("Science & Technology", " (Weekly)"),
+        )
         n_options = len(daily_topics) + len(weekly_topics)
 
         options_daily = "\n".join(
-            f"{' '*12}<option value={t}>{t}</option>" for t in daily_topics)
-            #f"{' '*12}<option value={t} selected>{t}</option>" for t in daily_topics)
+            f"{' '*12}<option value={t}>{t}{c}</option>" for t, c in daily_topics)
+            #f"{' '*12}<option value={t} selected>{t}{c}</option>" for t, c in daily_topics)
         options_weekly = "\n".join(
-            f"{' '*12}<option value={t}>{t} (Weekly)</option>" for t in weekly_topics)
+            f"{' '*12}<option value={t}>{t}{c}</option>" for t, c in weekly_topics)
         html_body = f"""
         <!DOCTYPE html>
         <html>
