@@ -248,7 +248,9 @@ class Subscriptions:
         clients = set(clients)
         for i in range(len(self.table)):
             orgs = set(self.table[i][1])
-            self.table[i][1] = list(orgs - clients)
+            diff = orgs - clients
+            if len(orgs) > len(diff):
+                self.table[i][1] = list(diff)
 
     def remove_invalids(self, valid_clients):
         '''Remove invalid clients in the subscriptions.
@@ -256,10 +258,12 @@ class Subscriptions:
         Args:
             valid_clients ([str]): a list of clients to keep.
         '''
-        valids = set(valid_clients)
+        keeps = set(valid_clients)
         for i in range(len(self.table)):
-            clients = set(self.table[i][1])
-            self.table[i][1] = list(clients & valids)
+            orgs = set(self.table[i][1])
+            coms = orgs & keeps
+            if len(orgs) > len(coms):
+                self.table[i][1] = list(coms)
 
 
 def test_Drive():
@@ -286,12 +290,13 @@ def test_TokenTable():
 
 def test_Subscriptions():
     tbl = Subscriptions('subscriptions_Daily.yml')
+    valid_clients = tbl.all_clients()
     #tbl.save()
     print(f"{tbl.table}\n")
     tbl.add_item('IT', 'Andy')
     tbl.add_item('Taiwan', 'Tina')
     print(f"{tbl.table}\n")
-    #tbl.remove_invalids(['Andy', 'Tina', '55688'])
+    #tbl.remove_invalids(valid_clients)
     tbl.remove_clients(['Andy', 'Tina', '55688'])
     print(f"{tbl.table}\n\n")
 
