@@ -2,17 +2,22 @@
 The module implement a Vercel Serverlesss Function to subscrip topics of news.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/04 (initial version) ~ 2023/05/05 (last revision)"
+__date__ = "2023/05/04 (initial version) ~ 2023/05/06 (last revision)"
 
 __all__ = [
     'handler',
 ]
 
 import os
-import requests
 from urllib.parse import urlparse, parse_qs
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from json import JSONDecodeError
+import requests
+
+try:
+    from .gdrive import Drive, TokenTable, Subscriptions
+except:
+    from gdrive import Drive, TokenTable, Subscriptions
 
 
 #------------------------------------------------------------------------------
@@ -51,35 +56,6 @@ def token_target(token):
         (str): the target (e.g., the user name or the group name)
     '''
     return token_status(token).get('target', '')
-
-
-#------------------------------------------------------------------------------
-# Operations of the table of access tokens
-#------------------------------------------------------------------------------
-
-def tokens_add_item(access_tokens, token, target):
-    """Add an item to the access_token table.
-
-    Returns
-        (str): the new name of target.
-    """
-    targets = list(access_tokens.keys())
-    tokens = list(access_tokens.values())
-
-    if target in targets and token not in tokens:
-        prog = re.compile(f'{re.escape(target)}(_\d+)?$')
-        d = sum(not not prog.match(t) for t in targets)
-        target = f"{target}_{d}"
-    elif target not in targets and token in tokens:
-        i = tokens.index(token)
-        target = targets[i]
-    elif target in targets and token in tokens:
-        if access_tokens[target] != token:
-            i = tokens.index(token)
-            target = targets[i]
-
-    access_tokens[target] = token
-    return target
 
 
 #------------------------------------------------------------------------------
@@ -123,10 +99,10 @@ class handler(BaseHTTPRequestHandler):
         n_options = len(daily_topics) + len(weekly_topics)
 
         options_daily = "\n".join(
-            f"{' '*12}<option value={t}>{t}{c}</option>" for t, c in daily_topics)
-            #f"{' '*12}<option value={t} selected>{t}{c}</option>" for t, c in daily_topics)
+            f"{' '*12}<option value='{t}'>{t}{c}</option>" for t, c in daily_topics)
+            #f"{' '*12}<option value='{t}' selected>{t}{c}</option>" for t, c in daily_topics)
         options_weekly = "\n".join(
-            f"{' '*12}<option value={t}>{t}{c}</option>" for t, c in weekly_topics)
+            f"{' '*12}<option value='{t}'>{t}{c}</option>" for t, c in weekly_topics)
         html_body = f"""
         <!DOCTYPE html>
         <html>
@@ -153,9 +129,7 @@ class handler(BaseHTTPRequestHandler):
         </body>
         </html>
         """
-
         self.wfile.write(html_body.encode())
-
 
     def do_POST(self):
         content_length = int(self.headers.get('Content-Length', 0))
@@ -166,8 +140,21 @@ class handler(BaseHTTPRequestHandler):
         token = post_params.get('token', [''])[0]
         target = post_params.get('target', [''])[0]
 
-        # 處理訂閱信息
-        # TODO: 在這裡加上訂閱處理的代碼
+        if target:
+            tok_tbl = TokenTable('access_tokens.yml')
+            target = tok_tbl.add_item(token, target)
+            tok_tbl.save()
+
+            weekly = ["Science & Technology"]
+            topics_daily = [t for t in topics if t not in weekly]
+            topics_weekly = [t for t in topics if t in weekly]
+
+            subscriptions_d = Subscriptions('subscriptions_Daily.yml')
+            subscriptions_d.update_topics(target, topics_daily)
+            subscriptions_d.save()
+            subscriptions_w = Subscriptions('subscriptions_Weekly.yml')
+            subscriptions_w.update_topics(target, topics_weekly)
+            subscriptions_w.save()
 
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
@@ -179,7 +166,7 @@ class handler(BaseHTTPRequestHandler):
         <html>
         <head>
             <meta charset="utf-8">
-            <title>News Subscription Form</title>
+            <title>Subscription Result (token: {token})</title>
         </head>
         <body>
             <h1>Thanks for subscribing!</h1>
@@ -192,7 +179,6 @@ class handler(BaseHTTPRequestHandler):
         </body>
         </html>
         """
-
         self.wfile.write(html_body.encode())
 
 
