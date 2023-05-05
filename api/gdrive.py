@@ -132,7 +132,56 @@ class Drive:
                 print('An error occurred: %s' % error)
 
 
-def test():
+class TokenTable:
+    '''Operations to map a target (a user or a group) to a Line Notify token.
+    '''
+    def __init__(self, filename="access_tokens.yml"):
+        self.table = Drive().load_YAML(filename)
+
+    def add_item(self, token, target):
+        """Add an item to the access_token table.
+
+        Args:
+            token (str): a token of Line Notify.
+            target (str): target name of the token.
+
+        Returns
+            (str): the new name of target.
+        """
+        targets = list(self.table.keys())
+        tokens = list(self.table.values())
+
+        if target in targets and token not in tokens:
+            prog = re.compile(f'{re.escape(target)}(_\d+)?$')
+            d = sum(not not prog.match(t) for t in targets)
+            target = f"{target}_{d}"
+        elif target not in targets and token in tokens:
+            i = tokens.index(token)
+            target = targets[i]
+        elif target in targets and token in tokens:
+            if self.table[target] != token:
+                i = tokens.index(token)
+                target = targets[i]
+
+        self.table[target] = token
+        return target
+
+    def remove_tokens(self, tokens=[]):
+        '''Remove tokens in the table.
+
+        Args:
+            tokens ([str]): a list of tokens.
+        '''
+        targets = []
+        for target, token in self.table.items():
+            if token in tokens:
+                targets.append(target)
+
+        for target in targets:
+            del self.table[target]
+
+
+def test_Drive():
     drive = Drive()
     assert id(Drive()) == id(drive)
     assert id(drive._file_table) == id(Drive._file_table)
@@ -144,6 +193,20 @@ def test():
     drive.save_YAML(tokens, fn)
 
 
+def test_TokenTable():
+    tbl = TokenTable('access_tokens.yml')
+    tbl.add_item('TOKEN_OF_ANDY', 'Andy')
+    tbl.add_item('TOKDN_OF_CINDY', 'Cindy')
+    print(tbl.table)
+    tbl.remove_tokens(['TOKEN_OF_ANDY', 'TOKDN_OF_CINDY'])
+    print(tbl.table)
+
+
+def main():
+    #test_Drive()
+    test_TokenTable()
+
+
 if __name__ == '__main__':
-    test()
+    main()
 
