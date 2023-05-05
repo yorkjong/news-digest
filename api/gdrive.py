@@ -136,7 +136,18 @@ class TokenTable:
     '''Operations to map a target (a user or a group) to a Line Notify token.
     '''
     def __init__(self, filename="access_tokens.yml"):
+        '''Load a token table from a YAML file.
+
+        Args:
+            filename (str): the filename of the token table.
+        '''
+        self.filename = filename
         self.table = Drive().load_YAML(filename)
+
+    def save(self):
+        '''Save the token table back to the original YAML file.
+        '''
+        Drive().save_YAML(self.table, self.filename)
 
     def add_item(self, token, target):
         """Add an item to the access_token table.
@@ -181,6 +192,60 @@ class TokenTable:
             del self.table[target]
 
 
+class Subscriptions:
+    '''Operations of a news-digest subscription table.
+    '''
+    def __init__(self, filename="subscriptions_Daily.yml"):
+        '''
+        Load a subscriptions from a YAML file.
+
+        Args:
+            filename (str): the filename of the token table.
+        '''
+        self.filename = filename
+        self.table = Drive().load_YAML(filename)
+
+    def save(self):
+        '''Save the subscriptions back to the original YAML file.
+        '''
+        Drive().save_YAML(self.table, self.filename)
+
+    def all_clients(self):
+        '''Get all clients in subscriptions.
+
+        Returns:
+            (set): all clients.
+        '''
+        all = set()
+        for topics, clients in self.table:
+            all |= set(clients)
+        return all
+
+    def add_item(self, heading, client):
+        '''Add an item to subscriptions.
+
+        Args:
+            heading (str): heanding to subscribe.
+            client (str): target name of a client.
+        '''
+        for i, (topics, clients) in enumerate(self.table):
+            if len(topics) != 1:
+                continue
+            if topics[0] == heading and client not in clients:
+                self.table[i][1] = clients + [client]
+
+    def remove_invalids(self, valid_clients):
+        '''Remove invalid clients in subscriptions.
+
+        Args:
+            valid_clients:
+        '''
+        valids = set(valid_clients)
+        for i in range(len(self.table)):
+            clients = set(self.table[i][1])
+            self.table[i][1] = list(clients & valids)
+
+
 def test_Drive():
     drive = Drive()
     assert id(Drive()) == id(drive)
@@ -195,6 +260,7 @@ def test_Drive():
 
 def test_TokenTable():
     tbl = TokenTable('access_tokens.yml')
+    tbl.save()
     tbl.add_item('TOKEN_OF_ANDY', 'Andy')
     tbl.add_item('TOKDN_OF_CINDY', 'Cindy')
     print(tbl.table)
@@ -202,9 +268,20 @@ def test_TokenTable():
     print(tbl.table)
 
 
+def test_Subscriptions():
+    tbl = Subscriptions('subscriptions_Daily.yml')
+    tbl.save()
+    tbl.add_item('IT', 'Andy')
+    tbl.add_item('Taiwan', 'Tina')
+    print(tbl.table)
+    tbl.remove_invalids(['Andy', 'Tina', '55688'])
+    print(tbl.table)
+
+
 def main():
     #test_Drive()
-    test_TokenTable()
+    #test_TokenTable()
+    test_Subscriptions()
 
 
 if __name__ == '__main__':
