@@ -29,20 +29,24 @@ jobs:
       - name: remove trace.zip
         run: rm www/trace.zip
 
+      - name: Set environment variables to GITHUB_ENV
+        run: |
+          echo "SRC_FOLDER=." >> $GITHUB_ENV
+          echo "TGT_FOLDER=www" >> $GITHUB_ENV
       - name: Copy api/*.py
         run: |
-          [ -d www/api ] || mkdir www/api
-          cp api/*.py www/api/
+          [ -d "${{ env.TGT_FOLDER }}/api" ] || mkdir "${{ env.TGT_FOLDER }}/api"
+          cp "${{ env.SRC_FOLDER }}/api/"*.py "${{ env.TGT_FOLDER }}/api/"
       - name: Copy requirements.txt and vercel.json
         run: |
           for file in requirements.txt vercel.json
           do
-            cp "$file" www/
+            cp "${{ env.SRC_FOLDER }}/$file" "${{ env.TGT_FOLDER }}/"
           done
       - name: Copy latest journal (YYYY_MM_DD.md)
         run: |
-          latest=$(find journals -name "????_??_??.md" | sort -r | head -n 1)
-          cp "$latest" www/
+          latest=$(find "${{ env.SRC_FOLDER }}/journals" -name "????_??_??.md" | sort -r | head -n 1)
+          cp "$latest" "${{ env.TGT_FOLDER }}/"
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.9
