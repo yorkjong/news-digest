@@ -239,11 +239,22 @@ class Subscriptions:
             if topics[0] == heading and client not in clients:
                 self.table[i][1] = clients + [client]
 
-    def remove_invalids(self, valid_clients):
-        '''Remove invalid clients in subscriptions.
+    def remove_clients(self, clients):
+        '''Remove clients in the subscriptions.
 
         Args:
-            valid_clients:
+            clients ([str]): a list of clients to remove.
+        '''
+        clients = set(clients)
+        for i in range(len(self.table)):
+            orgs = set(self.table[i][1])
+            self.table[i][1] = list(orgs - clients)
+
+    def remove_invalids(self, valid_clients):
+        '''Remove invalid clients in the subscriptions.
+
+        Args:
+            valid_clients ([str]): a list of clients to keep.
         '''
         valids = set(valid_clients)
         for i in range(len(self.table)):
@@ -255,32 +266,34 @@ def test_Drive():
     drive = Drive()
     assert id(Drive()) == id(drive)
     assert id(drive._file_table) == id(Drive._file_table)
-    print(drive._file_table.keys())
+    print(f"{drive._file_table.keys()}\n")
 
     fn = 'access_tokens.yml'
     tokens = drive.load_YAML(fn)
-    print(tokens)
+    print("{tokens}\n\n")
     drive.save_YAML(tokens, fn)
 
 
 def test_TokenTable():
     tbl = TokenTable('access_tokens.yml')
-    tbl.save()
+    #tbl.save()
     tbl.add_item('TOKEN_OF_ANDY', 'Andy')
     tbl.add_item('TOKDN_OF_CINDY', 'Cindy')
-    print(tbl.table)
+    print(f"{tbl.table}\n")
     tbl.remove_tokens(['TOKEN_OF_ANDY', 'TOKDN_OF_CINDY'])
-    print(tbl.table)
+    print(f"{tbl.table}\n\n")
 
 
 def test_Subscriptions():
     tbl = Subscriptions('subscriptions_Daily.yml')
-    tbl.save()
+    #tbl.save()
+    print(f"{tbl.table}\n")
     tbl.add_item('IT', 'Andy')
     tbl.add_item('Taiwan', 'Tina')
-    print(tbl.table)
-    tbl.remove_invalids(['Andy', 'Tina', '55688'])
-    print(tbl.table)
+    print(f"{tbl.table}\n")
+    #tbl.remove_invalids(['Andy', 'Tina', '55688'])
+    tbl.remove_clients(['Andy', 'Tina', '55688'])
+    print(f"{tbl.table}\n\n")
 
 
 def main():
