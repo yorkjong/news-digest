@@ -233,24 +233,22 @@ class Subscriptions:
             heading (str): heanding to subscribe.
             client (str): target name of a client.
         '''
-        for i, (topics, clients) in enumerate(self.table):
+        for topics, clients in self.table:
             if len(topics) != 1:
                 continue
             if topics[0] == heading and client not in clients:
-                self.table[i][1] = clients + [client]
+                clients.append(client)
 
-    def remove_clients(self, clients):
+    def remove_clients(self, clients_rm):
         '''Remove clients in the subscriptions.
 
         Args:
-            clients ([str]): a list of clients to remove.
+            clients_rm ([str]): a list of clients to remove.
         '''
-        clients = set(clients)
-        for i in range(len(self.table)):
-            orgs = set(self.table[i][1])
-            diff = orgs - clients
-            if len(orgs) > len(diff):
-                self.table[i][1] = list(diff)
+        for _, clients in self.table:
+            diff = set(clients) - set(clients_rm)
+            if len(clients) > len(diff):
+                clients[:] = list(diff)
 
     def remove_invalids(self, valid_clients):
         '''Remove invalid clients in the subscriptions.
@@ -258,12 +256,10 @@ class Subscriptions:
         Args:
             valid_clients ([str]): a list of clients to keep.
         '''
-        keeps = set(valid_clients)
-        for i in range(len(self.table)):
-            orgs = set(self.table[i][1])
-            coms = orgs & keeps
-            if len(orgs) > len(coms):
-                self.table[i][1] = list(coms)
+        for _, clients in self.table:
+            coms = set(clients) & set(valid_clients)
+            if len(clients) > len(coms):
+                clients[:] = list(coms)
 
 
 def test_Drive():
@@ -294,7 +290,7 @@ def test_Subscriptions():
     #tbl.save()
     print(f"{tbl.table}\n")
     tbl.add_item('IT', 'Andy')
-    tbl.add_item('Taiwan', 'Tina')
+    tbl.add_item('Crypto', 'Tina')
     print(f"{tbl.table}\n")
     #tbl.remove_invalids(valid_clients)
     tbl.remove_clients(['Andy', 'Tina', '55688'])
