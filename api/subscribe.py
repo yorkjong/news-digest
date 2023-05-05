@@ -129,7 +129,7 @@ class handler(BaseHTTPRequestHandler):
         <!DOCTYPE html>
         <html>
         <head>
-            <title>News Subscription Form</title>
+            <title>Subscription to news-digest (token: {token})</title>
             <style>
                 #topics {{
                     height: {n_options+2}em;
@@ -137,7 +137,7 @@ class handler(BaseHTTPRequestHandler):
             </style>
         </head>
         <body>
-            <h1>News Subscription Form</h1>
+            <h1>Subscription to news-digest</h1>
             <form method="post" action="/api/subscribe">
                 <label for="topics">Choose topics:</label><br/><br/>
                 <select name="topics" id="topics" multiple>
