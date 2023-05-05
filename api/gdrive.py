@@ -2,7 +2,7 @@
 The module implement operations of files in a folder in the Google Drive.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/05 (initial version) ~ 2023/05/05 (last revision)"
+__date__ = "2023/05/05 (initial version) ~ 2023/05/06 (last revision)"
 
 __all__ = [
     'Drive',
@@ -11,6 +11,7 @@ __all__ = [
 ]
 
 import os
+import re
 import io
 import json
 import yaml
@@ -120,7 +121,8 @@ class Drive:
 
         if data:
             # Convert the Python object to YAML
-            updated_content = yaml.safe_dump(data, default_flow_style=False)
+            updated_content = yaml.safe_dump(
+                data, default_flow_style=None, allow_unicode=True)
 
             # Upload the modified content to Google Drive
             try:
@@ -167,15 +169,19 @@ class TokenTable:
         targets = list(self.table.keys())
         tokens = list(self.table.values())
 
+        # repeated target
         if target in targets and token not in tokens:
             prog = re.compile(f'{re.escape(target)}(_\d+)?$')
             d = sum(not not prog.match(t) for t in targets)
             target = f"{target}_{d}"
+        # repeated token
         elif target not in targets and token in tokens:
+            # apply old target
             i = tokens.index(token)
             target = targets[i]
         elif target in targets and token in tokens:
             if self.table[target] != token:
+                # apply old target
                 i = tokens.index(token)
                 target = targets[i]
 
