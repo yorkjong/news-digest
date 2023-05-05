@@ -24,6 +24,8 @@ class Drive:
     _file_table = None  # map finename to file ID
 
     def __new__(cls, *args, **kwargs):
+        '''Support singleton pattern.
+        '''
         if cls._instance is None:
             cls._instance = super().__new__(cls)
             cls._service = cls._client(os.environ['SERVICE_ACCOUNT_INFO'])
@@ -36,6 +38,12 @@ class Drive:
     @staticmethod
     def _client(service_account_info):
         '''Create service client of Google Drive API.
+
+        Args:
+            service_account_info (str): a string representing service account info.
+
+        Returns:
+            service object of Google Drive API client.
         '''
         info = json.loads(service_account_info)
 
@@ -50,6 +58,15 @@ class Drive:
 
     @classmethod
     def _file_table(cls, folder_id):
+        '''Create the file table of a foldr.
+
+        Args:
+            folder_id (str): the ID of a folder.
+
+        Returns:
+            ({filename: file_id}): the file table to map a filename to a file
+                ID.
+        '''
         query = f"trashed = false and '{folder_id}' in parents"
         fields = "nextPageToken, files(id, name)"
         results = cls._service.files().list(q=query, fields=fields).execute()
@@ -62,6 +79,14 @@ class Drive:
 
     @classmethod
     def load_YAML(cls, filename):
+        '''Load a YAML file from the folder of the Google Dirve.
+
+        Args:
+            filename (str): the filename of a YAML file.
+
+        Returns:
+            the Python object.
+        '''
         file_id = cls._file_table[filename]
 
         # Download file content from Google Drive
@@ -80,9 +105,14 @@ class Drive:
 
     @classmethod
     def save_YAML(cls, data, filename):
+        '''Save a Python object to YAML on the folder of the Google Drive.
+
+        Args:
+            data: a Python object to save.
+            filename (str): the filename of a YAML file.
+        '''
         file_id = cls._file_table[filename]
 
-        # Modify the content and upload it to Google Drive
         if data:
             # Convert the Python object to YAML
             updated_content = yaml.safe_dump(data, default_flow_style=False)
