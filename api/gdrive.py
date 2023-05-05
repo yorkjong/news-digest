@@ -226,6 +226,24 @@ class Subscriptions:
             all |= set(clients)
         return all
 
+    def update_topics(self, client, new_topics):
+        '''Update subscribed topics for a client.
+
+        This method add topics listing in new_topics and remove topics not
+        listing in new_tpoics.
+
+        Args:
+            client (str): the client.
+            new_topics ([str]): a list of topics.
+        '''
+        for topics, clients in self.table:
+            if topics[0] in new_topics:
+                if client not in clients:
+                    clients.append(client)
+            else:
+                if client in clients:
+                    clients.remove(client)
+
     def add_item(self, heading, client):
         '''Add an item to subscriptions.
 
@@ -248,6 +266,7 @@ class Subscriptions:
         for _, clients in self.table:
             diff = set(clients) - set(clients_rm)
             if len(clients) > len(diff):
+                # update clients
                 clients[:] = list(diff)
 
     def remove_invalids(self, valid_clients):
@@ -259,6 +278,7 @@ class Subscriptions:
         for _, clients in self.table:
             coms = set(clients) & set(valid_clients)
             if len(clients) > len(coms):
+                # update clients
                 clients[:] = list(coms)
 
 
@@ -292,8 +312,10 @@ def test_Subscriptions():
     tbl.add_item('IT', 'Andy')
     tbl.add_item('Crypto', 'Tina')
     print(f"{tbl.table}\n")
-    #tbl.remove_invalids(valid_clients)
-    tbl.remove_clients(['Andy', 'Tina', '55688'])
+    tbl.remove_invalids(valid_clients)
+    #tbl.remove_clients(['Andy', 'Tina', '55688'])
+    print(f"{tbl.table}\n")
+    tbl.update_topics('55688', ['IT', 'Finance'])
     print(f"{tbl.table}\n\n")
 
 
