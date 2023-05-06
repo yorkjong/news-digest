@@ -46,7 +46,8 @@ class Drive:
         '''Create service client of Google Drive API.
 
         Args:
-            service_account_info (str): a string representing service account info.
+            service_account_info (str): a service account info for creating the
+                credentials object.
 
         Returns:
             service object of Google Drive API client.
@@ -188,6 +189,14 @@ class TokenTable:
         self.table[target] = token
         return target
 
+    def tokens(self):
+        '''Get all tokens in the table.
+
+        Returns:
+            ([str]): a list of all tokens in the table.
+        '''
+        return self.table.values()
+
     def remove_tokens(self, tokens=[]):
         '''Remove tokens in the table.
 
@@ -287,6 +296,9 @@ class Subscriptions:
                 # update clients
                 clients[:] = list(coms)
 
+#------------------------------------------------------------------------------
+# Unit Test
+#------------------------------------------------------------------------------
 
 def test_Drive():
     drive = Drive()
@@ -295,14 +307,15 @@ def test_Drive():
     print(f"{drive._file_table.keys()}\n")
 
     fn = 'access_tokens.yml'
-    tokens = drive.load_YAML(fn)
-    print("{tokens}\n\n")
-    drive.save_YAML(tokens, fn)
+    data = drive.load_YAML(fn)
+    print("{data}\n\n")
+    drive.save_YAML(data, fn)
 
 
 def test_TokenTable():
     tbl = TokenTable('access_tokens.yml')
     #tbl.save()
+    print(f'{tbl.tokens()}\n')
     tbl.add_item('TOKEN_OF_ANDY', 'Andy')
     tbl.add_item('TOKDN_OF_CINDY', 'Cindy')
     print(f"{tbl.table}\n")
