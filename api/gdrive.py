@@ -2,10 +2,9 @@
 The module implement operations of files in a folder in the Google Drive.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/05 (initial version) ~ 2023/05/06 (last revision)"
+__date__ = "2023/05/05 (initial version) ~ 2023/05/07 (last revision)"
 
 __all__ = [
-    'Drive',
     'TokenTable',
     'Subscriptions',
 ]
@@ -141,7 +140,8 @@ class Drive:
 
 
 class TokenTable:
-    '''Operations to map a target (a user or a group) to a Line Notify token.
+    '''Operations to map a target (i.e., a client: a user or a group) to a Line
+    Notify token.
     '''
     def __init__(self, filename="access_tokens.yml"):
         '''Load a token table from a YAML file.
@@ -157,37 +157,13 @@ class TokenTable:
         '''
         Drive().save_YAML(self.table, self.filename)
 
-    def add_item(self, token, target):
-        """Add an item to the access_token table.
+    def clients(self):
+        '''Get all clients (targets) in the table.
 
-        Args:
-            token (str): a token of Line Notify.
-            target (str): target name of the token.
-
-        Returns
-            (str): the new name of target.
-        """
-        targets = list(self.table.keys())
-        tokens = list(self.table.values())
-
-        # repeated target
-        if target in targets and token not in tokens:
-            prog = re.compile(f'{re.escape(target)}(_\d+)?$')
-            d = sum(not not prog.match(t) for t in targets)
-            target = f"{target}_{d}"
-        # repeated token
-        elif target not in targets and token in tokens:
-            # apply old target
-            i = tokens.index(token)
-            target = targets[i]
-        elif target in targets and token in tokens:
-            if self.table[target] != token:
-                # apply old target
-                i = tokens.index(token)
-                target = targets[i]
-
-        self.table[target] = token
-        return target
+        Returns:
+            ([str]): a list of all clients (targets) in the table.
+        '''
+        return list(self.table.keys())
 
     def tokens(self):
         '''Get all tokens in the table.
@@ -195,7 +171,66 @@ class TokenTable:
         Returns:
             ([str]): a list of all tokens in the table.
         '''
-        return self.table.values()
+        return list(self.table.values())
+
+    def token(self, client):
+        '''Get token with given client (target).
+
+        Args:
+            client (str): the client
+
+        Returns:
+            (str) the token
+        '''
+        return self.table[client]
+
+    def client(self, token):
+        '''Get client (target) with given token.
+
+        Args:
+            token (str): the token.
+
+        Returns:
+            (str) the client.
+        '''
+        i = self.tokens().index(token)
+        return self.clients()[i]
+
+    def add_item(self, token, client):
+        """Add an item to the access_token table.
+
+        Args:
+            token (str): a token of Line Notify.
+            client (str): client name of the token.
+
+        Returns
+            (str): the new name of client.
+        """
+        clients = self.clients()
+        tokens = self.tokens()
+
+        # repeated clients
+        if client in clients and token not in tokens:
+            prog = re.compile(f'{re.escape(client)}(_\d+)?$')
+            d = sum(not not prog.match(c) for c in clients)
+            client = f"{client}_{d}"
+        # repeated tokens
+        elif client not in clients and token in tokens:
+            # apply old client
+            i = tokens.index(token)
+            client = clients[i]
+        elif client in clients and token in tokens:
+            if self.table[client] != token:
+                # apply old client
+                i = tokens.index(token)
+                client = clients[i]
+
+        self.table[client] = token
+        return client
+
+    def remove_clients(self, clients=[]):
+        for client in clients:
+            del self.table[client]
 
     def remove_tokens(self, tokens=[]):
         '''Remove tokens in the table.
@@ -203,13 +238,13 @@ class TokenTable:
         Args:
             tokens ([str]): a list of tokens.
         '''
-        targets = []
-        for target, token in self.table.items():
+        clients = []
+        for client, token in self.table.items():
             if token in tokens:
-                targets.append(target)
+                clients.append(client)
 
-        for target in targets:
-            del self.table[target]
+        for client in clients:
+            del self.table[client]
 
 
 class Subscriptions:
@@ -274,17 +309,17 @@ class Subscriptions:
             all |= set(clients)
         return all
 
-    def add_item(self, heading, client):
+    def add_item(self, topic, client):
         '''Add an item to subscriptions.
 
         Args:
-            heading (str): heanding to subscribe.
+            topic (str): topic (heading) to subscribe.
             client (str): target name of a client.
         '''
         for topics, clients in self.table:
             if len(topics) != 1:
                 continue
-            if topics[0] == heading and client not in clients:
+            if topics[0] == topic and client not in clients:
                 clients.append(client)
 
     def remove_clients(self, clients_rm):
@@ -323,7 +358,7 @@ def test_Drive():
 
     fn = 'access_tokens.yml'
     data = drive.load_YAML(fn)
-    print("{data}\n")
+    print(f"{data}\n")
     #drive.save_YAML(data, fn)
     print()
 
@@ -360,6 +395,7 @@ def test_Subscriptions():
     assert tbl.topics('55688') == ['Finance', 'IT']
     print(f"{tbl.table}\n")
     print()
+
 
 def main():
     #test_Drive()
