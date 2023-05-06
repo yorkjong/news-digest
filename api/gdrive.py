@@ -230,16 +230,20 @@ class Subscriptions:
         '''
         Drive().save_YAML(self.table, self.filename)
 
-    def all_clients(self):
-        '''Get all clients in subscriptions.
+    def topics(self, client):
+        '''Get subscribed topics of a client.
+
+        Args:
+            client (str): the client.
 
         Returns:
-            (set): all clients.
+            ([str]): the subscribed topics.
         '''
-        all = set()
+        subscribed = []
         for topics, clients in self.table:
-            all |= set(clients)
-        return all
+            if client in clients:
+                subscribed.append(topics[0])
+        return subscribed
 
     def update_topics(self, client, new_topics):
         '''Update subscribed topics for a client.
@@ -258,6 +262,17 @@ class Subscriptions:
             else:
                 if client in clients:
                     clients.remove(client)
+
+    def clients(self):
+        '''Get all clients in subscriptions.
+
+        Returns:
+            (set): all clients.
+        '''
+        all = set()
+        for topics, clients in self.table:
+            all |= set(clients)
+        return all
 
     def add_item(self, heading, client):
         '''Add an item to subscriptions.
@@ -308,8 +323,9 @@ def test_Drive():
 
     fn = 'access_tokens.yml'
     data = drive.load_YAML(fn)
-    print("{data}\n\n")
-    drive.save_YAML(data, fn)
+    print("{data}\n")
+    #drive.save_YAML(data, fn)
+    print()
 
 
 def test_TokenTable():
@@ -320,23 +336,30 @@ def test_TokenTable():
     tbl.add_item('TOKDN_OF_CINDY', 'Cindy')
     print(f"{tbl.table}\n")
     tbl.remove_tokens(['TOKEN_OF_ANDY', 'TOKDN_OF_CINDY'])
-    print(f"{tbl.table}\n\n")
+    print(f"{tbl.table}\n")
+    print()
 
 
 def test_Subscriptions():
     tbl = Subscriptions('subscriptions_Daily.yml')
-    valid_clients = tbl.all_clients()
+    valid_clients = tbl.clients()
     #tbl.save()
     print(f"{tbl.table}\n")
     tbl.add_item('IT', 'Andy')
+    assert tbl.topics('Andy')[0] == 'IT'
     tbl.add_item('Crypto', 'Tina')
+    assert tbl.topics('Tina')[0] == 'Crypto'
     print(f"{tbl.table}\n")
     tbl.remove_invalids(valid_clients)
     #tbl.remove_clients(['Andy', 'Tina', '55688'])
+    assert not tbl.topics('Andy')
+    assert not tbl.topics('Tina')
     print(f"{tbl.table}\n")
+    print(f"{tbl.topics('55688')}\n")
     tbl.update_topics('55688', ['IT', 'Finance'])
-    print(f"{tbl.table}\n\n")
-
+    assert tbl.topics('55688') == ['Finance', 'IT']
+    print(f"{tbl.table}\n")
+    print()
 
 def main():
     #test_Drive()
