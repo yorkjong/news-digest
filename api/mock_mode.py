@@ -2,4 +2,4 @@ import os
 
 
 def init_environ_variables():
-    pass
+    print('init_environ_variables')
