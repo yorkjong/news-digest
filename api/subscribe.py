@@ -108,11 +108,11 @@ class handler(BaseHTTPRequestHandler):
         topics = Subscriptions('subscriptions_Daily.yml').topics(name)
         sel = lambda x: " selected" if x in topics else ""
         options_daily = "\n".join(
-            f"{' '*12}<option value='{t}'{sel(t)}>{t}{c}</option>"
+                f'{" "*12}<option value="{t}"{sel(t)}>{t}{c}</option>'
             for t, c in daily_topics)
-        topics = Subscriptions('subscriptions_Weekly.yml').topics(name)
+        topics = Subscriptions("subscriptions_Weekly.yml").topics(name)
         options_weekly = "\n".join(
-            f"{' '*12}<option value='{t}'{sel(t)}>{t}{c}</option>"
+            f'{" "*12}<option value="{t}"{sel(t)}>{t}{c}</option>'
             for t, c in weekly_topics)
 
         self.send_response(200)
