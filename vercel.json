@@ -11,6 +11,7 @@
       "destination": "/api/rss?heading=Tesla&heading=Tech&heading=Finance" },
     { "source": "/(.*).h.rss", "destination": "/api/rss?heading=$1" },
     { "source": "/(.*).t.rss", "destination": "/api/rss?tag=$1" },
+
     { "source": "/", "destination": "https://york-news-digest.netlify.app" }
   ]
 }
