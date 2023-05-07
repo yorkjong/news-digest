@@ -2,7 +2,7 @@
 The module implement a Vercel Serverlesss Function to subscrip topics of news.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/04 (initial version) ~ 2023/05/06 (last revision)"
+__date__ = "2023/05/04 (initial version) ~ 2023/05/07 (last revision)"
 
 __all__ = [
     'handler',
@@ -15,9 +15,9 @@ from json import JSONDecodeError
 import requests
 
 try:
-    from .gdrive import Drive, TokenTable, Subscriptions
+    from .gdrive import TokenTable, Subscriptions
 except:
-    from gdrive import Drive, TokenTable, Subscriptions
+    from gdrive import TokenTable, Subscriptions
 
 
 #------------------------------------------------------------------------------
@@ -73,17 +73,23 @@ class handler(BaseHTTPRequestHandler):
         params = parse_qs(query)
 
         token = params.get('token', [''])[0]
-        target = token_target(token)
+        status = token_status(token)
+        target = status.get('target', '')
 
         if not target:
-            self.send_response(401)
+            self.send_response(status['status'])    # 401, 404
             self.end_headers()
-            self.wfile.write(b'Invalid access token')
+            self.wfile.write(status['message'].encode())
             return
 
-        self.send_response(200)
-        self.send_header('Content-type', 'text/html')
-        self.end_headers()
+        tbl = TokenTable('access_tokens.yml')
+        name = tbl.gen_unique_name(target, token)
+        if name != target:
+            # in case of regenerating tokens.
+            if token_status(tbl[target]).get('status') != 200:
+                tbl[target] = token
+                tbl.save()
+                name = target
 
         daily_topics = (
             ("Tesla & SpaceX; Vehicle", ""),
@@ -98,11 +104,21 @@ class handler(BaseHTTPRequestHandler):
         )
         n_options = len(daily_topics) + len(weekly_topics)
 
+
+        topics = Subscriptions('subscriptions_Daily.yml').topics(name)
+        sel = lambda x: " selected" if x in topics else ""
         options_daily = "\n".join(
-            f"{' '*12}<option value='{t}'>{t}{c}</option>" for t, c in daily_topics)
-            #f"{' '*12}<option value='{t}' selected>{t}{c}</option>" for t, c in daily_topics)
+            f"{' '*12}<option value='{t}'{sel(t)}>{t}{c}</option>"
+            for t, c in daily_topics)
+        topics = Subscriptions('subscriptions_Weekly.yml').topics(name)
         options_weekly = "\n".join(
-            f"{' '*12}<option value='{t}'>{t}{c}</option>" for t, c in weekly_topics)
+            f"{' '*12}<option value='{t}'{sel(t)}>{t}{c}</option>"
+            for t, c in weekly_topics)
+
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+
         html_body = f"""
         <!DOCTYPE html>
         <html>
@@ -123,7 +139,7 @@ class handler(BaseHTTPRequestHandler):
         {options_weekly}
                 </select>
                 <input type="hidden" name="token" value="{token}">
-                <input type="hidden" name="target" value="{target}"><br/><br/>
+                <input type="hidden" name="target" value="{name}"><br/><br/>
                 <input type="submit" value="Subscribe">
             </form>
         </body>
@@ -140,21 +156,26 @@ class handler(BaseHTTPRequestHandler):
         token = post_params.get('token', [''])[0]
         target = post_params.get('target', [''])[0]
 
-        if target:
-            tok_tbl = TokenTable('access_tokens.yml')
-            target = tok_tbl.add_item(token, target)
-            tok_tbl.save()
+        if not target:
+            self.send_response(401)
+            self.end_headers()
+            self.wfile.write(b'Invalid access token')
+            return
 
-            weekly = ["Science & Technology"]
-            topics_daily = [t for t in topics if t not in weekly]
-            topics_weekly = [t for t in topics if t in weekly]
+        tok_tbl = TokenTable('access_tokens.yml')
+        target = tok_tbl.add_item(token, target)
+        tok_tbl.save()
 
-            subscriptions_d = Subscriptions('subscriptions_Daily.yml')
-            subscriptions_d.update_topics(target, topics_daily)
-            subscriptions_d.save()
-            subscriptions_w = Subscriptions('subscriptions_Weekly.yml')
-            subscriptions_w.update_topics(target, topics_weekly)
-            subscriptions_w.save()
+        weekly = ["Science & Technology"]
+        topics_daily = [t for t in topics if t not in weekly]
+        topics_weekly = [t for t in topics if t in weekly]
+
+        subscriptions_d = Subscriptions('subscriptions_Daily.yml')
+        subscriptions_d.update_topics(target, topics_daily)
+        subscriptions_d.save()
+        subscriptions_w = Subscriptions('subscriptions_Weekly.yml')
+        subscriptions_w.update_topics(target, topics_weekly)
+        subscriptions_w.save()
 
         self.send_response(200)
         self.send_header('Content-type', 'text/html')
