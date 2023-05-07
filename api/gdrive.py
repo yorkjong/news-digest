@@ -207,6 +207,28 @@ class TokenTable:
         i = self.tokens().index(token)
         return self.clients()[i]
 
+    def gen_unique_name(self, client):
+        '''Generate unique name for a client.
+
+        Args:
+            client (str): the expected name of the client.
+
+        Returns:
+            (str): the generated unique client name.
+        '''
+        clients = self.clients()
+        if client not in clients:
+            return client
+        prog = re.compile(f'{re.escape(client)}_(\d+)?$')
+        repeated = [c for c in clients if prog.match(c)]
+        if not repeated:
+            return client
+        repeated.sort()
+        display(repeated)
+        last = repeated[-1]
+        num = int(prog.findall(last)[0])
+        return f"{client}_{num+1}"
+
     def add_item(self, token, client):
         """Add an item to the access_token table.
 
@@ -220,24 +242,24 @@ class TokenTable:
         clients = self.clients()
         tokens = self.tokens()
 
-        # repeated clients
+        name = client
+
+        # repeated client names
         if client in clients and token not in tokens:
-            prog = re.compile(f'{re.escape(client)}(_\d+)?$')
-            d = sum(not not prog.match(c) for c in clients)
-            client = f"{client}_{d}"
-        # repeated tokens
+            name = gen_unique_name(client)
+        # repeated tokens (e.g., target is renamed)
         elif client not in clients and token in tokens:
-            # apply old client
+            # use old name
             i = tokens.index(token)
-            client = clients[i]
+            name = clients[i]
         elif client in clients and token in tokens:
             if self.table[client] != token:
-                # apply old client
+                # use old name
                 i = tokens.index(token)
-                client = clients[i]
+                name = clients[i]
 
-        self.table[client] = token
-        return client
+        self.table[name] = token
+        return name
 
     def remove_clients(self, clients=[]):
         '''Remove clients in the table.
@@ -432,7 +454,8 @@ def test_Subscriptions():
     print(f"{tbl.table}\n")
     #tbl.remove_invalids(valid_clients)
     #tbl.remove_clients(['Andy', 'Tina', '55688'])
-    del tbl['Andy', 'Tina', '55688']
+    del tbl['Andy', 'Tina']
+    del tbl['55688']
     assert not tbl.topics('Andy')
     assert not tbl.topics('Tina')
     print(f"{tbl.table}\n")
