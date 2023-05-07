@@ -26,7 +26,7 @@ class Drive:
     """
     _instance = None    # for singleton pattern
     _service = None     # service client of Google Drive API
-    _file_table = None  # map finename to file ID
+    _file_table = None  # map finename to file ID on Google Drive
 
     def __new__(cls, *args, **kwargs):
         '''Support singleton pattern.
@@ -252,7 +252,7 @@ class TokenTable:
         '''Remove clients in the table.
 
         Args:
-            clients ([str]): a list of clients.
+            clients ([str]): a list of clients or a single client (a string).
         '''
         if isinstance(clients, (list, tuple)):
             self.remove_clients(clients)
@@ -365,6 +365,17 @@ class Subscriptions:
                 # update clients
                 clients[:] = list(diff)
 
+    def __delitem__(self, clients):
+        '''Remove clients in the subscriptions.
+
+        Args:
+            clients ([str]): a list of clients or a single client (a string).
+        '''
+        if isinstance(clients, (list, tuple)):
+            self.remove_clients(clients)
+        else:
+            self.remove_clients([clients])
+
     def remove_invalids(self, valid_clients):
         '''Remove invalid clients in the subscriptions.
 
@@ -419,8 +430,9 @@ def test_Subscriptions():
     tbl.add_item('Crypto', 'Tina')
     assert tbl.topics('Tina')[0] == 'Crypto'
     print(f"{tbl.table}\n")
-    tbl.remove_invalids(valid_clients)
+    #tbl.remove_invalids(valid_clients)
     #tbl.remove_clients(['Andy', 'Tina', '55688'])
+    del tbl['Andy', 'Tina', '55688']
     assert not tbl.topics('Andy')
     assert not tbl.topics('Tina')
     print(f"{tbl.table}\n")
@@ -428,9 +440,9 @@ def test_Subscriptions():
     tbl.update_topics('55688', ['IT', 'Finance'])
     assert tbl.topics('55688') == ['Finance', 'IT']
     print(f"{tbl.table}\n")
-    print()
     for i, (s, c) in enumerate(tbl):
         print(f"{i}: ({s}, {c})")
+    print()
 
 
 def main():
