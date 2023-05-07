@@ -216,5 +216,7 @@ def test():
 
 
 if __name__ == '__main__':
+    import mock_mode
+    mock_mode.init_environ_variables()
     test()
 
