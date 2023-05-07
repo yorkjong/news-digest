@@ -292,6 +292,10 @@ class Subscriptions:
         '''
         Drive().save_YAML(self.table, self.filename)
 
+    def __iter__(self):
+        for elem in self.table:
+            yield elem
+
     def topics(self, client):
         '''Get subscribed topics of a client.
 
@@ -425,12 +429,14 @@ def test_Subscriptions():
     assert tbl.topics('55688') == ['Finance', 'IT']
     print(f"{tbl.table}\n")
     print()
+    for i, (s, c) in enumerate(tbl):
+        print(f"{i}: ({s}, {c})")
 
 
 def main():
     #test_Drive()
-    test_TokenTable()
-    #test_Subscriptions()
+    #test_TokenTable()
+    test_Subscriptions()
 
 
 if __name__ == '__main__':
