@@ -25,3 +25,4 @@ bak/
 #.obsidian/plugins/
 .obsidian/
 
+api/mock_mode.py
