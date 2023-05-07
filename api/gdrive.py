@@ -184,6 +184,17 @@ class TokenTable:
         '''
         return self.table[client]
 
+    def __getitem__(self, client):
+        '''Get token with given client (target).
+
+        Args:
+            client (str): the client
+
+        Returns:
+            self.token(client)
+        '''
+        return self.token(client)
+
     def client(self, token):
         '''Get client (target) with given token.
 
@@ -229,8 +240,24 @@ class TokenTable:
         return client
 
     def remove_clients(self, clients=[]):
+        '''Remove clients in the table.
+
+        Args:
+            clients ([str]): a list of clients.
+        '''
         for client in clients:
             del self.table[client]
+
+    def __delitem__(self, clients):
+        '''Remove clients in the table.
+
+        Args:
+            clients ([str]): a list of clients.
+        '''
+        if isinstance(clients, (list, tuple)):
+            self.remove_clients(clients)
+        else:
+            del self.table[clients]
 
     def remove_tokens(self, tokens=[]):
         '''Remove tokens in the table.
@@ -370,7 +397,10 @@ def test_TokenTable():
     tbl.add_item('TOKEN_OF_ANDY', 'Andy')
     tbl.add_item('TOKDN_OF_CINDY', 'Cindy')
     print(f"{tbl.table}\n")
-    tbl.remove_tokens(['TOKEN_OF_ANDY', 'TOKDN_OF_CINDY'])
+    #tbl.remove_tokens(['TOKEN_OF_ANDY', 'TOKDN_OF_CINDY'])
+    #tbl.remove_clients(['Andy', 'Cindy'])
+    #del tbl['Andy', 'Cindy']
+    del tbl['Andy']
     print(f"{tbl.table}\n")
     print()
 
@@ -399,8 +429,8 @@ def test_Subscriptions():
 
 def main():
     #test_Drive()
-    #test_TokenTable()
-    test_Subscriptions()
+    test_TokenTable()
+    #test_Subscriptions()
 
 
 if __name__ == '__main__':
