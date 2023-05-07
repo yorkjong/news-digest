@@ -195,6 +195,9 @@ class TokenTable:
         '''
         return self.token(client)
 
+    def __setitem__(self, key, value):
+        self.table[key] = value
+
     def client(self, token):
         '''Get client (target) with given token.
 
@@ -207,7 +210,7 @@ class TokenTable:
         i = self.tokens().index(token)
         return self.clients()[i]
 
-    def gen_unique_name(self, client):
+    def _gen_unique_name(self, client):
         '''Generate unique name for a client.
 
         Args:
@@ -222,12 +225,41 @@ class TokenTable:
         prog = re.compile(f'{re.escape(client)}_(\d+)?$')
         repeated = [c for c in clients if prog.match(c)]
         if not repeated:
-            return client
+            return f"{client}_1"
         repeated.sort()
         display(repeated)
         last = repeated[-1]
         num = int(prog.findall(last)[0])
         return f"{client}_{num+1}"
+
+    def gen_unique_name(self, client, token):
+        '''Generate unique name with a client and its token.
+
+        Args:
+            client (str): the expected name of the client.
+            token (str): the token.
+
+        Returns:
+            (str): the generated unique client name.
+        '''
+        clients = self.clients()
+        tokens = self.tokens()
+        name = client
+
+        # repeated client names (e.g., regenerated tokens)
+        if client in clients and token not in tokens:
+            name = self._gen_unique_name(client)
+        # repeated tokens (e.g., renamed targets)
+        elif client not in clients and token in tokens:
+            # use old name
+            i = tokens.index(token)
+            name = clients[i]
+        elif client in clients and token in tokens:
+            if self.table[client] != token:
+                # use old name
+                i = tokens.index(token)
+                name = clients[i]
+        return name
 
     def add_item(self, token, client):
         """Add an item to the access_token table.
@@ -239,25 +271,7 @@ class TokenTable:
         Returns
             (str): the new name of client.
         """
-        clients = self.clients()
-        tokens = self.tokens()
-
-        name = client
-
-        # repeated client names
-        if client in clients and token not in tokens:
-            name = gen_unique_name(client)
-        # repeated tokens (e.g., target is renamed)
-        elif client not in clients and token in tokens:
-            # use old name
-            i = tokens.index(token)
-            name = clients[i]
-        elif client in clients and token in tokens:
-            if self.table[client] != token:
-                # use old name
-                i = tokens.index(token)
-                name = clients[i]
-
+        name = self.gen_unique_name(client, token)
         self.table[name] = token
         return name
 
