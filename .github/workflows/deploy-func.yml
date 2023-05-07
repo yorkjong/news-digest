@@ -18,16 +18,16 @@ jobs:
           ref: main
           path: main
 
-      - name: Checkout gh-pages branch
+      - name: Checkout vercel branch
         uses: actions/checkout@v2
         with:
-          ref: gh-pages
-          path: gh-pages
+          ref: vercel
+          path: vercel
 
       - name: Set environment variables to GITHUB_ENV
         run: |
           echo "SRC_FOLDER=main" >> $GITHUB_ENV
-          echo "TGT_FOLDER=gh-pages" >> $GITHUB_ENV
+          echo "TGT_FOLDER=vercel" >> $GITHUB_ENV
       - name: Copy api/*.py
         run: |
           [ -d "${{ env.TGT_FOLDER }}/api" ] || mkdir "${{ env.TGT_FOLDER }}/api"
@@ -45,11 +45,11 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          cd gh-pages
+          cd vercel
           git config --local user.email "york.jong@gmail.com"
           git config --local user.name "York Jong"
           git add .
           git commit -m "Update api/*.py files, requirements.txt, and vercel.json"
-          git push origin gh-pages
+          git push origin vercel
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
