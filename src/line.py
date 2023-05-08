@@ -2,7 +2,7 @@
 Line Notify.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/23 (initial version) ~ 2023/03/28 (last revision)"
+__date__ = "2023/03/23 (initial version) ~ 2023/05/08 (last revision)"
 
 __all__ = [
     'notify_message',

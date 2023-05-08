@@ -2,14 +2,13 @@
 Hashtag querying
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/24 (initial version) ~ 2023/04/09 (last revision)"
+__date__ = "2023/03/24 (initial version) ~ 2023/05/08 (last revision)"
 
 __all__ = [
     'get_hashtags',
     'get_lines_with_any_hashtags',
     'get_lines_with_all_hashtags',
 ]
-
 
 import re
 
