@@ -33,6 +33,10 @@ jobs:
         run: |
           echo "SRC_FOLDER=." >> $GITHUB_ENV
           echo "TGT_FOLDER=www" >> $GITHUB_ENV
+      - name: Copy src/*.py
+        run: |
+          [ -d "${{ env.TGT_FOLDER }}/src" ] || mkdir "${{ env.TGT_FOLDER }}/src"
+          cp "${{ env.SRC_FOLDER }}/src/"*.py "${{ env.TGT_FOLDER }}/src/"
       - name: Copy api/*.py
         run: |
           [ -d "${{ env.TGT_FOLDER }}/api" ] || mkdir "${{ env.TGT_FOLDER }}/api"
