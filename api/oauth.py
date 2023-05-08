@@ -2,17 +2,18 @@
 The module implement a Vercel Serverlesss Function to authorize Line Notify.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/04 (initial version) ~ 2023/05/05 (last revision)"
+__date__ = "2023/05/04 (initial version) ~ 2023/05/08 (last revision)"
 
 __all__ = [
     'handler',
 ]
 
 import os
-import requests
 import secrets
 from urllib.parse import parse_qs
 from http.server import BaseHTTPRequestHandler
+
+import requests
 
 HOME_URL = "https://news-digest.vercel.app"
 REDIRECT_URI = f"{HOME_URL}/api/oauth"

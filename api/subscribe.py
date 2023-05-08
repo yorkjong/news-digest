@@ -2,22 +2,27 @@
 The module implement a Vercel Serverlesss Function to subscrip topics of news.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/04 (initial version) ~ 2023/05/07 (last revision)"
+__date__ = "2023/05/04 (initial version) ~ 2023/05/08 (last revision)"
 
 __all__ = [
     'handler',
 ]
 
 import os
+import sys
 from urllib.parse import urlparse, parse_qs
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from json import JSONDecodeError
+
 import requests
 
-try:
-    from .gdrive import TokenTable, Subscriptions
-except:
-    from gdrive import TokenTable, Subscriptions
+if __name__ == '__main__':
+    sys.path.append('../src')
+else:
+    # on Vercel environment
+    sys.path.append(os.path.join(os.getcwd(), 'src'))
+
+from gdrive import TokenTable, Subscriptions
 
 
 #------------------------------------------------------------------------------
@@ -218,5 +223,6 @@ def test():
 if __name__ == '__main__':
     import mock_mode
     mock_mode.init_environ_variables()
+
     test()
 

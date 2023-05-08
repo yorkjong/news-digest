@@ -2,20 +2,25 @@
 The module implement a Vercel Serverlesss Function to generate a RSS feed.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/04/23 (initial version) ~ 2023/04/25 (last revision)"
+__date__ = "2023/04/23 (initial version) ~ 2023/05/08 (last revision)"
 
 __all__ = [
     'handler',
 ]
 
+import os
+import sys
 import glob
 from http.server import HTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 
-try:
-    from . import clip, hashtag, feed
-except:
-    import clip, hashtag, feed
+if __name__ == '__main__':
+    sys.path.append('../src')
+else:
+    # on Vercel environment
+    sys.path.append(os.path.join(os.getcwd(), 'src'))
+
+import clip, hashtag, feed
 
 
 #------------------------------------------------------------------------------
@@ -103,5 +108,8 @@ def test():
 
 
 if __name__ == '__main__':
+    import sys
+    sys.path.append('../src')
+
     test()
 
