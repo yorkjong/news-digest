@@ -12,9 +12,9 @@
     { "source": "/(.*).h.rss", "destination": "/api/rss?heading=$1" },
     { "source": "/(.*).t.rss", "destination": "/api/rss?tag=$1" },
 
-    { "source": "/api/oauth",
+    { "source": "/LineOauth",
       "destination": "https://news-digest-line.vercel.app/api/oauth" },
-    { "source": "/api/subscribe",
+    { "source": "/LineSubscribe",
       "destination": "https://news-digest-line.vercel.app/api/subscribe" }
   ]
 }
