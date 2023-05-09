@@ -2,7 +2,7 @@
 The module implement operations of files in a folder in the Google Drive.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/05/05 (initial version) ~ 2023/05/08 (last revision)"
+__date__ = "2023/05/05 (initial version) ~ 2023/05/09 (last revision)"
 
 __all__ = [
     'TokenTable',
@@ -11,10 +11,10 @@ __all__ = [
 
 import os
 import re
-import io
 import json
-import yaml
+from io import BytesIO
 
+import yaml
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseUpload
@@ -91,52 +91,68 @@ class Drive:
             filename (str): the filename of a YAML file.
 
         Returns:
-            the Python object.
-        '''
+            A tuple containing two values:
+
+            - The parsed content of the file, or None if the file is empty.
+            - The version string of the file at the time it was read, or None
+              if versioning is disabled.
+           '''
         file_id = cls._file_table[filename]
 
-        # Download file content from Google Drive
+        # Get the current version of the file
         try:
-            file = cls._service.files().get(fileId=file_id).execute()
-            content = cls._service.files().get_media(fileId=file_id).execute()
-            if content:
-                # Convert YAML text to Python object
-                data = yaml.safe_load(content)
-            else:
-                print('File is empty.')
+            file = cls._service.files().get(
+                fileId=file_id, fields='version').execute()
+            version = file.get('version')
         except HttpError as error:
-            print('An error occurred: %s' % error)
-            data = None
-        return data
+            print(f"An error occurred: {error}")
+            version = None
+
+        # Read the content of the file
+        try:
+            response = cls._service.files().get_media(fileId=file_id)
+            content = response.execute().decode('utf-8')
+            # Convert YAML string to Python object
+            data = yaml.safe_load(content)
+        except HttpError as error:
+            print(f"An error occurred: {error}")
+            return None, None
+        return data, version
 
     @classmethod
-    def save_YAML(cls, data, filename):
+    def save_YAML(cls, data, filename, version=None):
         '''Save a Python object to YAML on the folder of the Google Drive.
 
         Args:
-            data: a Python object to save.
+            data (Any): The Python object to be written to the file.
             filename (str): the filename of a YAML file.
+            version (str): The current version of the file. If specified, the
+                update will use optimistic locking to ensure that the file is
+                not updated concurrently by another process.
         '''
         file_id = cls._file_table[filename]
 
-        if data:
-            # Convert the Python object to YAML
-            updated_content = yaml.safe_dump(
-                data, default_flow_style=None, allow_unicode=True)
+        # Convert the Python object to YAML string
+        yaml_str = yaml.dump(data)
 
-            # Upload the modified content to Google Drive
-            try:
-                media = MediaIoBaseUpload(
-                    io.BytesIO(updated_content.encode()),
-                    mimetype='application/x-yaml')
+        # Pack the YAML string into the media format
+        media = MediaIoBaseUpload(
+            BytesIO(yaml_str.encode()), mimetype='text/yaml')
 
-                cls._service.files().update(
-                    fileId=file_id,
-                    media_body=media,
-                    fields='id'
-                ).execute()
-            except HttpError as error:
-                print('An error occurred: %s' % error)
+        # Get the current metadata of the file
+        meta = cls._service.files().get(
+            fileId=file_id, fields='version').execute()
+
+        # Check if the current version matches the expected version
+        if meta.get('version') != version:
+            raise Exception("The file has been updated by someone else.")
+
+        try:
+            cls._service.files().update(
+                fileId=file_id, media_body=media,
+                fields='version').execute()
+        except HttpError as error:
+            print(f"An error occurred: {error}")
 
 
 class TokenTable:
@@ -149,13 +165,13 @@ class TokenTable:
         Args:
             filename (str): the filename of the token table.
         '''
-        self.filename = filename
-        self.table = Drive().load_YAML(filename)
+        self._filename = filename
+        self._table, self._version = Drive().load_YAML(filename)
 
     def save(self):
         '''Save the token table back to the original YAML file.
         '''
-        Drive().save_YAML(self.table, self.filename)
+        Drive().save_YAML(self._table, self._filename, self._version)
 
     def clients(self):
         '''Get all clients (targets) in the table.
@@ -163,7 +179,7 @@ class TokenTable:
         Returns:
             ([str]): a list of all clients (targets) in the table.
         '''
-        return list(self.table.keys())
+        return list(self._table.keys())
 
     def tokens(self):
         '''Get all tokens in the table.
@@ -171,7 +187,7 @@ class TokenTable:
         Returns:
             ([str]): a list of all tokens in the table.
         '''
-        return list(self.table.values())
+        return list(self._table.values())
 
     def token(self, client):
         '''Get token with given client (target).
@@ -182,7 +198,7 @@ class TokenTable:
         Returns:
             (str) the token
         '''
-        return self.table[client]
+        return self._table[client]
 
     def __getitem__(self, client):
         '''Get token with given client (target).
@@ -196,7 +212,7 @@ class TokenTable:
         return self.token(client)
 
     def __setitem__(self, key, value):
-        self.table[key] = value
+        self._table[key] = value
 
     def client(self, token):
         '''Get client (target) with given token.
@@ -255,7 +271,7 @@ class TokenTable:
             i = tokens.index(token)
             name = clients[i]
         elif client in clients and token in tokens:
-            if self.table[client] != token:
+            if self._table[client] != token:
                 # use old name
                 i = tokens.index(token)
                 name = clients[i]
@@ -272,7 +288,7 @@ class TokenTable:
             (str): the new name of client.
         """
         name = self.gen_unique_name(client, token)
-        self.table[name] = token
+        self._table[name] = token
         return name
 
     def remove_clients(self, clients=[]):
@@ -282,7 +298,7 @@ class TokenTable:
             clients ([str]): a list of clients.
         '''
         for client in clients:
-            del self.table[client]
+            del self._table[client]
 
     def __delitem__(self, clients):
         '''Remove clients in the table.
@@ -293,7 +309,7 @@ class TokenTable:
         if isinstance(clients, (list, tuple)):
             self.remove_clients(clients)
         else:
-            del self.table[clients]
+            del self._table[clients]
 
     def remove_tokens(self, tokens=[]):
         '''Remove tokens in the table.
@@ -302,12 +318,12 @@ class TokenTable:
             tokens ([str]): a list of tokens.
         '''
         clients = []
-        for client, token in self.table.items():
+        for client, token in self._table.items():
             if token in tokens:
                 clients.append(client)
 
         for client in clients:
-            del self.table[client]
+            del self._table[client]
 
 
 class Subscriptions:
@@ -320,16 +336,16 @@ class Subscriptions:
         Args:
             filename (str): the filename of the token table.
         '''
-        self.filename = filename
-        self.table = Drive().load_YAML(filename)
+        self._filename = filename
+        self._table, self._version = Drive().load_YAML(filename)
 
     def save(self):
         '''Save the subscriptions back to the original YAML file.
         '''
-        Drive().save_YAML(self.table, self.filename)
+        Drive().save_YAML(self._table, self._filename, self._version)
 
     def __iter__(self):
-        for elem in self.table:
+        for elem in self._table:
             yield elem
 
     def topics(self, client):
@@ -342,7 +358,7 @@ class Subscriptions:
             ([str]): the subscribed topics.
         '''
         subscribed = []
-        for topics, clients in self.table:
+        for topics, clients in self._table:
             if client in clients:
                 subscribed.append(topics[0])
         return subscribed
@@ -357,7 +373,7 @@ class Subscriptions:
             client (str): the client.
             new_topics ([str]): a list of topics.
         '''
-        for topics, clients in self.table:
+        for topics, clients in self._table:
             if topics[0] in new_topics:
                 if client not in clients:
                     clients.append(client)
@@ -372,7 +388,7 @@ class Subscriptions:
             (set): all clients.
         '''
         all = set()
-        for topics, clients in self.table:
+        for topics, clients in self._table:
             all |= set(clients)
         return all
 
@@ -383,7 +399,7 @@ class Subscriptions:
             topic (str): topic (heading) to subscribe.
             client (str): target name of a client.
         '''
-        for topics, clients in self.table:
+        for topics, clients in self._table:
             if len(topics) != 1:
                 continue
             if topics[0] == topic and client not in clients:
@@ -395,7 +411,7 @@ class Subscriptions:
         Args:
             clients_rm ([str]): a list of clients to remove.
         '''
-        for _, clients in self.table:
+        for _, clients in self._table:
             diff = set(clients) - set(clients_rm)
             if len(clients) > len(diff):
                 # update clients
@@ -411,18 +427,6 @@ class Subscriptions:
             self.remove_clients(clients)
         else:
             self.remove_clients([clients])
-
-    def remove_invalids(self, valid_clients):
-        '''Remove invalid clients in the subscriptions.
-
-        Args:
-            valid_clients ([str]): a list of clients to keep.
-        '''
-        for _, clients in self.table:
-            coms = set(clients) & set(valid_clients)
-            if len(clients) > len(coms):
-                # update clients
-                clients[:] = list(coms)
 
 #------------------------------------------------------------------------------
 # Unit Test
@@ -447,12 +451,12 @@ def test_TokenTable():
     print(f'{tbl.tokens()}\n')
     tbl.add_item('TOKEN_OF_ANDY', 'Andy')
     tbl.add_item('TOKDN_OF_CINDY', 'Cindy')
-    print(f"{tbl.table}\n")
+    print(f"{tbl._table}\n")
     #tbl.remove_tokens(['TOKEN_OF_ANDY', 'TOKDN_OF_CINDY'])
     #tbl.remove_clients(['Andy', 'Cindy'])
     #del tbl['Andy', 'Cindy']
     del tbl['Andy']
-    print(f"{tbl.table}\n")
+    print(f"{tbl._table}\n")
     print()
 
 
@@ -460,23 +464,22 @@ def test_Subscriptions():
     tbl = Subscriptions('subscriptions_Daily.yml')
     valid_clients = tbl.clients()
     #tbl.save()
-    print(f"{tbl.table}\n")
+    print(f"{tbl._table}\n")
     tbl.add_item('IT', 'Andy')
     assert tbl.topics('Andy')[0] == 'IT'
     tbl.add_item('Crypto', 'Tina')
     assert tbl.topics('Tina')[0] == 'Crypto'
-    print(f"{tbl.table}\n")
-    #tbl.remove_invalids(valid_clients)
+    print(f"{tbl._table}\n")
     #tbl.remove_clients(['Andy', 'Tina', '55688'])
     del tbl['Andy', 'Tina']
     del tbl['55688']
     assert not tbl.topics('Andy')
     assert not tbl.topics('Tina')
-    print(f"{tbl.table}\n")
+    print(f"{tbl._table}\n")
     print(f"{tbl.topics('55688')}\n")
     tbl.update_topics('55688', ['IT', 'Finance'])
     assert tbl.topics('55688') == ['Finance', 'IT']
-    print(f"{tbl.table}\n")
+    print(f"{tbl._table}\n")
     for i, (s, c) in enumerate(tbl):
         print(f"{i}: ({s}, {c})")
     print()
