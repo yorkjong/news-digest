@@ -15,6 +15,6 @@
     { "source": "/(.*).t.rss", "destination": "/api/rss?tag=$1" },
 
     { "source": "/LineOauth",
-      "destination": "https://news-digest-line.vercel.app/api/oauth" },
+      "destination": "https://news-digest-line.vercel.app/api/oauth" }
   ]
 }
