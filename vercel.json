@@ -7,14 +7,14 @@
     { "source": "/Crypto.rss", "destination": "/api/rss?heading=Crypto" },
     { "source": "/Science.rss", "destination": "/api/rss?heading=Science" },
     { "source": "/IT.rss", "destination": "/api/rss?heading=IT" },
+
     { "source": "/news.rss",
       "destination": "/api/rss?heading=Tesla&heading=Tech&heading=Finance" },
+
     { "source": "/(.*).h.rss", "destination": "/api/rss?heading=$1" },
     { "source": "/(.*).t.rss", "destination": "/api/rss?tag=$1" },
 
-    { "source": "/api/oauth",
+    { "source": "/LineOauth",
       "destination": "https://news-digest-line.vercel.app/api/oauth" },
-    { "source": "/api/subscribe",
-      "destination": "https://news-digest-line.vercel.app/api/subscribe" }
   ]
 }
