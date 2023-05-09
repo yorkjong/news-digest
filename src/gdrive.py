@@ -428,18 +428,6 @@ class Subscriptions:
         else:
             self.remove_clients([clients])
 
-    def remove_invalids(self, valid_clients):
-        '''Remove invalid clients in the subscriptions.
-
-        Args:
-            valid_clients ([str]): a list of clients to keep.
-        '''
-        for _, clients in self._table:
-            coms = set(clients) & set(valid_clients)
-            if len(clients) > len(coms):
-                # update clients
-                clients[:] = list(coms)
-
 #------------------------------------------------------------------------------
 # Unit Test
 #------------------------------------------------------------------------------
@@ -482,7 +470,6 @@ def test_Subscriptions():
     tbl.add_item('Crypto', 'Tina')
     assert tbl.topics('Tina')[0] == 'Crypto'
     print(f"{tbl._table}\n")
-    #tbl.remove_invalids(valid_clients)
     #tbl.remove_clients(['Andy', 'Tina', '55688'])
     del tbl['Andy', 'Tina']
     del tbl['55688']
