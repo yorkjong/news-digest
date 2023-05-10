@@ -21,6 +21,9 @@
        - Heading "Tech Titans" can be reduced to "Tech" or "Titans".
   - `https://news-digest.vercel.app/{tag}.t.rss`
     - `{tag}` can be any hashtag (`#` removed), e.g., `TSLA`, `NVDA`, `AI`.
+  - also see [RSS Feeds 訂閱 news-digest 新聞](https://news-digest.vercel.app/#/page/rss%20feeds%20訂閱%20news-digest%20新聞)
+- **LINE Notify Subcribing:** https://news-digest.vercel.app/LineOauth
+  - also see [Line Notify 訂閱 news-digest 新聞](https://news-digest.vercel.app/#/page/Line%20Notify%20訂閱%20news-digest%20新聞)
 
 ### Getting Started on Colab
 
