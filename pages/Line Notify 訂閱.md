@@ -4,10 +4,10 @@ tags: LineNotify, 訂閱
 ---
 
 - ## Line Notify 訂閱 news-digest 分為三大步驟：
-- 步驟一：設定你通知要發到哪，完成連動
+- 步驟一：授權。設定你通知要發到哪，完成連動
 	- 這個步驟是從連線到這[Line 通知連動授權](https://news-digest.vercel.app/LineOauth) 開始的
 	- 授權成功後系統自己取得一組 LINE_ACCESS_TOKEN 並自動跳到下一步驟的頁面
-- 步驟二：選定你要接收的新聞分類，完成訂閱
+- 步驟二：訂閱。選定你要接收的新聞分類，完成訂閱
 	- 這頁面的網址會從前一步驟產生，並自動跳轉過來
 		- 網址格式：`https://news-digest-line.vercel.app/api/subscribe?token=YOUR_LINE_ACCRSS_TOKEN`
 	- 可以把這個網址放入書籤，以後可以隨時更改訂閱主題
