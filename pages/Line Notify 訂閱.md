@@ -1,0 +1,46 @@
+---
+title: Line Notify 訂閱 news-digest 新聞
+tags: LineNotify, 訂閱
+---
+
+- ## Line Notify 訂閱 news-digest 分為三大步驟：
+- 步驟一：設定你通知要發到哪，完成連動
+	- 這個步驟是從連線到這[Line 通知連動授權](https://news-digest.vercel.app/LineOauth) 開始的
+	- 授權成功後系統自己取得一組 LINE_ACCESS_TOKEN 並自動跳到下一步驟的頁面
+- 步驟二：選定你要接收的新聞分類，完成訂閱
+	- 這頁面的網址會從前一步驟產生，並自動跳轉過來
+		- 網址格式：`https://news-digest-line.vercel.app/api/subscribe?token=YOUR_LINE_ACCRSS_TOKEN`
+	- 可以把這個網址放入書籤，以後可以隨時更改訂閱主題
+- 步驟三：把 Line Notify 機器人加入你要接收通知的群組
+-
+-
+- ## 以下將前兩步驟截圖說明：
+- ### 步驟一：授權
+- 點擊[Line 通知授權連結](https://news-digest.vercel.app/LineOauth) ，如果還沒登入 Line ，會看到如下登入畫面
+	- ![](assets/LineNotify/NF_00.jpg)
+-
+- 登入後會自動跳到如下的授權頁面
+	- ![](assets/LineNotify/NF_01.jpg)
+-
+- 依照指示，選擇你要接收通知的目標（target），可能是你自己，或這你加入的某個群組
+- 選好後按下最下面的「同意並連動」按鈕
+	- ![](assets/LineNotify/NF_02.jpg)
+-
+- ### 步驟二：訂閱
+- 等一下下後，會自動跳到如下的頁面（[[#green]]==建議將這個網頁放入書籤，將來可隨時回到這頁面改變訂閱的分類==）
+	- ![](assets/LineNotify/NF_03.jpg)
+- 點擊上述中的「已選取 n 個項目」那個下拉式選單
+- 點擊後會跳出下面的新聞分類的選單
+	- ![](assets/LineNotify/NF_04.jpg)
+- 勾選你想收到 Line 通知的新聞分類後按下「確定」
+- 確定後會自動回到如下頁面
+	- ![](assets/LineNotify/NF_05.jpg)
+- 按下「訂閱」按鈕。這時會把你的訂閱資訊送到雲端登記
+- 登記完成後會跳出下面這個訂閱完成的提示畫面
+	- ![](assets/LineNotify/NF_06.jpg)
+-
+-
+- ## 停止收到 Line 通知發的新聞
+- 如果要停止收到 news-digest 的Line通知可以點擊 [已連動的服務](https://notify-bot.line.me/my/) 進入如下頁面
+	- ![](assets/LineNotify/NF_07.jpg)
+- 按下「解除」鈕即可停止Line通知
