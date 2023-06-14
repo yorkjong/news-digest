@@ -8,6 +8,7 @@
 	- [[小丹尼]]
 	- [[安築]]
 	- [[Alan]]
+	- [[LifeWayne]]
 	- [[Anastasi]]
 - AI
   collapsed:: true
