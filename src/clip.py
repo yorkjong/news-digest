@@ -155,7 +155,7 @@ def get_lines_of_category(category, content, with_hashtags=False):
     if not with_hashtags:
         # Remove hashtags after each link
         lines = text.split('\n')
-        lines = [re.sub(r'\s+#[\S]+', '', line) for line in lines]
+        lines = [re.sub(r'\)\s+#.*', ')', line) for line in lines]
         text = '\n'.join(lines)
 
     trigger = False
@@ -303,11 +303,11 @@ def test_markdown_to_readable():
 def main():
     #test_get_latest_journalXX()
     #print(f"{'-'*80}\n")
-    #test_get_lines_of_categories()
+    test_get_lines_of_categories()
     #print(f"{'-'*80}\n")
     #test_get_merge_recent_journals()
     #print(f"{'-'*80}\n")
-    test_markdown_to_readable()
+    #test_markdown_to_readable()
 
 
 if __name__ == '__main__':
