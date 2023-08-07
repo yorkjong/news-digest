@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/05/08 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2023/08/06 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -155,7 +155,7 @@ def get_lines_of_category(category, content, with_hashtags=False):
     if not with_hashtags:
         # Remove hashtags after each link
         lines = text.split('\n')
-        lines = [re.sub(r'\s+#[\S]+', '', line) for line in lines]
+        lines = [re.sub(r'\)\s+#.*', ')', line) for line in lines]
         text = '\n'.join(lines)
 
     trigger = False
@@ -223,11 +223,13 @@ def markdown_to_readable(markdown_string):
     """
     output = ""
     for line in markdown_string.split('\n'):
-        if line.startswith('#'):
+        if line.startswith('- ### '):
+            line = line[2:]
+        if line.startswith('###'):
             # Process heading
             heading = line.replace('#', '').strip()
             output += f"{heading}:\n\n"
-        elif line.startswith('- '):
+        elif line.startswith('- ['):
             # Process link
             title, link = line[2:].split('](')
             title = title.strip()[1:]   # Remove '['
@@ -299,13 +301,13 @@ def test_markdown_to_readable():
     print(markdown_to_readable(content))
 
 def main():
-    test_get_latest_journalXX()
-    print(f"{'-'*80}\n")
+    #test_get_latest_journalXX()
+    #print(f"{'-'*80}\n")
     test_get_lines_of_categories()
-    print(f"{'-'*80}\n")
-    test_get_merge_recent_journals()
-    print(f"{'-'*80}\n")
-    test_markdown_to_readable()
+    #print(f"{'-'*80}\n")
+    #test_get_merge_recent_journals()
+    #print(f"{'-'*80}\n")
+    #test_markdown_to_readable()
 
 
 if __name__ == '__main__':
