@@ -27,6 +27,8 @@ jobs:
       - uses: actions/checkout@v3
       - name: Logseq Publish 🚩
         #uses: pengx17/logseq-publish@v0.1
+        #with:
+        #  trace: false
         uses: logseq/publish-spa@v0.3.0
       - name: add a nojekyll file # to make sure asset paths are correctly identified
         run: touch "$GITHUB_WORKSPACE/www/.nojekyll"
@@ -37,13 +39,17 @@ jobs:
         run: |
           echo "SRC_FOLDER=." >> $GITHUB_ENV
           echo "TGT_FOLDER=www" >> $GITHUB_ENV
+      - name: Copy assets
+        run: |
+          mkdir -p "${{ env.TGT_FOLDER }}/assets"
+          cp -r "${{ env.SRC_FOLDER }}/assets" "${{ env.TGT_FOLDER }}/assets"
       - name: Copy src/*.py
         run: |
-          [ -d "${{ env.TGT_FOLDER }}/src" ] || mkdir "${{ env.TGT_FOLDER }}/src"
+          mkdir -p "${{ env.TGT_FOLDER }}/src"
           cp "${{ env.SRC_FOLDER }}/src/"*.py "${{ env.TGT_FOLDER }}/src/"
       - name: Copy api/*.py
         run: |
-          [ -d "${{ env.TGT_FOLDER }}/api" ] || mkdir "${{ env.TGT_FOLDER }}/api"
+          mkdir -p "${{ env.TGT_FOLDER }}/api"
           cp "${{ env.SRC_FOLDER }}/api/"*.py "${{ env.TGT_FOLDER }}/api/"
       - name: Copy requirements.txt and vercel.json
         run: |
@@ -57,8 +63,7 @@ jobs:
           cp "$latest" "${{ env.TGT_FOLDER }}/"
 
       - name: Deploy 🚀
-        #uses: JamesIves/github-pages-deploy-action@4.1.9
-        uses: JamesIves/github-pages-deploy-action@4
+        uses: JamesIves/github-pages-deploy-action@4.1.9
         with:
           branch: gh-pages # The branch the action should deploy to.
           folder: www # The folder the action should deploy.
