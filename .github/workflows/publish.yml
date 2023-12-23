@@ -42,7 +42,7 @@ jobs:
       - name: Copy assets
         run: |
           mkdir -p "${{ env.TGT_FOLDER }}/assets"
-          cp -r "${{ env.SRC_FOLDER }}/assets" "${{ env.TGT_FOLDER }}/assets"
+          cp -r "${{ env.SRC_FOLDER }}/assets" "${{ env.TGT_FOLDER }}"
       - name: Copy src/*.py
         run: |
           mkdir -p "${{ env.TGT_FOLDER }}/src"
