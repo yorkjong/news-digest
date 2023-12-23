@@ -30,11 +30,11 @@ jobs:
           echo "TGT_FOLDER=gh-pages" >> $GITHUB_ENV
       - name: Copy src/*.py
         run: |
-          [ -d "${{ env.TGT_FOLDER }}/src" ] || mkdir "${{ env.TGT_FOLDER }}/src"
+          mkdir -p "${{ env.TGT_FOLDER }}/src"
           cp "${{ env.SRC_FOLDER }}/src/"*.py "${{ env.TGT_FOLDER }}/src/"
       - name: Copy api/*.py
         run: |
-          [ -d "${{ env.TGT_FOLDER }}/api" ] || mkdir "${{ env.TGT_FOLDER }}/api"
+          mkdir -p "${{ env.TGT_FOLDER }}/api"
           cp "${{ env.SRC_FOLDER }}/api/"*.py "${{ env.TGT_FOLDER }}/api/"
       - name: Copy requirements.txt and vercel.json
         run: |
