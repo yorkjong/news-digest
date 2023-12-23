@@ -12,6 +12,9 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -21,16 +24,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       - name: Logseq Publish 🚩
-        uses: pengx17/logseq-publish@v0.1
-        with:
-          assets: assets
-          version: latest
+        #uses: pengx17/logseq-publish@v0.1
+        uses: logseq/publish-spa@v0.3.0
       - name: add a nojekyll file # to make sure asset paths are correctly identified
         run: touch "$GITHUB_WORKSPACE/www/.nojekyll"
-      - name: remove trace.zip
-        run: rm www/trace.zip
+      #- name: remove trace.zip
+      #  run: rm www/trace.zip
 
       - name: Set environment variables to GITHUB_ENV
         run: |
