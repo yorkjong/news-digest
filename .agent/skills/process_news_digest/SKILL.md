@@ -10,8 +10,9 @@ This is the main skill that chains all other skills to perform the full nightly 
 ## Steps
 
 1.  **Ensure Daily Journal Exists**
-    - usage: `ensure_daily_journal(date=CURRENT_DATE)`
+    - usage: Run `ensure_daily_journal` python script.
     - *Purpose*: Make sure the destination file `journals/YYYY_MM_DD.md` exists and has the template.
+    - *Command*: `python3 .agent/skills/ensure_daily_journal/ensure_journal.py` (defaults to today)
 
 2.  **Clean Temp Links (Formatting)**
     - usage: Run `clean_temp_links` script on `pages/TempLinks.md`.

@@ -10,25 +10,12 @@ This skill ensures that the Logseq journal file for a specific date exists.
 ## Inputs
 - `date`: (Optional) The date string in `YYYY_MM_DD` format. Defaults to the current local date.
 
-## Steps
+## Usage
+Run the following command:
+`python3 .agent/skills/ensure_daily_journal/ensure_journal.py "{date}"`
 
-1.  **Determine Target Date**
-    - usage: `date` argument or current date.
-    - format: `YYYY_MM_DD` (e.g., `2026_02_09`).
+- `date`: Optional. Target date (YYYY_MM_DD). Defaults to today.
 
-2.  **Check File Existence**
-    - Check if `journals/{date}.md` exists.
-    - **IF EXISTS**: Return success (Content already exists).
-
-3.  **Read Template (If File Missing)**
-    - Read `pages/templates.md`.
-    - Parse the markdown to find the block named `Daily framework` with property `template:: Daily framework`.
-    - Extract the *children* blocks of this template.
-    - **Logic**: Since `template-including-parent:: false` is used, extract only the nested list items, removing one level of indentation.
-
-4.  **Create Journal File**
-    - Write the extracted content to `journals/{date}.md`.
-    - Ensure the content is formatted as valid Logseq markdown (list items).
-
-## Example Action
-`ensure_daily_journal(date="2026_02_09")` -> ensures `journals/2026_02_09.md` exists.
+## Example
+`python3 .agent/skills/ensure_daily_journal/ensure_journal.py`
+`python3 .agent/skills/ensure_daily_journal/ensure_journal.py 2026_02_10`
