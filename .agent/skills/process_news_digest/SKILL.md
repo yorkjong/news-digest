@@ -20,9 +20,8 @@ This is the main skill that chains all other skills to perform the full nightly 
     - *Command*: `python3 .agent/skills/clean_temp_links/clean_links.py "{workspace_root}/pages/TempLinks.md"`
 
 3.  **Clean Link Titles**
-    - usage: Run `clean_link_titles` script on `pages/TempLinks.md`.
-    - *Purpose*: Remove suffixes like ` | TechNews`, ` - MoneyDJ`.
-    - *Command*: `python3 .agent/skills/clean_link_titles/clean_titles.py "{workspace_root}/pages/TempLinks.md"`
+    - usage: `clean_link_titles` LLM skill on `pages/TempLinks.md`.
+    - *Purpose*: Remove suffixes like ` | TechNews` and prefixes intelligently.
 
 4.  **Add Hashtags**
     - usage: `add_hashtags` LLM skill on `pages/TempLinks.md`.

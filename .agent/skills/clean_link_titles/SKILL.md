@@ -1,36 +1,36 @@
 ---
 name: clean_link_titles
-description: Removes extraneous information (source, author, etc.) from link titles in markdown files.
+description: Removes extraneous information (source, author, etc.) from link titles using LLM intelligence.
 ---
 
 # Clean Link Titles
 
-This skill cleans up the titles of markdown links by removing common suffixes that indicate the source, author, or site name.
+This skill uses an LLM to intelligently clean news link titles by removing unnecessary metadata such as source names, author names, and site branding, while preserving the core headline.
 
-## Inputs
-- `file_path`: The absolute path to the markdown file to process.
+## Execution Instructions for AI
+1.  **Read Source**: Read the list of links (usually in `TempLinks.md`).
+2.  **Analyze Titles**: For each link `[Title](URL)`, identify and remove extraneous suffixes or prefixes.
+3.  **Preserve Core Content**: Ensure the main news headline remains intact. Do NOT summarize or rewrite the headline; only remove metadata.
 
-## Supported Patterns (Conservative)
-It removes only high-confidence patterns:
-
-**Suffixes:**
-- ` | SiteName` (e.g., ` | TechNews`)
-- ` - Source` (Only if source contains "News", "新聞", "網", ".com" etc.)
-- `_SourceName` (e.g., `_财经头条`)
-
-**Prefixes:**
-- `【Source】` (e.g., `【TechNews】`)
-- `[Source]` (Length limited to < 15 chars to avoid removing content tags)
-
-## Usage
-Run the following command in the terminal:
-`python3 .agent/skills/clean_link_titles/clean_titles.py "{file_path}"`
+## Cleaning Rules
+- **Remove Suffixes**:
+    - remove ` | SiteName` (e.g., ` | TechNews`, ` | iThome`, ` - MoneyDJ`).
+    - remove ` - Source Name` (especially if it looks like a brand).
+    - remove `(Source)` at the end.
+- **Remove Prefixes**:
+    - remove `【Source】` or `[Source]` if it's clearly a publisher tag.
+    - remove `Author Name:` if present at start.
+- **Handle Edge Cases**:
+    - If the "suffix" is actually part of the meaning (e.g., "Review | Product Name"), keep it. Context matters.
+    - If unsure, bias towards keeping text to avoid losing information.
 
 ## Example
 **Input:**
-`- [Title | TechNews 科技新報](...)`
-`- [【獨家】Title](...)`
+`- [NVIDIA stock jumps 5% | CNBC](...)`
+`- [【TechCrunch】OpenAI releases new model](...)`
+`- [Review: iPhone 16 | The Verge](...)`
 
 **Output:**
-`- [Title](...)`
-`- [Title](...)`
+`- [NVIDIA stock jumps 5%](...)`
+`- [OpenAI releases new model](...)`
+`- [Review: iPhone 16](...)`
