@@ -32,14 +32,14 @@ This skill is designed for an AI to parse news headlines/links and append releva
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
     - MediaTek (聯發科) -> `#MTK`
-    - Others: Use Traditional Chinese Name (e.g., `#鴻海`, `#智邦`, `#中美晶`, `#創見`).
+    - Others: Use Traditional Chinese Name (e.g., `#鴻海`, `#智邦`, `#中美晶`, `#創見`). **Do NOT use `#stock` tag for these.**
 - **People**: `#Elon`, `#Jensen`, `#Trump`, `#Altman`.
 
 ### Topics & Industries
 - **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents).
 - **Semiconductor**: `#semicon`, `#Chips`, `#CoWoS`, `#ASIC`.
 - **Crypto**: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF`, `#Stablecoin`, `#CBDC`.
-- **Finance**: `#Finance`, `#stock`, `#Gold`, `#Silver`, `#Fed`.
+- **Finance**: `#Finance`, `#stock` (US/Global only, NOT for TW stocks), `#Gold`, `#Silver`, `#Fed`.
 - **Automotive**: `#EV` (Electric Vehicles), `#FSD`, `#Robotaxi`, `#Waymo`.
 - **Energy**: `#Solar`, `#power`, `#battery`.
 - **Science**: `#science`, `#universe`, `#biology`.
