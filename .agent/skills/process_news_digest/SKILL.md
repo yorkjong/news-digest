@@ -17,26 +17,26 @@ This is the main skill that chains all other skills to perform the full nightly 
 2.  **Clean Temp Links (Formatting)**
     - usage: Run `clean_temp_links` script on `pages/TempLinks.md`.
     - *Purpose*: Remove `**HH:MM**`, decode URLs.
-    - *Command*: `python3 .agent/skills/clean_temp_links/clean_links.py "{workspace_root}/pages/TempLinks.md"`
+    - *Command*: `python3 .agent/skills/clean_temp_links/clean_links.py "../notes/pages/TempLinks.md"`
 
 3.  **Clean Link Titles**
-    - usage: `clean_link_titles` LLM skill on `pages/TempLinks.md`.
+    - usage: `clean_link_titles` LLM skill on `../notes/pages/TempLinks.md`.
     - *Purpose*: Remove suffixes like ` | TechNews` and prefixes intelligently.
 
 4.  **Add Hashtags**
-    - usage: `add_hashtags` LLM skill on `pages/TempLinks.md`.
+    - usage: `add_hashtags` LLM skill on `../notes/pages/TempLinks.md`.
     - *Purpose*: Analyze content and append tags (#AI, #TSLA, etc.).
 
 5.  **Organize to Journal**
     - usage: `organize_links_to_journal` LLM skill.
-    - *Input*: `pages/TempLinks.md`
+    - *Input*: `../notes/pages/TempLinks.md`
     - *Target*: `journals/YYYY_MM_DD.md`
     - *Purpose*: Sort links into sections and move them to today's journal.
 
 6.  **Clear Temp Links**
-    - usage: Run `clear_file` script on `pages/TempLinks.md`.
+    - usage: Run `clear_file` script on `../notes/pages/TempLinks.md`.
     - *Purpose*: After successful move, clear `TempLinks.md`.
-    - *Command*: `python3 .agent/skills/clear_file/clear_file.py "{workspace_root}/pages/TempLinks.md"`
+    - *Command*: `python3 .agent/skills/clear_file/clear_file.py "../notes/pages/TempLinks.md"`
 
 ## Usage
 Run this skill to execute the entire pipeline.
