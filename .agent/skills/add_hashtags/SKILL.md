@@ -17,17 +17,18 @@ This skill is designed for an AI to parse news headlines/links and append releva
 ## Tagging Rules
 
 ### Entities & Stocks
-- **US Stocks**: Use Ticker symbol.
-    - NVIDIA -> `#NVDA`
-    - Tesla -> `#TSLA`
+- **US Stocks**: Use Ticker symbol. **Do NOT use company name.**
+    - Tesla -> `#TSLA` (NOT `#Tesla`)
+    - Google/Alphabet -> `#GOOG` (NOT `#Google`)
     - Microsoft -> `#MSFT`
-    - Google/Alphabet -> `#GOOG`
     - Amazon -> `#AMZN`
     - Apple -> `#AAPL`
     - Meta -> `#META`
+    - NVIDIA -> `#NVDA`
     - AMD -> `#AMD`
     - Intel -> `#INTC`
     - Oracle -> `#ORCL`
+    - Softbank -> `#SFTBY` (NOT `#Softbank`)
     - Bloom Energy -> `#BE`
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
@@ -39,8 +40,10 @@ This skill is designed for an AI to parse news headlines/links and append releva
 - **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents).
 - **Semiconductor**: `#semicon`, `#Chips`, `#CoWoS`, `#ASIC`.
 - **Crypto**: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF`, `#Stablecoin`, `#CBDC`.
-- **Finance**: `#Finance`, `#stock` (US/Global only, NOT for TW stocks), `#Gold`, `#Silver`, `#Fed`.
-- **Automotive**: `#EV` (Electric Vehicles), `#FSD`, `#Robotaxi`, `#Waymo`.
+- **Finance**: `#stock` (US/Global only, NOT for TW stocks), `#Gold`, `#Silver`, `#Fed`. **Do NOT use `#Finance`.**
+- **Automotive**: `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
+- **Robots**: `#humanoid`, `#robotics`.
+- **Materials**: `#REE` (Rare Earth Elements), `#lithium`.
 - **Energy**: `#Solar`, `#power`, `#battery`.
 - **Science**: `#science`, `#universe`, `#biology`.
 
