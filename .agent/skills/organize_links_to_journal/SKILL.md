@@ -20,7 +20,8 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
 
 1.  **### Tesla & SpaceX; Vehicle**
     - Tags: `#TSLA`, `#SpaceX`, `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
-    - *Note*: Even if it has `#AI`, if it's about Tesla/Waymo, it goes here.
+    - **Elon Musk Companies**: Include xAI, Neuralink, Boring Company here (Tags: `#Elon`, `#xAI`, `#Neuralink`).
+    - *Note*: Even if it has `#AI`, if it's about Tesla/Waymo/xAI, it goes here.
 
 2.  **### Taiwan**
     - Tags: `#TW`, `#TSM` (TSMC), `#MTK` (MediaTek), `#鴻海`, `#Foxconn`, and other Taiwan companies (#智邦, #中美晶, #創見 etc).
@@ -30,19 +31,20 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
     - Tags: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF` (if Bitcoin ETF), `#Stablecoin`, `#BlackRock` (if crypto related).
 
 4.  **### Finance**
-    - Tags: `#Finance`, `#Gold`, `#Silver`, `#stock` (General market news like Dow Jones, S&P 500), `#Fed`, `#Economy`.
-    - *Note*: Individual tech stock news usually goes to "Tech Industry", but general market trends go here.
+    - Tags: `#stock` (General market news like Dow Jones, S&P 500), `#Gold`, `#Silver`, `#Fed`, `#Economy`.
+    - **Do NOT** put `#Finance` tag itself here (it should be removed by previous skill).
 
 5.  **### Health & Food**
     - Tags: `#Health`, `#Food`, `#medicine`, `#LLY` (Eli Lilly), `#NVO`.
 
 6.  **### Science & Technology**
-    - Tags: `#science`, `#universe` (astronomy), `#biology` (if not medical), `#physics`, `#environment`, `#energy` (if scientific breakthrough).
+    - Tags: `#science`, `#universe` (astronomy), `#biology` (if not medical), `#physics`, `#environment`, `#energy` (if scientific breakthrough), `#REE`.
+    - **Humanoid Robots**: Can go here or separate if User prefers, but for now can group with Robotics if not Tesla related.
+    - *Update*: If tag is `#humanoid`, stick with Robotics/AI contexts.
 
 7.  **### IT**
-    - Tags: `#AI` (Research papers, Model releases, Open Source, Developer tools), `#LLM`, `#Agent`, `#OpenAI`, `#Claude`, `#Gemini` (the model, not the stock), `#Coding`, `#GitHub`.
+    - Tags: `#AI` (Research papers, Model releases, Open Source, Developer tools, agents), `#LLM`, `#Agent`, `#OpenAI`, `#Claude`, `#Gemini` (the model), `#Coding`, `#GitHub`.
     - *Distinction*: **Tech Industry** is for *Business/Stock/Corporate* news. **IT** is for *Technology/Product/Research* news.
-    - Example: "Google stock falls" -> `Tech Industry`. "Google releases Gemini 1.5 paper" -> `IT`.
 
 8.  **### Tech Industry** (Default for major tech)
     - Tags: `#NVDA`, `#MSFT`, `#GOOG`, `#AMZN`, `#AAPL`, `#META`, `#AMD`, `#INTC`, `#ORCL`, `#semicon`, `#Chips`.
@@ -51,9 +53,19 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
 ## Sorting Rules (Within Sections)
 
 - **Grouping**: Always group links about the same company/topic together.
-- **Ordering (Importance)**:
-    - **Tech Industry**: `#NVDA` > `#MSFT` > `#GOOG`/`#Alphabet` > `#AMZN` > `#AAPL` > `#META` > `#AMD` > `#INTC` > Others.
-    - **Taiwan**: `#TSM` (TSMC) > `#MTK` > `#鴻海` > Others.
+- **Ordering (Importance/Market Cap)**:
+    - **Tech Industry**:
+        1.  `#NVDA` (Top priority for AI/Chips)
+        2.  `#GOOG` / `#Alphabet`
+        3.  `#MSFT`
+        4.  `#META`
+        5.  `#AMZN`
+        6.  `#AAPL`
+        7.  `#AMD`
+        8.  `#INTC`
+        9.  Others
+    - **Tesla & SpaceX**: `#TSLA` > `#SpaceX` > `#xAI` > Others.
+    - **Taiwan**: `#TSM` (TSMC) > `#鴻海` > `#MTK` > Others.
     - **Crypto**: `#BTC` > `#ETH` > Others.
 
 ## Example
