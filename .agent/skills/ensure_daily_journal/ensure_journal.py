@@ -135,10 +135,29 @@ def ensure_daily_journal(date_str=None):
             base_child_indent = current_indent
 
         # Remove base_child_indent from start
+        stripped_line = ""
         if len(line) >= base_child_indent:
-             final_lines.append(line[base_child_indent:])
+             stripped_line = line[base_child_indent:]
         else:
-             final_lines.append(line.lstrip())
+             stripped_line = line.lstrip()
+
+        # Clean formatting for user preference (Markdown style, not Logseq outline style)
+        # 1. Headers: "- ### Title" -> "### Title"
+        # 2. Empty blocks: "- " or "-" -> ""
+
+        stripped_line = stripped_line.rstrip()
+
+        # Check for header pattern
+        if stripped_line.startswith("- ###") or stripped_line.startswith("- ##") or stripped_line.startswith("- #"):
+             # Remove the "- " prefix
+             final_lines.append(stripped_line[2:])
+        # Check for empty block pattern (just a dash)
+        elif stripped_line == "-" or stripped_line == "- ":
+             final_lines.append("")
+        else:
+             # Identify if it's a regular list item we want to keep as list item
+             # For now, just keep it.
+             final_lines.append(stripped_line)
 
     if not final_lines:
         # Fallback if extraction fails or empty
