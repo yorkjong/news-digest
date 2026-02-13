@@ -30,9 +30,16 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Oracle -> `#ORCL`
     - Softbank -> `#SFTBY` (NOT `#Softbank`)
     - Bloom Energy -> `#BE`
+    - Applied Materials (應材) -> `#AMAT`
+    - SanDisk -> `#SNDK`
+    - Cisco (思科) -> `#CSCO`
+    - Coinbase -> `#COIN`
+    - Cloudflare -> `#NET`
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
     - MediaTek (聯發科) -> `#MTK`
+    - Acer (宏碁) -> `#宏碁`
+    - Global Unichip / Alchip (創意) -> `#創意`
     - Others: Use Traditional Chinese Name (e.g., `#鴻海`, `#智邦`, `#中美晶`, `#創見`). **Do NOT use `#stock` tag for these.**
 - **People**: `#Elon`, `#Jensen`, `#Trump`, `#Altman`.
 
