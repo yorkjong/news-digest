@@ -2,6 +2,8 @@
 description: Process the daily news digest (Clean, Tag, Organize)
 ---
 
+// turbo-all
+
 This workflow automates the daily news digest process.
 
 1. **Ensure Daily Journal Exists**
