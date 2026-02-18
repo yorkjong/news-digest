@@ -36,6 +36,13 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Coinbase -> `#COIN`
     - Cloudflare -> `#NET`
     - Spotify -> `#SPOT`
+    - ARM -> `#ARM`
+    - Micron (美光) -> `#MU`
+    - Walmart (沃爾瑪) -> `#WMT`
+    - Alibaba (阿里巴巴) -> `#BABA`
+    - Western Digital (威騰電子) -> `#WDC`
+    - Estee Lauder (雅詩蘭黛) -> `#EL`
+    - Infosys -> `#INFY`
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
     - MediaTek (聯發科) -> `#MTK`
@@ -48,7 +55,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
 - **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents).
 - **Semiconductor**: `#semicon`, `#Chips`, `#CoWoS`, `#ASIC`.
 - **Crypto**: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF`, `#Stablecoin`, `#CBDC`.
-- **Finance**: `#stock` (US/Global only, NOT for TW stocks), `#Gold`, `#Silver`, `#Fed`. **Do NOT use `#Finance`.**
+- **Finance**: `#stock` (US/Global only, NOT for TW stocks), `#Gold`, `#Silver`, `#Fed`. **Do NOT use `#Finance` unless no other tags apply.**
 - **Automotive**: `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
 - **Robots**: `#humanoid`, `#robotics`.
 - **Materials**: `#REE` (Rare Earth Elements), `#lithium`.
