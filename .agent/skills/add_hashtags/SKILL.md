@@ -31,6 +31,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Softbank -> `#SFTBY` (NOT `#Softbank`)
     - Bloom Energy -> `#BE`
     - Applied Materials (應材) -> `#AMAT`
+    - ASML (艾司摩爾) -> `#ASML`
     - SanDisk -> `#SNDK`
     - Cisco (思科) -> `#CSCO`
     - Coinbase -> `#COIN`
