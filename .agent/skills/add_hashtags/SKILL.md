@@ -54,14 +54,15 @@ This skill is designed for an AI to parse news headlines/links and append releva
 
 ### Topics & Industries
 - **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents).
-- **Semiconductor**: `#semicon`, `#Chips`, `#CoWoS`, `#ASIC`.
+- **Semiconductor**: `#Semicon`, `#Chips`, `#CoWoS`, `#ASIC`.
 - **Crypto**: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF`, `#Stablecoin`, `#CBDC`.
-- **Finance**: `#stock` (US/Global only, NOT for TW stocks), `#Gold`, `#Silver`, `#Fed`. **Do NOT use `#Finance` unless no other tags apply.**
+- **Finance**: **Do NOT use `#stock`**. ALWAYS attempt to find and use the specific US Ticker symbol (e.g. `#AVGO` for Broadcom, `#ADBE` for Adobe, `#VST` for Vistra), even if only the Chinese company name is mentioned. Use `#Gold`, `#Silver`, `#Fed`, etc. for general economic news.
 - **Automotive**: `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
-- **Robots**: `#humanoid`, `#robotics`.
-- **Materials**: `#REE` (Rare Earth Elements), `#lithium`.
-- **Energy**: `#Solar`, `#power`, `#battery`.
-- **Science**: `#science`, `#universe`, `#biology`.
+- **Robots**: `#Humanoid`, `#Robotics`.
+- **Materials**: `#REE` (Rare Earth Elements), `#Lithium`.
+- **Energy**: `#Solar`, `#Power`, `#Battery`, `#Nuclear`.
+- **Science**: `#Science`, `#Universe`, `#Biology`, `#Space`.
+- **General Rule for Topics**: Use UpperCamelCase for topic tags (e.g., `#SmartPhone`, `#MachineLearning`) rather than all lowercase.
 
 ### Regions
 - **Taiwan**: `#TW` (Add if related to Taiwan companies, politics, or economy).
