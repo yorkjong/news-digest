@@ -44,6 +44,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Western Digital (威騰電子) -> `#WDC`
     - Estee Lauder (雅詩蘭黛) -> `#EL`
     - Infosys -> `#INFY`
+    - CoreWeave -> `#CRWV`
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
     - MediaTek (聯發科) -> `#MTK`
@@ -53,16 +54,17 @@ This skill is designed for an AI to parse news headlines/links and append releva
 - **People**: `#Elon`, `#Jensen`, `#Trump`, `#Altman`.
 
 ### Topics & Industries
-- **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents).
-- **Semiconductor**: `#Semicon`, `#Chips`, `#CoWoS`, `#ASIC`.
+- **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents). Use specific technical tags like `#GPU`, `#CUDA` when applicable.
+- **Semiconductor**: `#Semicon`, `#CoWoS`, `#ASIC`. **Do NOT use `#Chips`**.
 - **Crypto**: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF`, `#Stablecoin`, `#CBDC`.
-- **Finance**: **Do NOT use `#stock`**. ALWAYS attempt to find and use the specific US Ticker symbol (e.g. `#AVGO` for Broadcom, `#ADBE` for Adobe, `#VST` for Vistra), even if only the Chinese company name is mentioned. Use `#Gold`, `#Silver`, `#Fed`, etc. for general economic news.
+- **Finance**: **Do NOT use `#stock` or `#Finance`**. ALWAYS attempt to find and use the specific US Ticker symbol (e.g. `#AVGO` for Broadcom, `#ADBE` for Adobe, `#VST` for Vistra), even if only the Chinese company name is mentioned. For Taiwan ETFs, use specific tickers (e.g. `#00988A`) and `#TW`. Use `#Gold`, `#Silver`, `#Fed`, etc. for general economic news.
+- **Software & Dev Tools**: Use specific tool/OS names (e.g., `#Windows`, `#VSCode`, `#Rust`, `#Coding`, `#Codex`) rather than generic company tags like `#MSFT`.
 - **Automotive**: `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
 - **Robots**: `#Humanoid`, `#Robotics`.
-- **Materials**: `#REE` (Rare Earth Elements), `#Lithium`.
+- **Materials**: `#REE` (Rare Earth Elements), `#Lithium`, `#gas` (for natural gas).
 - **Energy**: `#Solar`, `#Power`, `#Battery`, `#Nuclear`.
 - **Science**: `#Science`, `#Universe`, `#Biology`, `#Space`.
-- **General Rule for Topics**: Use UpperCamelCase for topic tags (e.g., `#SmartPhone`, `#MachineLearning`) rather than all lowercase.
+- **General Rule for Topics**: Use UpperCamelCase for topic tags (e.g., `#SmartPhone`, `#MachineLearning`) rather than all lowercase. Avoid generic tags like `#Privacy` for specific product issues.
 
 ### Regions
 - **Taiwan**: `#TW` (Add if related to Taiwan companies, politics, or economy).
