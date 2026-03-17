@@ -12,7 +12,7 @@ This workflow automates the daily news digest process.
    Command: `python3 .agent/skills/ensure_daily_journal/ensure_journal.py`
 
 2. **Clean Temp Links (Formatting)**
-   Run the script to fix formatting and decode URLs in the temp file.
+   Use the `clean_temp_links` skill to fix formatting and decode URLs in the temp file.
    // turbo
    Command: `python3 .agent/skills/clean_temp_links/clean_links.py "../notes/pages/TempLinks.md"`
 
