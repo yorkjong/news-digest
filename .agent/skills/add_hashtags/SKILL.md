@@ -67,7 +67,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
 - **General Rule for Topics**: Use UpperCamelCase for topic tags (e.g., `#SmartPhone`, `#MachineLearning`) rather than all lowercase. Avoid generic tags like `#Privacy` for specific product issues.
 
 ### Regions
-- **Taiwan**: `#TW` (Add if related to Taiwan companies, politics, or economy).
+- **Taiwan**: `#TW` (Add if related to Taiwan companies, politics, or economy). **CRITICAL**: Always include this tag for any Taiwan-related news to ensure it is correctly categorized into the Taiwan section.
 - **China**: `#China` (Add if related to Chinese companies or economy).
 - **Japan**: `#Japan`
 - **India**: `#India`
