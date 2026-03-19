@@ -31,7 +31,8 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
     - Tags: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF` (if Bitcoin ETF), `#Stablecoin`, `#BlackRock` (if crypto related).
 
 4.  **### Finance**
-    - Tags: `#stock` (General market news like Dow Jones, S&P 500), `#Gold`, `#Silver`, `#Fed`, `#Economy`.
+    - Tags: `#stock` (General market news), `#Gold`, `#Silver`, `#Fed`, `#Economy`, `#UST`, `#RMB`, `#oil` (if impacting market prices).
+    - **Scope**: Includes macro-financial news, currency movements, and geopolitical events that directly impact global markets or raw materials (like oil).
     - **Do NOT** put `#Finance` tag itself here (it should be removed by previous skill).
 
 5.  **### Health & Food**
@@ -43,12 +44,14 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
     - *Update*: If tag is `#humanoid`, stick with Robotics/AI contexts.
 
 7.  **### IT**
-    - Tags: `#AI` (Research papers, Model releases, Open Source, Developer tools, agents), `#LLM`, `#Agent`, `#OpenAI`, `#Claude`, `#Gemini` (the model), `#Coding`, `#GitHub`.
-    - *Distinction*: **Tech Industry** is for *Business/Stock/Corporate* news. **IT** is for *Technology/Product/Research* news.
+    - Tags: `#AI` (Core research, Model releases, Open Source), `#LLM`, `#Agent`, `#DeepSeek`, `#Kimi`, `#OpenAI`, `#Claude`, `#ClaudeCode`, `#Coding`, `#GitHub`, `#Skill`.
+    - *Distinction*: **IT** is for *Technology/Product/Research* news that is strictly about the model or technical development.
 
 8.  **### Tech Industry** (Default for major tech)
-    - Tags: `#NVDA`, `#MSFT`, `#GOOG`, `#AMZN`, `#AAPL`, `#META`, `#AMD`, `#INTC`, `#ORCL`, `#semicon`, `#Chips`.
-    - *Fallback*: If it fits nowhere else but is tech news.
+    - Tags: `#NVDA`, `#MSFT`, `#GOOG`, `#AMZN`, `#AAPL`, `#META`, `#AMD`, `#INTC`, `#ORCL`, `#semicon`, `#PLTR`, `#CPNG`, `#SWMR`.
+    - **Product Launches**: Major product or feature releases (e.g., Google Stitch, MSFT Copilot, Amazon Canvas, Alexa+) go here.
+    - **Business/Corporate**: Layoffs (#labor), price hikes, and corporate strategy go here.
+    - *Fallback*: If it fits nowhere else but is tech-business news.
 
 ## Sorting Rules (Within Sections)
 
