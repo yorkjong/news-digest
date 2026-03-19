@@ -25,7 +25,7 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
 
 2.  **### Taiwan**
     - Tags: `#TW`, `#TSM` (TSMC), `#MTK` (MediaTek), `#鴻海`, `#Foxconn`, and other Taiwan companies (#智邦, #中美晶, #創見 etc).
-    - *Exception*: If it's purely about a global product launch, it might go to Tech, but usually Taiwan-specific news stays here.
+    - **GLOBAL PRIORITY**: If a link contains the `#TW` hashtag, it **MUST** be placed in this category, regardless of other hashtags (e.g., even if it has `#TSLA` or `#AI`).
 
 3.  **### Crypto**
     - Tags: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF` (if Bitcoin ETF), `#Stablecoin`, `#BlackRock` (if crypto related).
