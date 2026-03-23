@@ -27,9 +27,14 @@ def clean_links(file_path):
         text = m.group(1)
         url = m.group(2)
         try:
-            # Unquote the URL to decode percent-encoded characters (like Chinese)
-            decoded_url = urllib.parse.unquote(url)
-            return f"[{text}]({decoded_url})"
+            # Unquote the URL recursively to handle double-encoded characters
+            curr_url = url
+            while True:
+                next_url = urllib.parse.unquote(curr_url)
+                if next_url == curr_url:
+                    break
+                curr_url = next_url
+            return f"[{text}]({curr_url})"
         except Exception:
             return m.group(0) # Return original if decode fails
 
