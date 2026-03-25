@@ -61,19 +61,20 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Acer (宏碁) -> `#宏碁`
     - Global Unichip / Alchip (創意) -> `#創意`
     - Others: Use Traditional Chinese Name (e.g., `#鴻海`, `#智邦`, `#中美晶`, `#創見`). **Do NOT use `#stock` tag for these.**
-- **People**: `#Elon`, `#Jensen`, `#Trump`, `#Altman`.
+- **People**: `#Elon`, `#Jensen`, `#Trump`, `#Altman`, `#NASA`.
+- **Others**: `#SpaceX`, `#Anthropic`, `#OpenAI`.
 
 ### Topics & Industries
-- **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents). Use specific technical tags like `#GPU`, `#CUDA` when applicable.
+- **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents). Use specific technical tags like `#GPU`, `#CUDA`, `#SFT`, `#RL` when applicable.
 - **Semiconductor**: `#Semicon`, `#CoWoS`, `#ASIC`. **Do NOT use `#Chips`**.
 - **Crypto**: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF`, `#Stablecoin`, `#CBDC`, `#NFT`.
-- **Finance**: **Do NOT use `#stock` or `#Finance` or `#Economy`** unnecessarily. ALWAYS attempt to find and use the specific US Ticker symbol (e.g. `#AVGO` for Broadcom, `#ADBE` for Adobe, `#VST` for Vistra), even if only the Chinese company name is mentioned. For Taiwan ETFs, use specific tickers (e.g. `#00988A`) and `#TW`. Use `#Gold`, `#Silver`, `#Fed`, `#UST` (US Treasuries), `#RMB` (Renminbi), `#options` for general economic or market news.
+- **Finance**: **Do NOT use `#stock` or `#Finance` or `#Economy`** unnecessarily. ALWAYS attempt to find and use the specific US Ticker symbol (e.g. `#AVGO` for Broadcom, `#ADBE` for Adobe, `#VST` for Vistra), even if only the Chinese company name is mentioned. For Taiwan ETFs, use specific tickers (e.g. `#00988A`) and `#TW`. Use `#Gold`, `#Silver`, `#Fed`, `#UST` (US Treasuries), `#RMB` (Renminbi), `#options` for general economic or market news. **If specific tags like `#Gold` or tickers are used, omit `#Finance`.**
 - **Software & Dev Tools**: Use specific tool/OS names (e.g., `#Windows`, `#VSCode`, `#Rust`, `#Coding`, `#Codex`) rather than generic company tags like `#MSFT`.
 - **Automotive**: `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
 - **Robots**: `#Humanoid`, `#Robotics`.
 - **Materials**: `#REE` (Rare Earth Elements), `#Lithium`, `#gas` (for natural gas).
 - **Energy**: `#Solar`, `#Power`, `#Battery`, `#Nuclear`, `#oil`, `#gas`, `#LNG`, `#Hydrogen`.
-- **Science**: `#Science`, `#Universe`, `#Biology`, `#Space`.
+- **Science**: `#Science`, `#Universe`, `#Biology`, `#Space`, `#NASA`. **If `#NASA` or `#Space` is used, omit `#Science`.**
 - **General Rule for Topics**: Use UpperCamelCase for topic tags (e.g., `#SmartPhone`, `#MachineLearning`) rather than all lowercase. Use `#labor` for employment/layoff news. Avoid generic tags like `#Privacy` for specific product issues.
 
 ### Regions
