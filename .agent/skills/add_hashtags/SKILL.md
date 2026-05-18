@@ -55,6 +55,8 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Estee Lauder (雅詩蘭黛) -> `#EL`
     - Infosys -> `#INFY`
     - CoreWeave -> `#CRWV`
+    - Cerebras -> `#CBRS`
+    - SpaceX -> `#SPCX` (or `#SpaceX`)
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
     - MediaTek (聯發科) -> `#MTK`
@@ -62,7 +64,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Global Unichip / Alchip (創意) -> `#創意`
     - Others: Use Traditional Chinese Name (e.g., `#鴻海`, `#智邦`, `#中美晶`, `#創見`). **Do NOT use `#stock` tag for these.**
 - **People**: `#Elon`, `#Jensen`, `#Trump`, `#Altman`, `#NASA`.
-- **Others**: `#SpaceX`, `#Anthropic`, `#OpenAI`.
+- **Others**: `#Anthropic`, `#OpenAI`.
 
 ### Topics & Industries
 - **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents). Use specific technical tags like `#GPU`, `#CUDA`, `#SFT`, `#RL` when applicable.
