@@ -56,7 +56,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Infosys -> `#INFY`
     - CoreWeave -> `#CRWV`
     - Cerebras -> `#CBRS`
-    - SpaceX -> `#SPCX` (or `#SpaceX`)
+    - SpaceX -> `#SPCX`
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
     - MediaTek (聯發科) -> `#MTK`
@@ -91,7 +91,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
 - AI Models: `#ChatGPT`, `#Claude`, `#ClaudeCode`, `#Gemini`, `#Sora`, `#Llama`, `#GPT5`, `#DeepSeek`, `#Kimi`, `#Qwen`.
 - AI Concepts: `#Agent`, `#LLM`, `#OpenSource`, `#Skill`, `#VibeCoding`, `#Astral`.
 - Hardware/Brands: `#iPhone`, `#Mac`, `#VisionPro`, `#OpenClaw`.
-- Others: `#Starlink`, `#SpaceX`, `#SWMR` (Swarmer), `#drone`.
+- Others: `#Starlink`, `#SPCX`, `#SWMR` (Swarmer), `#drone`.
 
 ## Example
 **Input:**

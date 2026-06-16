@@ -19,7 +19,7 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
 ## Categorization Rules (Priority Order)
 
 1.  **### Tesla & SpaceX; Vehicle**
-    - Tags: `#TSLA`, `#SPCX`, `#SpaceX`, `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
+    - Tags: `#TSLA`, `#SPCX`, `#EV`, `#FSD`, `#Robotaxi`, `#Waymo`.
     - **Elon Musk Companies**: Include xAI, Neuralink, Boring Company here (Tags: `#Elon`, `#xAI`, `#Neuralink`).
     - *Note*: Even if it has `#AI`, if it's about Tesla/Waymo/xAI, it goes here.
 
@@ -67,7 +67,7 @@ This skill sorts and categorizes news links (typically from `TempLinks.md`) into
         7.  `#AMD`
         8.  `#INTC`
         9.  Others
-    - **Tesla & SpaceX**: `#TSLA` > `#SPCX` / `#SpaceX` > `#xAI` > Others.
+    - **Tesla & SpaceX**: `#TSLA` > `#SPCX` > `#xAI` > Others.
     - **Taiwan**: `#TSM` (TSMC) > `#鴻海` > `#MTK` > Others.
     - **Crypto**: `#BTC` > `#ETH` > Others.
 
