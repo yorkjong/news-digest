@@ -29,6 +29,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - Intel -> `#INTC`
     - Oracle -> `#ORCL`
     - Softbank -> `#SFTBY` (NOT `#Softbank`)
+    - SK Hynix -> `#SKHY`
     - Bloom Energy -> `#BE`
     - Applied Materials (應材) -> `#AMAT`
     - ASML (艾司摩爾) -> `#ASML`
@@ -68,7 +69,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
 
 ### Topics & Industries
 - **AI**: `#AI` (Always add if related to Artificial Intelligence, LLMs, Agents). Use specific technical tags like `#GPU`, `#CUDA`, `#SFT`, `#RL` when applicable.
-- **Semiconductor**: `#CoWoS`, `#ASIC`, `#CPO`, `#HBM`, `#DRAM` etc. (Avoid `#Semicon` unless there is no better, more specific hashtag). **Do NOT use `#Chips`**.
+- **Semiconductor**: `#CoWoS`, `#ASIC`, `#CPO`, `#HBM`, `#DRAM` etc. **Do NOT use `#semicon` or `#Chips`**.
 - **Crypto**: `#Crypto`, `#BTC`, `#ETH`, `#MSTR`, `#ETF`, `#Stablecoin`, `#CBDC`, `#NFT`.
 - **Finance**: **Do NOT use `#stock` or `#Finance` or `#Economy`** unnecessarily. ALWAYS attempt to find and use the specific US Ticker symbol (e.g. `#AVGO` for Broadcom, `#ADBE` for Adobe, `#VST` for Vistra), even if only the Chinese company name is mentioned. For Taiwan ETFs, use specific tickers (e.g. `#00988A`) and `#TW`. Use `#Gold`, `#Silver`, `#Fed`, `#UST` (US Treasuries), `#RMB` (Renminbi), `#options` for general economic or market news. **If specific tags like `#Gold` or tickers are used, omit `#Finance`.**
 - **Software & Dev Tools**: Use specific tool/OS names (e.g., `#Windows`, `#VSCode`, `#Rust`, `#Coding`, `#Codex`) rather than generic company tags like `#MSFT`.
