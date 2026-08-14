@@ -2,7 +2,7 @@
 News clipping by categories within single markdown journal text.
 """
 __author__ = "York <york.jong@gmail.com>"
-__date__ = "2023/03/20 (initial version) ~ 2023/08/06 (last revision)"
+__date__ = "2023/03/20 (initial version) ~ 2026/08/13 (last revision)"
 
 __all__ = [
     'get_all_journal_filenames',
@@ -32,19 +32,47 @@ path = 'journals'               # path of "journals" folder
 
 
 def get_all_journal_filenames():
-    '''Get all filenames of journals.
+    """Get all filenames of journals using the GitHub Git Trees API to bypass
+    the 1,000 items limitation of the Contents API.
 
     Returns:
-        (List[str]): a list of filenames with YYYY_MM_DD.md format.
-    '''
-    api_url = f"https://api.github.com/repos/{repo}/contents/{path}"
+        List[str]: A list of filenames matching the YYYY_MM_DD.md format.
+    """
+    # Specify the target branch (e.g., 'main' or 'master')
+    branch = "main"
+    tree_url = (
+        f"https://api.github.com/repos/{repo}/git/trees/{branch}?recursive=1"
+    )
 
-    # Request to the GitHub API to get all the archives under the journal folder
-    response = requests.get(api_url)
+    # Optional: Include GitHub token for authentication and higher rate limits
+    # headers = {"Authorization": f"token {YOUR_GITHUB_TOKEN}"}
+    # response = requests.get(tree_url, headers=headers)
+
+    response = requests.get(tree_url)
+
     if response.status_code == 200:
         content = response.json()
-        pattern = r'^\d{4}_\d{2}_\d{2}\.md$'
-        return [f['name'] for f in content if re.match(pattern, f['name'])]
+        pattern = r"^\d{4}_\d{2}_\d{2}\.md$"
+
+        # Clean leading and trailing slashes for directory path comparison
+        target_dir = path.strip("/")
+
+        filenames = []
+        for item in content.get("tree", []):
+            # Ensure the item is a file (blob) and resides in the target directory
+            if item.get("type") == "blob":
+                item_path = item.get("path", "")
+
+                # Separate folder path and filename
+                if "/" in item_path:
+                    dir_name, filename = item_path.rsplit("/", 1)
+                else:
+                    dir_name, filename = "", item_path
+
+                if dir_name == target_dir and re.match(pattern, filename):
+                    filenames.append(filename)
+
+        return filenames
     else:
         print(f"Error {response.status_code}: {response.reason}")
         return []
@@ -303,11 +331,12 @@ def test_markdown_to_readable():
 def main():
     #test_get_latest_journalXX()
     #print(f"{'-'*80}\n")
-    test_get_lines_of_categories()
+    #test_get_lines_of_categories()
     #print(f"{'-'*80}\n")
     #test_get_merge_recent_journals()
     #print(f"{'-'*80}\n")
     #test_markdown_to_readable()
+    print(get_latest_journal_filename())
 
 
 if __name__ == '__main__':
