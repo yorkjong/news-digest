@@ -58,6 +58,7 @@ This skill is designed for an AI to parse news headlines/links and append releva
     - CoreWeave -> `#CRWV`
     - Cerebras -> `#CBRS`
     - SpaceX -> `#SPCX`
+    - X-energy -> `#XE`
 - **Taiwan Stocks**:
     - TSMC (台積電) -> `#TSM`
     - MediaTek (聯發科) -> `#MTK`
