@@ -1,14 +1,14 @@
 ---
-description: Process the daily news digest (Clean, Tag, Organize)
+name: news_digest
+description: Process the daily news digest (Clean, Tag, Organize). Automates end-to-end processing into today's journal entry.
 ---
 
-// turbo-all
+# Process Daily News Digest
 
-This workflow automates the daily news digest process, intelligently designed to avoid macOS sandbox boundaries by running Python scripts only on internal workspace files.
+This skill automates the daily news digest process, intelligently designed to avoid macOS sandbox boundaries by running Python scripts only on internal workspace files.
 
 1. **Ensure Daily Journal Exists**
    Run the script to make sure today's journal entry exists (creates `journals/YYYY_MM_DD.md`).
-   // turbo
    Command: `python3 .agent/skills/ensure_daily_journal/ensure_journal.py`
 
 2. **Clean Link Titles**
@@ -22,7 +22,6 @@ This workflow automates the daily news digest process, intelligently designed to
    
 5. **Clean Journal Links (Formatting)**
    Use the `clean_temp_links` script to fix formatting (remove timestamps) and decode URLs in the newly written journal file.
-   // turbo
    Command: `python3 .agent/skills/clean_temp_links/clean_links.py "journals/$(date +%Y_%m_%d).md"`
 
 6. **Clear Temp Links**
